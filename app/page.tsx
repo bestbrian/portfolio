@@ -6,7 +6,13 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-center p-24">
       <div>
         <h1 className="mb-8 text-4xl">Hello, my name is Brian.</h1>
-        <p className="max-w-2xl"> I am a seasoned tech professional with extensive experience in FinTech and SaaS startups, specializing in the integration of sophisticated design and coding to deliver scalable digital solutions. <br></br><br></br> My expertise spans leading product development initiatives for financial platforms, enhancing user experience, and automating marketing campaigns to ensure operational excellence. <br></br><br></br>Driven by a passion for leveraging data to fuel growth and streamline business processes, I am eager to collaborate with forward-thinking teams. <br></br><br></br>If you are interested in elevating your technology and product strategy, please feel free to reach out at: <a href="mailto: hello@brianbest.dev ?subject=I have some work  &body=Hi Brian, I need help with"><span className="font-bold">hello@brianbest.dev</span></a></p>
+        <p className="max-w-2xl"> I am a seasoned tech professional with extensive experience in FinTech and SaaS startups, specializing in scalable digital solutions and agile team leadership.
+        <br></br><br></br> 
+        With a strong background in Scrum, I’ve led teams through sprint planning, backlog refinement, and daily stand-ups, ensuring timely delivery and alignment with business goals. My expertise spans product development, user experience enhancement, and marketing automation.
+        <br></br><br></br>
+        Passionate about leveraging data to drive growth and streamline processes, I’m excited to collaborate with innovative teams.
+        <br></br><br></br>
+        Let’s connect: <a href="mailto: hello@brianbest.dev ?subject=I have some work  &body=Hi Brian, I need help with"><span className="font-bold">hello@brianbest.dev</span></a></p>
       </div>
     </main>
   );
