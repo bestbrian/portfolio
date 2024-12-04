@@ -1,0 +1,60 @@
+<html>
+<head>
+  <!-- utf-8 is required for JS Plugin default fonts -->
+  <meta charset="utf-8" />
+  <script src="https://static.vouched.id/widget/vouched-2.0.0.js"></script>
+  <script type='text/javascript'>
+
+    (function() {
+        var vouched = Vouched({
+        appId: "2ZG4B#-_CkX6d9rf6XWw*w8.v1~Hq5",
+        callbackURL: 'https://webhook.site/5cb92794-e8c6-49c9-b670-bd27a86a5b63',
+        verification: {
+          firstName: 'Gladys',
+          lastName: 'West',
+          email: 'test@test.id',
+          phone: '000-111-2222'
+        },
+        
+        // mobile handoff
+        crossDevice: true,
+        crossDeviceQRCode: true,
+        crossDeviceSMS: true,
+        onInit: ({token, job}) => {
+          console.log('initialization');
+        },
+
+        // called when the verification is completed.
+        onDone: (job) => {
+          // token used to query jobs
+          console.log("Scanning complete", { token: job.token });
+
+          // An alternative way to update your system based on the 
+          // results of the job. Your backend could perform the following:
+          // 1. query jobs with the token
+          // 2. store relevant job information such as the id and 
+          //    success property into the user's profile
+          fetch(`/yourapi/idv?job_token=${job.token}`);
+
+
+          // Redirect to the next page based on the job success
+          if( job.result.success){
+            window.location.replace("https://website.com/success/");
+          }else{
+            window.location.replace("https://website.com/failed/");
+          }
+        },
+        
+        // theme
+        theme: {
+          name: 'avant',
+        },
+      });
+      vouched.mount("#vouched-element");
+    })();
+
+  </script>
+</head>
+<body>
+  <div id='vouched-element' style="height: 100%"/>
+</body></html>
