@@ -17,7 +17,7 @@ export const BadgeGrid = ({
   title: string;
 }) => {
   return (
-    <div>
+    <div className="p-4">
       <h3>{title}</h3>
       <div className="flex gap-3 items-center mt-4 flex-wrap">
         {badges.map((badge, i) => (

@@ -43,13 +43,17 @@ export const TOOLS = [
   },
 ];
 
-export const ProductManagementSkills = [
+export const ProductSkills = [
   {
-    name: "Communication",
+    name: "Product Strategy",
   },
   {
-    name: "Scrum",
-    highlight: "destructive",
+    name: "Roadmapping",
+    // highlight: "card",
+  },
+  {
+    name: "Lifecycle Management",
+    // highlight: "destructive",
   },
   {
     name: "Agile Methodologies",
@@ -58,33 +62,93 @@ export const ProductManagementSkills = [
     name: "Market Research",
   },
   {
-    name: "Communication",
-    highlight: "card",
+    name: "Data Analysis",
   },
   {
-    name: "Scrum",
+    name: "Go-to-Market Strategies",
+  },
+  {
+    name: "Feature Prioritization",
+  },
+  {
+    name: "Decision Making",
   },
 ];
 
-export const ProgrammingSkills = [
+export const CollabSkills = [
   {
-    name: "Communication",
+    name: "Cross-Functional Leadership",
   },
   {
-    name: "Scrum",
-    highlight: "destructive",
+    name: "Stakeholder Management",
   },
   {
-    name: "Agile Methodologies",
-  },
-  {
-    name: "Market Research",
+    name: "Team Building & Mentorship",
   },
   {
     name: "Communication",
-    highlight: "card",
   },
   {
-    name: "Scrum",
+    name: "Negotiation",
+  },
+  {
+    name: "Performance Tracking",
+  },
+];
+
+export const TechnicalSkills = [
+  {
+    name: "JavaScript",
+  },
+  {
+    name: "Python",
+  },
+  {
+    name: "React",
+  },
+  {
+    name: "Node.js",
+  },
+  {
+    name: "SQL",
+  },
+  {
+    name: "RESTful APIs",
+  },
+  {
+    name: "OAuth",
+  },
+  {
+    name: "Webhooks",
+  },
+  {
+    name: "HTML & CSS",
+  },
+  {
+    name: "SaaS Systems",
+  },
+  {
+    name: "Scalability",
+  },
+];
+
+export const MarketingSkills = [
+  {
+    name: "CRM",
+  },
+  {
+    name: "Retention Strategies",
+  },
+  {
+    name: "Personalization Algorithms",
+  },
+  {
+    name: "PLG",
+  },
+  {
+    name: "User Behavior Analysis",
+  },
+  {
+    name: "A/B Testing",
   },
 ];
