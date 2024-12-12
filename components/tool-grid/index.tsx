@@ -12,7 +12,10 @@ export const ToolGrid = ({ tools }: { tools: ToolGridProps[] }) => {
   return (
     <div className="flex p-4 gap-3 items-center mt-4 flex-wrap">
       {tools.map((tool, i) => (
-        <div className="rounded-md bg-secondary items-center flex flex-col gap-5 p-4 pb-3">
+        <div
+          key={i}
+          className="rounded-md bg-secondary items-center flex flex-col gap-5 p-4 pb-3"
+        >
           <Image
             src={tool.image}
             alt="alt"

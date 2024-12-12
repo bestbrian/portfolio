@@ -6,7 +6,8 @@ import { EventItem } from "@/components/event-item";
 import { BadgeGrid } from "@/components/badge-grid";
 import { ToolGrid } from "@/components/tool-grid";
 import {
-  TOOLS,
+  TechTools,
+  SoftwareTools,
   ProductSkills,
   TechnicalSkills,
   CollabSkills,
@@ -24,7 +25,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-center">
       <div>
         <h2 className="border-solid border-2 border-sky-500 font-subway font-black mt-8 mb-4 text-3xl dark:text-yellow-200 {styles.TorontoSubway} font-medium">
-          TORONTO SUBWAY
+          WELCOME, BRIAN BEST
         </h2>
         <section className="flex flex-col gap-12">
           <SplitLayout section="Bio">
@@ -91,15 +92,11 @@ export default function Home() {
           </SplitLayout>
 
           <SplitLayout section="Stack">
-            <ToolGrid tools={TOOLS} />
+            <ToolGrid tools={TechTools} />
           </SplitLayout>
 
           <SplitLayout section="Contact">
-            <ToolGrid tools={TOOLS} />
-          </SplitLayout>
-
-          <SplitLayout section="Stack">
-            <ToolGrid tools={TOOLS} />
+            <ToolGrid tools={SoftwareTools} />
           </SplitLayout>
         </section>
         <InputForm />
