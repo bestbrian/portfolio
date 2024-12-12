@@ -1,4 +1,49 @@
-export const TOOLS = [
+export const TechTools = [
+  {
+    image: "https://placehold.co/48x48/WebP",
+    name: "JavaScript",
+    badge: {
+      name: "product",
+    },
+  },
+  {
+    image: "https://placehold.co/48x48/WebP",
+    name: "React",
+    badge: {
+      name: "product",
+    },
+  },
+  {
+    image: "https://placehold.co/48x48/WebP",
+    name: "HTML5",
+    badge: {
+      name: "product",
+    },
+  },
+  {
+    image: "https://placehold.co/48x48/WebP",
+    name: "CSS3",
+    badge: {
+      name: "product",
+    },
+  },
+  {
+    image: "https://placehold.co/48x48/WebP",
+    name: "Agile",
+    badge: {
+      name: "product",
+    },
+  },
+  {
+    image: "https://placehold.co/48x48/WebP",
+    name: "Agile",
+    badge: {
+      name: "product",
+    },
+  },
+];
+
+export const SoftwareTools = [
   {
     image: "https://placehold.co/48x48/WebP",
     name: "Agile",
