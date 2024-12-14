@@ -91,12 +91,12 @@ export default function Home() {
             />
           </SplitLayout>
 
-          <SplitLayout section="Stack">
-            <ToolGrid tools={TechTools} />
+          <SplitLayout section="Software">
+            <ToolGrid tools={SoftwareTools} />
           </SplitLayout>
 
-          <SplitLayout section="Contact">
-            <ToolGrid tools={SoftwareTools} />
+          <SplitLayout section="Tech">
+            <ToolGrid tools={TechTools} />
           </SplitLayout>
         </section>
         <InputForm />

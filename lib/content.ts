@@ -1,42 +1,43 @@
 export const TechTools = [
   {
-    image: "https://placehold.co/48x48/WebP",
-    name: "JavaScript",
-    badge: {
-      name: "product",
-    },
-  },
-  {
-    image: "https://placehold.co/48x48/WebP",
+    image: "/images/react_logo.svg",
     name: "React",
     badge: {
       name: "product",
     },
   },
   {
-    image: "https://placehold.co/48x48/WebP",
+    image: "/images/typescript_logo.svg",
+    name: "TypeScript",
+    badge: {
+      name: "product",
+    },
+  },
+  {
+    image: "/images/javascript_logo.svg",
+    name: "JavaScript",
+    badge: {
+      name: "product",
+    },
+  },
+  {
+    image: "/images/html5_logo.svg",
     name: "HTML5",
     badge: {
       name: "product",
     },
   },
   {
-    image: "https://placehold.co/48x48/WebP",
+    image: "/images/css3_logo.svg",
     name: "CSS3",
     badge: {
       name: "product",
     },
   },
+
   {
-    image: "https://placehold.co/48x48/WebP",
-    name: "Agile",
-    badge: {
-      name: "product",
-    },
-  },
-  {
-    image: "https://placehold.co/48x48/WebP",
-    name: "Agile",
+    image: "/images/cPanel_logo.svg",
+    name: "cPanel",
     badge: {
       name: "product",
     },
@@ -45,42 +46,42 @@ export const TechTools = [
 
 export const SoftwareTools = [
   {
-    image: "https://placehold.co/48x48/WebP",
+    image: "/images/vscode_logo.svg",
+    name: "VS Code",
+    badge: {
+      name: "Tech",
+    },
+  },
+  {
+    image: "/images/slack_logo.svg",
+    name: "Slack",
+    badge: {
+      name: "Comms",
+    },
+  },
+  {
+    image: "/images/github_logo.svg",
+    name: "GitHub",
+    badge: {
+      name: "product",
+    },
+  },
+  {
+    image: "/images/vscode_logo.svg",
     name: "Agile",
     badge: {
       name: "product",
     },
   },
   {
-    image: "https://placehold.co/48x48/WebP",
-    name: "test",
-    badge: {
-      name: "product",
-    },
-  },
-  {
-    image: "https://placehold.co/48x48/WebP",
+    image: "/images/vscode_logo.svg",
     name: "Agile",
     badge: {
       name: "product",
     },
   },
   {
-    image: "https://placehold.co/48x48/WebP",
-    name: "Agile",
-    badge: {
-      name: "product",
-    },
-  },
-  {
-    image: "https://placehold.co/48x48/WebP",
-    name: "Agile",
-    badge: {
-      name: "product",
-    },
-  },
-  {
-    image: "https://placehold.co/48x48/WebP",
+    image: "/images/vscode_logo.svg",
     name: "Agile",
     badge: {
       name: "product",

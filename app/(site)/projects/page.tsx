@@ -84,7 +84,7 @@ function Projects({ posts }: { posts: SanityPost[] }) {
   );
 }
 
-function ProjectCard({ post }: { post: Post }) {
+function ProjectCard({ post }: { post: Project }) {
   return (
     <Card className="overflow-hidden transition-transform duration-300 hover:scale-105">
       <Link href={`/projects/${post.file}`}>
