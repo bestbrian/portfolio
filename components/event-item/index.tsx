@@ -9,7 +9,7 @@ interface EventProps {
 
 export const EventItem = ({ title, body, image, timeline }: EventProps) => {
   return (
-    <div className="flex justify-between items-start p-4 hover:bg-secondary rounded-md">
+    <div className="inline-flex justify-between items-start w-full p-4 hover:bg-secondary rounded-md">
       <div className="flex gap-4 items-center">
         <Image
           src={image}
@@ -25,8 +25,8 @@ export const EventItem = ({ title, body, image, timeline }: EventProps) => {
           }}
         />
         <div className="flex flex-col">
-          <h4 className="font-semibold">{title}</h4>
-          <p className="font-normal">{body}</p>
+          <h4 className="font-semibold text-left">{title}</h4>
+          <p className="font-normal text-left">{body}</p>
         </div>
       </div>
 

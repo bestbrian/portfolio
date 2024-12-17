@@ -75,7 +75,7 @@ export function ContactForm() {
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
         <FormLabel>
-          <h2>Let's connect</h2>
+          <h2>Let&apos;s connect</h2>
         </FormLabel>
         <FormDescription>Contact me</FormDescription>
         <FormField

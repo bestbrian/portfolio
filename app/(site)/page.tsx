@@ -6,6 +6,12 @@ import { EventItem } from "@/components/event-item";
 import { BadgeGrid } from "@/components/badge-grid";
 import { ToolGrid } from "@/components/tool-grid";
 import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import {
   TechTools,
   SoftwareTools,
   ProductSkills,
@@ -50,37 +56,116 @@ export default function Home() {
           </SplitLayout>
 
           <SplitLayout section="EXPERIENCE">
-            <EventItem
-              title="Senior Product Manager"
-              body="Musth"
-              timeline="2022 – 2024"
-              image={musthLogo}
-            />
-            <EventItem
-              title="Software Engineer"
-              body="Better"
-              timeline="2020 – 2022"
-              image={betterLogo}
-            />
-            <EventItem
-              title="Co-Founder & Chief Operating Officer"
-              body="BrandLoyal"
-              timeline="2014 – 2022"
-              image={brandloyalLogo}
-            />
-            <EventItem
-              title="Software Engineer"
-              body="Vroom"
-              timeline="2018 – 2020"
-              image={vroomLogo}
-            />
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger className="w-full">
+                  <EventItem
+                    title="Senior Product Manager"
+                    body="Musth"
+                    timeline="2022 – 2024"
+                    image={musthLogo}
+                  />
+                </TooltipTrigger>
+                <TooltipContent>
+                  <h3>Key Achievements</h3>
+                  <ul>
+                    <li>
+                      Developed and launched multiple key features, achieving
+                      significant improvements in the efficiency and
+                      accessibility of financial trading platforms, by guiding
+                      the team through iterative, customer-focused delivery.
+                    </li>
+                    <li>
+                      Played a pivotal role in adopting and implementing new
+                      technologies within an Agile framework, resulting in
+                      enhanced product performance and increased customer
+                      satisfaction.
+                    </li>
+                    <li>
+                      Fostered an Agile culture within the team, accelerating
+                      product development cycles and improving responsiveness to
+                      market changes through iterative feedback and continuous
+                      improvement.
+                    </li>
+                  </ul>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger className="w-full">
+                  <EventItem
+                    title="Software Engineer"
+                    body="Better"
+                    timeline="2020 – 2022"
+                    image={betterLogo}
+                  />
+                </TooltipTrigger>
+                <TooltipContent>
+                  <h3>Key Achievements</h3>
+                  <ul>
+                    <li>XXXXXXXXX</li>
+                    <li>XXXXXXXXX</li>
+                    <li>XXXXXXXXX</li>
+                  </ul>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger className="w-full">
+                  <EventItem
+                    title="Co-Founder & Chief Operating Officer"
+                    body="BrandLoyal"
+                    timeline="2014 – 2022"
+                    image={brandloyalLogo}
+                  />
+                </TooltipTrigger>
+                <TooltipContent>
+                  <h3>Key Achievements</h3>
+                  <ul>
+                    <li>XXXXXXXXX</li>
+                    <li>XXXXXXXXX</li>
+                    <li>XXXXXXXXX</li>
+                  </ul>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger className="w-full">
+                  <EventItem
+                    title="Software Engineer"
+                    body="Vroom"
+                    timeline="2018 – 2020"
+                    image={vroomLogo}
+                  />
+                </TooltipTrigger>
+                <TooltipContent>
+                  <h3>Key Achievements</h3>
+                  <ul>
+                    <li>XXXXXXXXX</li>
+                    <li>XXXXXXXXX</li>
+                    <li>XXXXXXXXX</li>
+                  </ul>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           </SplitLayout>
 
           <SplitLayout section="SKILLS">
             <BadgeGrid title="Product Management" badges={ProductSkills} />
             <BadgeGrid title="Technical" badges={TechnicalSkills} />
-            <BadgeGrid title="Collaboration" badges={CollabSkills} />
+            {/* <BadgeGrid title="Collaboration" badges={CollabSkills} /> */}
             <BadgeGrid title="Marketing" badges={MarketingSkills} />
+          </SplitLayout>
+
+          <SplitLayout section="TECH">
+            <ToolGrid tools={TechTools} />
+          </SplitLayout>
+
+          <SplitLayout section="TOOLS">
+            <ToolGrid tools={SoftwareTools} />
           </SplitLayout>
 
           <SplitLayout section="EDUCATION">
@@ -96,14 +181,6 @@ export default function Home() {
               timeline="2024"
               image={psmiiLogo}
             />
-          </SplitLayout>
-
-          <SplitLayout section="SOFTWARE">
-            <ToolGrid tools={SoftwareTools} />
-          </SplitLayout>
-
-          <SplitLayout section="TECH">
-            <ToolGrid tools={TechTools} />
           </SplitLayout>
         </section>
         <section className="mt-16">
