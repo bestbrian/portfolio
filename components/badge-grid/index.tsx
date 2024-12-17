@@ -1,6 +1,12 @@
 import { ReactNode } from "react";
 import { Badge } from "../ui/badge";
 import { cn } from "@/lib/utils";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 // TODO: Move to /types/ folder for imports
 export interface BadgeProps {
