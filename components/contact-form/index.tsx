@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -32,7 +33,7 @@ const FormSchema = z.object({
     .min(10, { message: "Please enter at least 10 characters." }),
 });
 
-export function InputForm() {
+export function ContactForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -73,6 +74,10 @@ export function InputForm() {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
+        <FormLabel>
+          <h2>Let's connect</h2>
+        </FormLabel>
+        <FormDescription>Contact me</FormDescription>
         <FormField
           control={form.control}
           name="email"
