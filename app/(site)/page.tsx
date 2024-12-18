@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center">
       <div>
-        <section className="flex flex-col gap-12 mt-20 mb-20">
+        <section className="flex flex-col gap-12 my-20">
           <SplitLayout>
             <h2 className="text-center font-subway mt-8 mb-4 text-3xl dark:text-white">
               HI, MY NAME IS BRIAN
