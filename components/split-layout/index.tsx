@@ -4,7 +4,7 @@ export const SplitLayout = ({
   section,
   children,
 }: {
-  section: string;
+  section?: string;
   children?: ReactNode;
 }) => {
   return (

@@ -30,9 +30,14 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center">
       <div>
-        <h2 className="font-subway font-black mt-8 mb-4 text-3xl dark:text-yellow-200 {styles.TorontoSubway} font-medium">
-          HI, MY NAME IS BRIAN AND I AM THE BEST
-        </h2>
+        <section className="flex flex-col gap-12 mt-20 mb-20">
+          <SplitLayout>
+            <h2 className="text-center font-subway mt-8 mb-4 text-3xl dark:text-white">
+              HI, MY NAME IS BRIAN
+              {/* <br></br>AND I AM THE BEST */}
+            </h2>
+          </SplitLayout>
+        </section>
         <section className="flex flex-col gap-12">
           <SplitLayout section="BIO">
             <div className="p-4">
@@ -155,7 +160,7 @@ export default function Home() {
 
           <SplitLayout section="SKILLS">
             <BadgeGrid title="Product Management" badges={ProductSkills} />
-            <BadgeGrid title="Technical" badges={TechnicalSkills} />
+            {/* <BadgeGrid title="Technical" badges={TechnicalSkills} /> */}
             {/* <BadgeGrid title="Collaboration" badges={CollabSkills} /> */}
             <BadgeGrid title="Marketing" badges={MarketingSkills} />
           </SplitLayout>

@@ -1,90 +1,166 @@
 export const TechTools = [
   {
-    image: "/images/react_logo.svg",
+    image: "images/react_logo.svg",
     name: "React",
     badge: {
-      name: "product",
+      name: "Tech",
     },
   },
   {
-    image: "/images/typescript_logo.svg",
-    name: "TypeScript",
+    image: "images/nextjs_logo.svg",
+    name: "NextJS",
     badge: {
-      name: "product",
+      name: "Tech",
     },
   },
   {
-    image: "/images/javascript_logo.svg",
+    image: "images/vuejs_logo.svg",
+    name: "VueJS",
+    badge: {
+      name: "Tech",
+    },
+  },
+  {
+    image: "images/javascript_logo.svg",
     name: "JavaScript",
     badge: {
-      name: "product",
+      name: "Tech",
     },
   },
   {
-    image: "/images/html5_logo.svg",
-    name: "HTML5",
+    image: "images/typescript_logo.svg",
+    name: "TypeScript",
     badge: {
-      name: "product",
+      name: "Tech",
     },
   },
   {
-    image: "/images/css3_logo.svg",
-    name: "CSS3",
+    image: "images/nodejs_logo.svg",
+    name: "NodeJS",
     badge: {
-      name: "product",
+      name: "Tech",
     },
   },
-
   {
-    image: "/images/cPanel_logo.svg",
-    name: "cPanel",
+    image: "images/postgresql_logo.svg",
+    name: "PostgreSQL",
     badge: {
-      name: "product",
+      name: "Tech",
+    },
+  },
+  {
+    image: "images/python_logo.svg",
+    name: "Python",
+    badge: {
+      name: "Tech",
+    },
+  },
+  {
+    image: "images/aws_logo.svg",
+    name: "AWS",
+    badge: {
+      name: "Tech",
+    },
+  },
+  {
+    image: "images/docker_logo.svg",
+    name: "Docker",
+    badge: {
+      name: "Tech",
+    },
+  },
+  {
+    image: "images/npm_logo.svg",
+    name: "NPM",
+    badge: {
+      name: "Tech",
     },
   },
 ];
 
 export const SoftwareTools = [
   {
-    image: "/images/vscode_logo.svg",
-    name: "VS Code",
+    image: "images/linear_logo.svg",
+    name: "Linear",
     badge: {
-      name: "Tech",
+      name: "Product",
     },
   },
   {
-    image: "/images/slack_logo.svg",
-    name: "Slack",
+    image: "images/jira_logo.svg",
+    name: "Jira",
+    badge: {
+      name: "Product",
+    },
+  },
+  {
+    image: "images/salesforce_logo.svg",
+    name: "Salesforce",
+    badge: {
+      name: "Product",
+    },
+  },
+  {
+    image: "images/amplitude_logo.svg",
+    name: "Amplitude",
+    badge: {
+      name: "Product",
+    },
+  },
+  {
+    image: "images/datadog_logo.svg",
+    name: "DataDog",
+    badge: {
+      name: "Product",
+    },
+  },
+  {
+    image: "images/figma_logo.svg",
+    name: "Figma",
+    badge: {
+      name: "Design",
+    },
+  },
+  {
+    image: "images/acc_logo.svg",
+    name: "Adobe CS",
+    badge: {
+      name: "Design",
+    },
+  },
+  {
+    image: "images/sendgrid_logo.svg",
+    name: "SendGrid",
     badge: {
       name: "Comms",
     },
   },
   {
-    image: "/images/github_logo.svg",
-    name: "GitHub",
+    image: "images/intercom_logo.svg",
+    name: "Intercom",
     badge: {
-      name: "product",
+      name: "Comms",
     },
   },
   {
-    image: "/images/vscode_logo.svg",
-    name: "Agile",
+    image: "images/postman_logo.svg",
+    name: "Postman",
     badge: {
-      name: "product",
+      name: "Testing",
     },
   },
   {
-    image: "/images/vscode_logo.svg",
-    name: "Agile",
+    image: "images/notion_logo.svg",
+    name: "Notion",
     badge: {
-      name: "product",
+      name: "Docs",
     },
   },
   {
-    image: "/images/vscode_logo.svg",
-    name: "Agile",
+    image: "images/arc_logo.svg",
+    name: "Arc Browser",
     badge: {
-      name: "product",
+      name: "IYKYK",
     },
   },
 ];
