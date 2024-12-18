@@ -11,11 +11,11 @@ interface ToolGridProps {
 
 export const ToolGrid = ({ tools }: { tools: ToolGridProps[] }) => {
   return (
-    <div className="flex p-4 gap-3 items-center mt-4 flex-wrap">
+    <div className="flex px-4 pb-4 gap-3 items-center mt-4 flex-wrap">
       {tools.map((tool, i) => (
         <div
           key={i}
-          className="rounded-md bg-secondary items-center flex flex-col justify-between p-4 pb-3 w-[6.75rem] h-40"
+          className="rounded-md bg-secondary items-center flex flex-col justify-between py-4 w-[6.75rem] h-40"
         >
           <div className="h-[60px] flex items-center">
             <Image
