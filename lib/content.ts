@@ -34,13 +34,13 @@ export const TechTools = [
       name: "Tech",
     },
   },
-  {
-    image: "images/nodejs_logo.svg",
-    name: "NodeJS",
-    badge: {
-      name: "Tech",
-    },
-  },
+  // {
+  //   image: "images/nodejs_logo.svg",
+  //   name: "NodeJS",
+  //   badge: {
+  //     name: "Tech",
+  //   },
+  // },
   {
     image: "images/postgresql_logo.svg",
     name: "PostgreSQL",
@@ -80,6 +80,13 @@ export const TechTools = [
 
 export const SoftwareTools = [
   {
+    image: "images/amplitude_logo.svg",
+    name: "Amplitude",
+    badge: {
+      name: "Product",
+    },
+  },
+  {
     image: "images/linear_logo.svg",
     name: "Linear",
     badge: {
@@ -96,13 +103,6 @@ export const SoftwareTools = [
   {
     image: "images/salesforce_logo.svg",
     name: "Salesforce",
-    badge: {
-      name: "Product",
-    },
-  },
-  {
-    image: "images/amplitude_logo.svg",
-    name: "Amplitude",
     badge: {
       name: "Product",
     },
