@@ -57,6 +57,7 @@ export const TechTools = [
   },
   {
     image: "images/aws_logo.svg",
+    imageDark: "images/aws_logo_dark.svg",
     name: "AWS",
     badge: {
       name: "Tech",

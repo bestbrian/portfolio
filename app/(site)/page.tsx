@@ -189,7 +189,9 @@ export default function Home() {
           </SplitLayout>
         </section>
         <section className="mt-16">
-          <ContactForm />
+          <SplitLayout section="CONTACT">
+            <ContactForm />
+          </SplitLayout>
         </section>
       </div>
     </main>

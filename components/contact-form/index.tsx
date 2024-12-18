@@ -27,6 +27,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
 
 const FormSchema = z.object({
+  name: z.string().min(2, { message: "Please enter at least 2 characters." }),
   email: z.string().email({ message: "Please enter a valid email address." }),
   message: z
     .string()
@@ -73,11 +74,23 @@ export function ContactForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
-        <FormLabel>
-          <h2>Let&apos;s connect</h2>
-        </FormLabel>
-        <FormDescription>Contact me</FormDescription>
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="space-y-6 pt-4 pb-16"
+      >
+        <FormField
+          control={form.control}
+          name="name"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Name</FormLabel>
+              <FormControl>
+                <Input placeholder="John Doe" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
         <FormField
           control={form.control}
           name="email"
@@ -85,7 +98,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="Enter your email" {...field} />
+                <Input placeholder="johndoe@gmail.com" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -98,13 +111,15 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>Message</FormLabel>
               <FormControl>
-                <Textarea placeholder="Enter your message" {...field} />
+                <Textarea placeholder="What can I help you with?" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit" className="w-full">
+          Submit
+        </Button>
       </form>
     </Form>
   );
