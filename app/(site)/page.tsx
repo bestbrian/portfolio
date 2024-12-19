@@ -32,6 +32,16 @@ export default function Home() {
       <div>
         <section className="flex flex-col gap-12 my-20">
           <SplitLayout>
+            <div className="flex justify-center">
+              <Image
+                src="/images/brian_image.jpeg"
+                alt="Brian Best"
+                height={360}
+                width={360}
+                className="object-center object-cover rounded-md"
+                priority
+              />
+            </div>
             <h2 className="text-center font-subway mt-8 mb-4 text-3xl dark:text-white">
               HI, MY NAME IS BRIAN
               {/* <br></br>AND I AM THE BEST */}
@@ -67,7 +77,7 @@ export default function Home() {
                 <li>
                   <b>Better</b>: Designed and implemented modular email systems
                   during a decade-defining mortgage boom, boosting refinance
-                  signups by ___% and pre-approval rates by ___%. Built drip
+                  signups by 200%+ and pre-approval rates by 300%+. Built drip
                   automations for strategic partners like Amex, NerdWallet, and
                   Credit Karma, increasing stickiness and ROI.
                 </li>

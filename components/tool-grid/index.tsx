@@ -15,7 +15,7 @@ export const ToolGrid = ({ tools }: { tools: ToolGridProps[] }) => {
       {tools.map((tool, i) => (
         <div
           key={i}
-          className="rounded-md bg-secondary items-center flex flex-col justify-between py-4 w-[6.75rem] h-40"
+          className="rounded-md bg-card items-center flex flex-col justify-between py-4 w-[6.75rem] h-40"
         >
           <div className="h-[60px] flex items-center">
             <Image
@@ -49,7 +49,7 @@ export const ToolGrid = ({ tools }: { tools: ToolGridProps[] }) => {
           </div>
           <div className="flex flex-col items-center justify-center gap-2">
             <p className="text-sm">{tool.name}</p>
-            <Badge className="uppercase rounded-sm bg-primary text-black border-primary font-mono text-xs">
+            <Badge className="uppercase rounded-sm bg-card text-black border-primary font-mono text-xs">
               {tool.badge.name}
             </Badge>
           </div>

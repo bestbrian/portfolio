@@ -30,7 +30,7 @@ export const EventItem = ({ title, body, image, timeline }: EventProps) => {
         </div>
       </div>
 
-      <div className="flex justify-start text-muted">{timeline}</div>
+      <div className="flex justify-start text-primary">{timeline}</div>
     </div>
   );
 };

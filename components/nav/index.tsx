@@ -14,6 +14,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { ModeSwitcher } from "../mode-switcher";
+import { Button } from "../ui/button";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -72,14 +73,28 @@ export function Nav() {
                         className="object-cover rounded-md"
                         priority
                       />
-                      <div className="font-subway mt-4 text-lg font-medium relative z-10 [text-shadow:_0_1px_0_rgb(0_0_0_/_80%)]">
+                      <div
+                        className="font-subway mt-4 text-lg font-medium relative z-10 [text-shadow:_0_1px_0_rgb(0_0_0_/_80%)]"
+                        style={{ color: "white" }}
+                      >
                         BRIAN BEST
                       </div>
-                      <p className="font-satoshi text-xs leading-tight relative z-10 [text-shadow:_0_1px_0_rgb(0_0_0_/_80%)]">
+                      <p
+                        className="font-satoshi text-xs leading-tight relative z-10 [text-shadow:_0_1px_0_rgb(0_0_0_/_80%)]"
+                        style={{ color: "white" }}
+                      >
                         Product Manager, Software Engineer
                       </p>
                     </a>
                   </NavigationMenuLink>
+                  {/* <div>
+                    <Button type="submit" className="w-full">
+                      Submit
+                    </Button>
+                    <Button type="submit" className="w-full">
+                      Submit
+                    </Button>
+                  </div> */}
                 </li>
                 <ListItem title="Innovative Leader">
                   {/* Y Combinator alum driving SaaS growth through strategy,
