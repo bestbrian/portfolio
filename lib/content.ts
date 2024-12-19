@@ -169,109 +169,139 @@ export const SoftwareTools = [
 export const ProductSkills = [
   {
     name: "Product Strategy",
+    highlight: "card",
   },
   {
     name: "Roadmapping",
-    // highlight: "card",
+    highlight: "card",
   },
   {
     name: "Lifecycle Management",
-    // highlight: "destructive",
+    highlight: "card",
   },
   {
     name: "Agile Methodologies",
+    highlight: "card",
   },
   {
     name: "Market Research",
+    highlight: "card",
   },
   {
     name: "Data Analysis",
+    highlight: "card",
   },
   {
     name: "Go-to-Market Strategies",
+    highlight: "card",
   },
   {
     name: "Feature Prioritization",
+    highlight: "card",
   },
   {
     name: "Decision Making",
+    highlight: "card",
   },
 ];
 
 export const CollabSkills = [
   {
     name: "Cross-Functional Leadership",
+    highlight: "card",
   },
   {
     name: "Stakeholder Management",
+    highlight: "card",
   },
   {
     name: "Team Building & Mentorship",
+    highlight: "card",
   },
   {
     name: "Communication",
+    highlight: "card",
   },
   {
     name: "Negotiation",
+    highlight: "card",
   },
   {
     name: "Performance Tracking",
+    highlight: "card",
   },
 ];
 
 export const TechnicalSkills = [
   {
     name: "JavaScript",
+    highlight: "card",
   },
   {
     name: "Python",
+    highlight: "card",
   },
   {
     name: "React",
+    highlight: "card",
   },
   {
     name: "Node.js",
+    highlight: "card",
   },
   {
     name: "SQL",
+    highlight: "card",
   },
   {
     name: "RESTful APIs",
+    highlight: "card",
   },
   {
     name: "OAuth",
+    highlight: "card",
   },
   {
     name: "Webhooks",
+    highlight: "card",
   },
   {
     name: "HTML & CSS",
+    highlight: "card",
   },
   {
     name: "SaaS Systems",
+    highlight: "card",
   },
   {
     name: "Scalability",
+    highlight: "card",
   },
 ];
 
 export const MarketingSkills = [
   {
     name: "CRM",
+    highlight: "card",
   },
   {
     name: "Retention Strategies",
+    highlight: "card",
   },
   {
     name: "Personalization Algorithms",
+    highlight: "card",
   },
   {
     name: "PLG",
+    highlight: "card",
   },
   {
     name: "User Behavior Analysis",
+    highlight: "card",
   },
   {
     name: "A/B Testing",
+    highlight: "card",
   },
 ];
