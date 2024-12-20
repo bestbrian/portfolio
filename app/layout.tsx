@@ -1,5 +1,7 @@
+import * as amplitude from "@amplitude/analytics-browser";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "next-themes";
@@ -7,6 +9,7 @@ import { Nav } from "@/components/nav";
 import { siteConfig } from "./config/site";
 import localFont from "@next/font/local";
 import { IBM_Plex_Mono } from "@next/font/google";
+import AmplitudeContextProvider from "@/components/ui/telemetry-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 const mono = IBM_Plex_Mono({
@@ -96,7 +99,7 @@ export const metadata: Metadata = {
     creator: "@shadcn",
   },
   icons: {
-    icon: "/b_logo.ico",
+    icon: "/icon.ico",
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
@@ -110,6 +113,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <Script
+          src="https://cdn.amplitude.com/script/f35f9b509af29436e226d9ff53b2b266.js"
+          strategy="afterInteractive"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));
+              window.amplitude.init('f35f9b509af29436e226d9ff53b2b266', {
+                fetchRemoteConfig: true,
+                autocapture: true
+              });
+            `,
+          }}
+        />
+      </head>
       <body
         className={`${inter.className} ${subway.variable} ${satoshi.variable} ${mono.variable} px-4 md:px-0`}
       >

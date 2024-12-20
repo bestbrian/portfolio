@@ -11,6 +11,7 @@
     "update-schema": "npx sanity@latest schema extract && npx sanity@latest typegen generate"
   },
   "dependencies": {
+    "@amplitude/analytics-browser": "^2.11.10",
     "@hookform/resolvers": "^3.9.1",
     "@next/font": "^14.2.15",
     "@portabletext/react": "^3.1.0",
