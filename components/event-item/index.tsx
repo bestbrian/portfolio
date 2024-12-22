@@ -5,11 +5,20 @@ interface EventProps {
   body: string;
   image: StaticImageData;
   timeline: string;
+  disableHover?: boolean;
 }
 
-export const EventItem = ({ title, body, image, timeline }: EventProps) => {
+export const EventItem = ({
+  title,
+  body,
+  image,
+  timeline,
+  disableHover,
+}: EventProps) => {
   return (
-    <div className="inline-flex justify-between items-start w-full p-4 hover:bg-secondary rounded-md">
+    <div
+      className={`inline-flex justify-between items-start w-full p-4 ${!disableHover && "hover:bg-secondary"} rounded-md`}
+    >
       <div className="flex gap-4 items-center">
         <Image
           src={image}

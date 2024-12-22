@@ -1,12 +1,11 @@
 export const siteConfig = {
   name: "Brian Best",
-  url: "https://ui.shadcn.com",
-  ogImage: "https://ui.shadcn.com/og.jpg",
+  url: "https://brianbest.dev",
+  ogImage: "/images/brian_image.jpeg",
   description:
-    "Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.",
+    "Data-driven product leader & Y Combinator alum who builds user-centric platforms, automates workflows, and drives growth for SaaS, retail, & FinTech.",
   links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn-ui/ui",
+    github: "https://github.com/bestbrian",
   },
 };
 

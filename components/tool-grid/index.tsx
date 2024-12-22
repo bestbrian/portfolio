@@ -49,7 +49,7 @@ export const ToolGrid = ({ tools }: { tools: ToolGridProps[] }) => {
           </div>
           <div className="flex flex-col items-center justify-center gap-2">
             <p className="text-sm">{tool.name}</p>
-            <Badge className="uppercase rounded-sm bg-card text-black border-primary font-mono text-xs">
+            <Badge className="uppercase rounded-sm bg-card text-primary border-primary font-mono text-xs light:text-black">
               {tool.badge.name}
             </Badge>
           </div>

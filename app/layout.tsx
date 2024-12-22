@@ -70,8 +70,8 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: "shadcn",
-      url: "https://shadcn.com",
+      name: "Brian Best",
+      url: "https://brianbest.dev",
     },
   ],
   creator: "shadcn",
@@ -99,7 +99,7 @@ export const metadata: Metadata = {
     creator: "@shadcn",
   },
   icons: {
-    icon: "/icon.ico",
+    icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
@@ -115,14 +115,14 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <Script
-          src="https://cdn.amplitude.com/script/f35f9b509af29436e226d9ff53b2b266.js"
+          src={`https://cdn.amplitude.com/script/${process.env.NEXT_PUBLIC_AMPLITUDE_API_KEY}.js`}
           strategy="afterInteractive"
         />
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));
-              window.amplitude.init('f35f9b509af29436e226d9ff53b2b266', {
+              window.amplitude.init('${process.env.NEXT_PUBLIC_AMPLITUDE_API_KEY}', {
                 fetchRemoteConfig: true,
                 autocapture: true
               });

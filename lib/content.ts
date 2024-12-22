@@ -8,6 +8,7 @@ export const TechTools = [
   },
   {
     image: "images/nextjs_logo.svg",
+    imageDark: "images/nextjs_logo_dark.svg",
     name: "NextJS",
     badge: {
       name: "Tech",
@@ -95,10 +96,10 @@ export const SoftwareTools = [
     },
   },
   {
-    image: "images/jira_logo.svg",
-    name: "Jira",
+    image: "images/git_logo.svg", //change to atlassian maybe
+    name: "GitHub",
     badge: {
-      name: "Product",
+      name: "Tools",
     },
   },
   {
@@ -138,6 +139,7 @@ export const SoftwareTools = [
   },
   {
     image: "images/intercom_logo.svg",
+    imageDark: "images/intercom_logo_dark.svg",
     name: "Intercom",
     badge: {
       name: "Comms",
@@ -152,6 +154,7 @@ export const SoftwareTools = [
   },
   {
     image: "images/notion_logo.svg",
+    imageDark: "images/notion_logo_dark.svg",
     name: "Notion",
     badge: {
       name: "Docs",
