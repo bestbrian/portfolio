@@ -292,12 +292,14 @@ export default function Home() {
               body="York University, Toronto"
               timeline="2010-2014"
               image={yorkuLogo}
+              disableHover={true}
             />
             <EventItem
               title="Professional Scrum Master II"
               body="Scrum.org"
               timeline="2024"
               image={psmiiLogo}
+              disableHover={true}
             />
           </SplitLayout>
         </section>
