@@ -39,7 +39,9 @@ export const EventItem = ({
         </div>
       </div>
 
-      <div className="flex justify-start text-primary">{timeline}</div>
+      <div className="flex justify-start text-primary whitespace-nowrap">
+        {timeline}
+      </div>
     </div>
   );
 };

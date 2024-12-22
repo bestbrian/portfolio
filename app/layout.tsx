@@ -131,7 +131,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.className} ${subway.variable} ${satoshi.variable} ${mono.variable} px-4 md:px-0`}
+        className={`${inter.className} ${subway.variable} ${satoshi.variable} ${mono.variable} px-0 md:px-4`}
       >
         <ThemeProvider
           attribute="class"

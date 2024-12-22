@@ -170,7 +170,7 @@ export default function Home() {
               <Tooltip>
                 <TooltipTrigger className="w-full">
                   <EventItem
-                    title="Co-Founder & Chief Operating Officer"
+                    title="Co-Founder & Chief&nbsp;Operating&nbsp;Officer"
                     body="BrandLoyal"
                     timeline="2014 &mdash; 2022"
                     image={brandloyalLogo}
@@ -288,7 +288,7 @@ export default function Home() {
 
           <SplitLayout section="EDUCATION">
             <EventItem
-              title="Bachelor of Human Resources Management"
+              title="Bachelor of Human Resources&nbsp;Management"
               body="York University, Toronto"
               timeline="2010-2014"
               image={yorkuLogo}
