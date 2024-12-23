@@ -303,7 +303,7 @@ export default function Home() {
             />
           </SplitLayout>
         </section>
-        <section className="mt-16">
+        <section className="mt-16" id="contact">
           <SplitLayout section="CONTACT">
             <ContactForm />
           </SplitLayout>

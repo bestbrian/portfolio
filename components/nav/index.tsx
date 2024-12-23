@@ -4,6 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { Download, Linkedin } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -16,99 +17,78 @@ import {
 import { ModeSwitcher } from "../mode-switcher";
 import { Button } from "../ui/button";
 
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-  },
-  {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
-  },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-  },
-];
-
 export function Nav() {
   return (
-    <nav className="flex items-center justify-center">
+    <div className="flex items-center justify-center font-satoshi sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>TLDR</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="bg-background/60 hover:bg-background/75 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+              TLDR
+            </NavigationMenuTrigger>
+
             <NavigationMenuContent>
-              <ul className="grid gap-3 p-4 md:w-[500px] lg:w-[600px] lg:grid-cols-[.75fr_1fr]">
+              <ul className="grid gap-3 p-4 md:w-[600px] lg:w-[700px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
-                    <a className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-2 no-underline outline-none focus:shadow-md relative">
-                      <Image
-                        src="/images/brian_image.jpeg"
-                        alt="Brian Best"
-                        fill
-                        className="object-cover rounded-md"
-                        priority
-                      />
-                      <div
-                        className="font-subway mt-4 text-lg font-medium relative z-10 [text-shadow:_0_1px_0_rgb(0_0_0_/_80%)]"
-                        style={{ color: "white" }}
-                      >
-                        BRIAN BEST
+                    <div className="flex h-full w-full select-none flex-col justify-end rounded-md outline-none focus:shadow-md relative">
+                      <div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-2 outline-none focus:shadow-md relative px-4">
+                        <Image
+                          src="/images/brian_image.jpeg"
+                          alt="Brian Best"
+                          fill
+                          className="object-cover rounded-md"
+                          priority
+                        />
+                        <div
+                          className="font-subway mt-4 text-lg font-medium relative z-10 [text-shadow:_0_1px_0_rgb(0_0_0_/_80%)]"
+                          style={{ color: "white" }}
+                        >
+                          BRIAN BEST
+                        </div>
+                        <p
+                          className="font-satoshi text-xs leading-tight relative z-10 [text-shadow:_0_1px_0_rgb(0_0_0_/_80%)]"
+                          style={{ color: "white" }}
+                        >
+                          Product Manager, Software Engineer
+                        </p>
                       </div>
-                      <p
-                        className="font-satoshi text-xs leading-tight relative z-10 [text-shadow:_0_1px_0_rgb(0_0_0_/_80%)]"
-                        style={{ color: "white" }}
-                      >
-                        Product Manager, Software Engineer
-                      </p>
-                    </a>
+
+                      <div className="flex gap-2 mt-2 w-full">
+                        <Button
+                          className="flex-1 gap-2"
+                          onClick={() =>
+                            window.open("/BrianBestResume.pdf", "_blank")
+                          }
+                        >
+                          <Download size={16} />
+                          Download CV
+                        </Button>
+                        <Button
+                          className="flex-1 gap-2"
+                          onClick={() =>
+                            window.open(
+                              "https://linkedin.com/in/bestbrian",
+                              "_blank"
+                            )
+                          }
+                        >
+                          <Linkedin size={16} />
+                          LinkedIn
+                        </Button>
+                      </div>
+                    </div>
                   </NavigationMenuLink>
-                  {/* <div>
-                    <Button type="submit" className="w-full">
-                      Submit
-                    </Button>
-                    <Button type="submit" className="w-full">
-                      Submit
-                    </Button>
-                  </div> */}
                 </li>
                 <ListItem title="Innovative Leader">
-                  {/* Y Combinator alum driving SaaS growth through strategy,
-                  design, and development. */}
                   From co-founding Y Combinator &apos;18 startups to scaling
                   SaaS products, I blend strategy, design, and development to
                   drive measurable growth.
                 </ListItem>
                 <ListItem title="Builder of Solutions">
-                  {/* From 0-1 ideas to scalable platforms, I deliver impactful
-                  digital products. */}
                   I design, launch, and optimize digital platforms - delivering
-                  impactful 0-1 projects in FinTech, marketing automation, and
-                  UX.
+                  impactful 0-1 projects in FinTech, marketing automation,
+                  and&nbsp;UX.
                 </ListItem>
                 <ListItem title="Agile Champion">
                   Certified Scrum Master enabling teams to ship user-focused
@@ -117,35 +97,29 @@ export function Nav() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-          {/* <NavigationMenuItem>
-            <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                {components.map((component) => (
-                  <ListItem
-                    key={component.title}
-                    title={component.title}
-                    href={component.href}
-                  >
-                    {component.description}
-                  </ListItem>
-                ))}
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/docs" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Documentation
+            <button
+              onClick={() => {
+                const element = document.getElementById("contact");
+                element?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              <NavigationMenuLink
+                className={cn(
+                  navigationMenuTriggerStyle(),
+                  "bg-background/60 hover:bg-background/75 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+                )}
+              >
+                Contact
               </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem> */}
+            </button>
+          </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
-      <div className="ml-10">
+      <div className="ml-7 mr-2">
         <ModeSwitcher />
       </div>
-    </nav>
+    </div>
   );
 }
 
