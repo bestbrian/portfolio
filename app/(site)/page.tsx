@@ -1,10 +1,12 @@
 import Image from "next/image";
 import { ContactForm } from "@/components/contact-form";
 import { Badge } from "@/components/ui/badge";
+import { motion } from "motion/react";
 import { SplitLayout } from "@/components/split-layout";
 import { EventItem } from "@/components/event-item";
 import { BadgeGrid } from "@/components/badge-grid";
 import { ToolGrid } from "@/components/tool-grid";
+
 import {
   Tooltip,
   TooltipContent,
@@ -25,6 +27,7 @@ import vroomLogo from "/public/images/vroom_logo.jpeg";
 import musthLogo from "/public/images/musth_logo.jpg";
 import psmiiLogo from "/public/images/psmii_logo.png";
 import yorkuLogo from "/public/images/yorku_logo.jpg";
+import { PopBounce } from "../../components/pop-bounce";
 
 export default function Home() {
   return (
@@ -33,14 +36,16 @@ export default function Home() {
         <section className="flex flex-col gap-12 my-20">
           <SplitLayout>
             <div className="flex justify-center">
-              <Image
-                src="/images/brian_image.jpeg"
-                alt="Brian Best"
-                height={360}
-                width={360}
-                className="object-center object-cover rounded-md"
-                priority
-              />
+              <PopBounce>
+                <Image
+                  src="/images/brian_image.jpeg"
+                  alt="Brian Best"
+                  height={360}
+                  width={360}
+                  className="object-center object-cover rounded-md"
+                  priority
+                />
+              </PopBounce>
             </div>
             <h2 className="text-center font-subway mt-8 mb-4 text-3xl dark:text-white">
               HI, MY NAME IS BRIAN
