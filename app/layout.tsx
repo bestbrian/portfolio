@@ -62,11 +62,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   description: siteConfig.description,
   keywords: [
-    "Next.js",
-    "React",
-    "Tailwind CSS",
-    "Server Components",
-    "Radix UI",
+    "Product Manager",
+    "Software Engineer",
+    "Marketing Manager",
+    "Growth Manager",
+    "Tech",
+    "FinTech",
+    "MarTech",
   ],
   authors: [
     {
@@ -74,7 +76,7 @@ export const metadata: Metadata = {
       url: "https://brianbest.dev",
     },
   ],
-  creator: "shadcn",
+  creator: "Brian Best",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -91,13 +93,13 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.description,
-    images: [siteConfig.ogImage],
-    creator: "@shadcn",
-  },
+  // twitter: {
+  //   card: "summary_large_image",
+  //   title: siteConfig.name,
+  //   description: siteConfig.description,
+  //   images: [siteConfig.ogImage],
+  //   creator: "@shadcn",
+  // },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",

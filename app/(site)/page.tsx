@@ -27,7 +27,8 @@ import vroomLogo from "/public/images/vroom_logo.jpeg";
 import musthLogo from "/public/images/musth_logo.jpg";
 import psmiiLogo from "/public/images/psmii_logo.png";
 import yorkuLogo from "/public/images/yorku_logo.jpg";
-import { PopBounce } from "../../components/pop-bounce";
+import { SlidePhase } from "../../components/slide-phase";
+import { PopBounce } from "@/components/pop-bounce";
 
 export default function Home() {
   return (
@@ -47,28 +48,32 @@ export default function Home() {
                 />
               </PopBounce>
             </div>
-            <h2 className="text-center font-subway mt-8 mb-4 text-3xl dark:text-white">
-              HI, MY NAME IS BRIAN
-              {/* <br></br>AND I AM THE BEST */}
-            </h2>
+            <SlidePhase delay={0.3}>
+              <h2 className="text-center font-subway mt-8 mb-4 text-3xl dark:text-white">
+                HI, MY NAME IS BRIAN
+                {/* <br></br>AND I AM THE BEST */}
+              </h2>
+            </SlidePhase>
           </SplitLayout>
         </section>
         <section className="flex flex-col gap-12">
           <SplitLayout section="SUMMARY">
             <div className="p-4">
-              <p>
-                Data-driven product leader and Y Combinator alum who builds
-                tools and platforms that solve real problems, simplify
-                workflows, and drive measurable impact. From co-founding
-                BrandLoyal, where I pioneered retail feedback automation, to
-                leading product and systems development at Better, Vroom, and
-                Musth, I specialize in creating scalable, user-centric solutions
-                that deliver results.
-                <br />
-                <br />
-                Some of my highlights include:
-                <br />
-              </p>
+              <SlidePhase>
+                <p>
+                  Data-driven product leader and Y Combinator alum who builds
+                  tools and platforms that solve real problems, simplify
+                  workflows, and drive measurable impact. From co-founding
+                  BrandLoyal, where I pioneered retail feedback automation, to
+                  leading product and systems development at Better, Vroom, and
+                  Musth, I specialize in creating scalable, user-centric
+                  solutions that deliver results.
+                  <br />
+                  <br />
+                  Some of my highlights include:
+                  <br />
+                </p>
+              </SlidePhase>
               <ul className="list-disc pt-2 pl-4 space-y-2">
                 <li>
                   <b>BrandLoyal</b>: Transformed the way retail businesses
@@ -107,7 +112,8 @@ export default function Home() {
               </p>
             </div>
           </SplitLayout>
-
+        </section>
+        <section className="flex flex-col gap-12">
           <SplitLayout section="EXPERIENCE">
             <TooltipProvider>
               <Tooltip>
@@ -275,14 +281,16 @@ export default function Home() {
               </Tooltip>
             </TooltipProvider>
           </SplitLayout>
-
+        </section>
+        <section className="flex flex-col gap-12">
           <SplitLayout section="SKILLS">
             <BadgeGrid title="Product Management" badges={ProductSkills} />
             {/* <BadgeGrid title="Technical" badges={TechnicalSkills} /> */}
             {/* <BadgeGrid title="Collaboration" badges={CollabSkills} /> */}
             <BadgeGrid title="Marketing" badges={MarketingSkills} />
           </SplitLayout>
-
+        </section>
+        <section className="flex flex-col gap-12">
           <SplitLayout section="TECH">
             <ToolGrid tools={TechTools} />
           </SplitLayout>
@@ -290,7 +298,8 @@ export default function Home() {
           <SplitLayout section="TOOLS">
             <ToolGrid tools={SoftwareTools} />
           </SplitLayout>
-
+        </section>
+        <section className="flex flex-col gap-12">
           <SplitLayout section="EDUCATION">
             <EventItem
               title="Bachelor of Human Resources&nbsp;Management"
