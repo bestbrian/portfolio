@@ -1,4 +1,7 @@
+"use client";
+
 import Image, { StaticImageData } from "next/image";
+import { motion } from "motion/react";
 
 interface EventProps {
   title: string;
@@ -16,7 +19,11 @@ export const EventItem = ({
   disableHover,
 }: EventProps) => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: 0.2 }}
       className={`inline-flex justify-between items-start w-full p-4 ${!disableHover && "hover:bg-secondary"} rounded-md`}
     >
       <div className="flex gap-4 items-center">
@@ -42,6 +49,6 @@ export const EventItem = ({
       <div className="flex justify-start text-primary whitespace-nowrap">
         {timeline}
       </div>
-    </div>
+    </motion.div>
   );
 };
