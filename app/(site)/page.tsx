@@ -37,43 +37,38 @@ export default function Home() {
         <section className="flex flex-col gap-12 my-20">
           <SplitLayout>
             <div className="flex justify-center">
-              <PopBounce>
-                <Image
-                  src="/images/brian_image.jpeg"
-                  alt="Brian Best"
-                  height={360}
-                  width={360}
-                  className="object-center object-cover rounded-md"
-                  priority
-                />
-              </PopBounce>
+              <Image
+                src="/images/brian_image.jpeg"
+                alt="Brian Best"
+                height={360}
+                width={360}
+                className="object-center object-cover rounded-md"
+                priority
+              />
             </div>
-            <SlidePhase delay={0.3}>
-              <h2 className="text-center font-subway mt-8 mb-4 text-3xl dark:text-white">
-                HI, MY NAME IS BRIAN
-                {/* <br></br>AND I AM THE BEST */}
-              </h2>
-            </SlidePhase>
+
+            <h2 className="text-center font-subway mt-8 mb-4 text-3xl dark:text-white">
+              HI, MY NAME IS BRIAN <br />
+              AND I AM THE BEST
+            </h2>
           </SplitLayout>
         </section>
         <section className="flex flex-col gap-12">
           <SplitLayout section="SUMMARY">
             <div className="p-4">
-              <SlidePhase>
-                <p>
-                  Data-driven product leader and Y Combinator alum who builds
-                  tools and platforms that solve real problems, simplify
-                  workflows, and drive measurable impact. From co-founding
-                  BrandLoyal, where I pioneered retail feedback automation, to
-                  leading product and systems development at Better, Vroom, and
-                  Musth, I specialize in creating scalable, user-centric
-                  solutions that deliver results.
-                  <br />
-                  <br />
-                  Some of my highlights include:
-                  <br />
-                </p>
-              </SlidePhase>
+              <p>
+                Data-driven product leader and Y Combinator alum who builds
+                tools and platforms that solve real problems, simplify
+                workflows, and drive measurable impact. From co-founding
+                BrandLoyal, where I pioneered retail feedback automation, to
+                leading product and systems development at Better, Vroom, and
+                Musth, I specialize in creating scalable, user-centric solutions
+                that deliver results.
+                <br />
+                <br />
+                Some of my highlights include:
+                <br />
+              </p>
               <ul className="list-disc pt-2 pl-4 space-y-2">
                 <li>
                   <b>BrandLoyal</b>: Transformed the way retail businesses
