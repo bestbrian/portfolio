@@ -171,39 +171,42 @@ export const SoftwareTools = [
 
 export const ProductSkills = [
   {
-    name: "Product Strategy",
+    name: "Product Roadmapping",
     highlight: "card",
-  },
-  {
-    name: "Roadmapping",
-    highlight: "card",
+    tooltip:
+      "Creating plans that align product goals with company objectives and user needs.",
   },
   {
     name: "Lifecycle Management",
     highlight: "card",
+    tooltip: "brian is cool",
   },
   {
     name: "Agile Methodologies",
     highlight: "card",
   },
   {
-    name: "Market Research",
+    name: "Cross-Functional Leadership",
     highlight: "card",
   },
   {
-    name: "Data Analysis",
+    name: "Data-Driven Decisions",
     highlight: "card",
   },
   {
-    name: "Go-to-Market Strategies",
+    name: "Customer Feedback",
     highlight: "card",
   },
   {
-    name: "Feature Prioritization",
+    name: "Go-to-Market Strategy",
     highlight: "card",
   },
   {
-    name: "Decision Making",
+    name: "Growth & Retention",
+    highlight: "card",
+  },
+  {
+    name: "Stakeholder Communication",
     highlight: "card",
   },
 ];
