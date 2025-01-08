@@ -1,3 +1,5 @@
+"use client";
+
 import { SplitLayout } from "../split-layout";
 import betterLogo from "/public/images/better_logo.jpg";
 import brandloyalLogo from "/public/images/brandloyal_logo.jpeg";
@@ -10,22 +12,33 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { EventItem } from "@/components/event-item";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "../ui/drawer";
+import { Button } from "../ui/button";
 
 export const Experience = () => {
   return (
     <section className="flex flex-col gap-12">
       <SplitLayout section="EXPERIENCE">
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger className="w-full">
-              <EventItem
-                title="Senior Product Manager"
-                body="Musth"
-                timeline="2022 &mdash; 2024"
-                image={musthLogo}
-              />
-            </TooltipTrigger>
-            <TooltipContent>
+        <Drawer>
+          <DrawerTrigger className="w-full">
+            <EventItem
+              title="Senior Product Manager"
+              body="Musth"
+              timeline="2022 &mdash; 2024"
+              image={musthLogo}
+            />
+          </DrawerTrigger>
+          <DrawerContent>
+            <div className="mx-auto max-w-xl p-4">
               <h3>Key Achievements</h3>
               <ul className="list-disc pt-2 pl-4 space-y-2">
                 <li>
@@ -46,20 +59,21 @@ export const Experience = () => {
                   improvement.
                 </li>
               </ul>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger className="w-full">
-              <EventItem
-                title="Software Engineer"
-                body="Better"
-                timeline="2020 &mdash; 2022"
-                image={betterLogo}
-              />
-            </TooltipTrigger>
-            <TooltipContent>
+            </div>
+          </DrawerContent>
+        </Drawer>
+
+        <Drawer>
+          <DrawerTrigger className="w-full">
+            <EventItem
+              title="Software Engineer"
+              body="Better"
+              timeline="2020 &mdash; 2022"
+              image={betterLogo}
+            />
+          </DrawerTrigger>
+          <DrawerContent>
+            <div className="mx-auto max-w-xl p-4">
               <h3>Key Achievements</h3>
               <ul className="list-disc pt-2 pl-4 space-y-2">
                 <li>
@@ -73,20 +87,21 @@ export const Experience = () => {
                   key performance benchmarks.
                 </li>
               </ul>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger className="w-full">
-              <EventItem
-                title="Co-Founder & Chief&nbsp;Operating&nbsp;Officer"
-                body="BrandLoyal"
-                timeline="2014 &mdash; 2022"
-                image={brandloyalLogo}
-              />
-            </TooltipTrigger>
-            <TooltipContent>
+            </div>
+          </DrawerContent>
+        </Drawer>
+
+        <Drawer>
+          <DrawerTrigger className="w-full">
+            <EventItem
+              title="Co-Founder & Chief&nbsp;Operating&nbsp;Officer"
+              body="BrandLoyal"
+              timeline="2014 &mdash; 2022"
+              image={brandloyalLogo}
+            />
+          </DrawerTrigger>
+          <DrawerContent>
+            <div className="mx-auto max-w-xl p-4">
               <h3>Key Achievements</h3>
               <ul className="list-disc pt-2 pl-4 space-y-2">
                 <li>
@@ -131,20 +146,20 @@ export const Experience = () => {
                   to meet strategic goals.
                 </li>
               </ul>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger className="w-full">
-              <EventItem
-                title="Software Engineer"
-                body="Vroom"
-                timeline="2018 &mdash; 2020"
-                image={vroomLogo}
-              />
-            </TooltipTrigger>
-            <TooltipContent>
+            </div>
+          </DrawerContent>
+        </Drawer>
+        <Drawer>
+          <DrawerTrigger className="w-full">
+            <EventItem
+              title="Software Engineer"
+              body="Vroom"
+              timeline="2018 &mdash; 2020"
+              image={vroomLogo}
+            />
+          </DrawerTrigger>
+          <DrawerContent>
+            <div className="mx-auto max-w-xl p-4">
               <h3>Key Achievements</h3>
               <ul className="list-disc pt-2 pl-4 space-y-2">
                 <li>
@@ -174,9 +189,9 @@ export const Experience = () => {
                   Vroom&apos;s growth goals.
                 </li>
               </ul>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
+            </div>
+          </DrawerContent>
+        </Drawer>
       </SplitLayout>
     </section>
   );
