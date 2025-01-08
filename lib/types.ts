@@ -33,11 +33,9 @@ export const animations = {
   // Container with children animations staggered (delayed by x + staggerTime)
   staggerContainer: (staggerTime: number = 0.1) => ({
     hidden: {
-      opacity: 0,
       transition: { when: "beforeChildren" },
     },
     show: {
-      opacity: 1,
       transition: {
         staggerChildren: staggerTime,
         duration: 0.3,
@@ -48,6 +46,9 @@ export const animations = {
 
   fadeIn: (duration: number = 0.3) => ({
     hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { duration: duration } },
+    show: {
+      opacity: 1,
+      transition: { duration: duration },
+    },
   }),
 };

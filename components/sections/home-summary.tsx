@@ -1,11 +1,25 @@
+"use client";
+import { motion } from "motion/react";
 import { SplitLayout } from "../split-layout";
 import Image from "next/image";
+import { EASE } from "@/lib/types";
 
 export const HomeSummary = () => {
   return (
     <section className="flex flex-col gap-12">
       <SplitLayout section="SUMMARY">
-        <div className="p-4">
+        <motion.div
+          className="p-4"
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+          }}
+          viewport={{ once: true }}
+          transition={{
+            ease: EASE.slideIn,
+            duration: 0.6,
+          }}
+        >
           <p>
             Data-driven product leader and Y Combinator alum who builds tools
             and platforms that solve real problems, simplify workflows, and
@@ -52,7 +66,7 @@ export const HomeSummary = () => {
             design, and strategy to craft products that delight users and drive
             business growth.
           </p>
-        </div>
+        </motion.div>
       </SplitLayout>
     </section>
   );

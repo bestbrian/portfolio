@@ -1,44 +1,37 @@
 "use client";
-import { motion, useAnimate } from "motion/react";
+import { motion } from "motion/react";
 import { SplitLayout } from "../split-layout";
 import Image from "next/image";
 import { animations, EASE } from "@/lib/types";
-import { useEffect } from "react";
 
 export const HomeHero = () => {
-  const [scope, animate] = useAnimate();
-
-  const sequence: [string, Record<string, any>, Record<string, any>?][] = [
-    ["#box", { x: 200 }, { duration: 1 }], // spin
-    ["#box", { x: -20, scale: 2, rotate: 360 }, { duration: 1 }], // scale
-    ["#box", { scale: 0.5, borderRadius: "50%" }, { duration: 1 }], // change color
-  ];
-
-  useEffect(() => {
-    animate(sequence);
-  }, []);
-
   return (
-    <section ref={scope} className="flex flex-col gap-2 my-20">
-      <motion.div
-        id="box"
-        style={{ width: 100, height: 100, backgroundColor: "blue" }}
-      ></motion.div>
+    <motion.section
+      className="flex flex-col gap-2 my-20"
+      variants={animations.fadeIn()}
+      initial="hidden"
+      animate="show"
+    >
       <div>
         <motion.h1
-          className="text-4xl mb-4"
+          className="text-4xl mb-4 font-subway"
           variants={animations.slideUp(true)}
+          animate={{ ...animations.slideUp().show }}
         >
           Work
         </motion.h1>
-        <motion.p className="text-muted" variants={animations.slideUp(true)}>
+        <motion.p
+          className="text-muted"
+          variants={animations.slideUp(true)}
+          animate={{ ...animations.slideUp().show, transition: { delay: 0.2 } }}
+        >
           An overview of my career
         </motion.p>
       </div>
       <SplitLayout>
         <motion.div
           className="flex justify-center"
-          variants={animations.imageFadeIn}
+          variants={animations.fadeIn(0.7)}
         >
           <Image
             src="/images/brian_image.jpeg"
@@ -52,12 +45,13 @@ export const HomeHero = () => {
 
         <motion.h2
           className="text-center font-subway mt-8 mb-4 text-3xl dark:text-white"
-          variants={animations.slideUp(true, 0.1, 5)}
+          variants={animations.slideUp()}
+          animate={{ ...animations.slideUp().show, transition: { delay: 0.3 } }}
         >
           HI, MY NAME IS BRIAN <br />
           AND I AM THE BEST
         </motion.h2>
       </SplitLayout>
-    </section>
+    </motion.section>
   );
 };

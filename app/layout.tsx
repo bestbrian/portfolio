@@ -144,6 +144,7 @@ export default function RootLayout({
         >
           <Nav />
           {children}
+          <div id="drawer-root" />
           <Toaster />
         </ThemeProvider>
       </body>
