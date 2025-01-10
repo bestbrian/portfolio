@@ -10,8 +10,8 @@
     --card-foreground: 142 5% 10%;
     --popover: 142 100% 95%;
     --popover-foreground: 142 100% 0%;
-    --primary: 142 100% 34%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 145 45% 40%; /* Muted forest green */
+    --primary-foreground: 0 0% 100%; /* White text on green */
     --secondary: 142 30% 70%;
     --secondary-foreground: 0 0% 0%;
     --muted: 104 30% 85%;
@@ -32,7 +32,7 @@
     --card-foreground: 142 5% 90%;
     --popover: 142 50% 5%;
     --popover-foreground: 142 5% 90%;
-    --primary: 142 100% 34%;
+    --primary: 145 45% 45%; /* Slightly brighter green for dark mode */
     --primary-foreground: 0 0% 100%;
     --secondary: 142 30% 10%;
     --secondary-foreground: 0 0% 100%;
