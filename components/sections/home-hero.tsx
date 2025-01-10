@@ -21,7 +21,7 @@ export const HomeHero = () => {
           Work
         </motion.h1>
         <motion.p
-          className="text-accent"
+          className="text-primary"
           variants={animations.slideUp(true)}
           animate={{ ...animations.slideUp().show, transition: { delay: 0.2 } }}
         >
