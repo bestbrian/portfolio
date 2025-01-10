@@ -27,7 +27,7 @@ export const BadgeGrid = ({
     <div className="p-4">
       <h3>{title}</h3>
       <div className="flex gap-3 items-center mt-4 flex-wrap">
-        <TooltipProvider>
+        <TooltipProvider delayDuration={100}>
           {badges.map((badge, i) =>
             badge.tooltip ? (
               <Tooltip key={i}>

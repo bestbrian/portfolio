@@ -179,35 +179,43 @@ export const ProductSkills = [
   {
     name: "Lifecycle Management",
     highlight: "card",
-    tooltip: "brian is cool",
+    tooltip: "Overseeing products from concept to launch and beyond.",
   },
   {
     name: "Agile Methodologies",
     highlight: "card",
+    tooltip: "Leading sprints, backlog prioritization, and iterative delivery.",
   },
   {
     name: "Cross-Functional Leadership",
     highlight: "card",
+    tooltip: "Aligning teams across Engineering, Design, Marketing, and Sales.",
   },
   {
     name: "Data-Driven Decisions",
     highlight: "card",
+    tooltip: "Using analytics to prioritize features and validate strategies.",
   },
   {
     name: "Customer Feedback",
     highlight: "card",
+    tooltip: "Translating user insights into impactful improvements.",
   },
   {
     name: "Go-to-Market Strategy",
     highlight: "card",
+    tooltip:
+      "Planning launches that drive adoption and stand out in the market.",
   },
   {
-    name: "Growth & Retention",
+    name: "Growth and Retention",
     highlight: "card",
+    tooltip: "Driving user acquisition and long-term engagement.",
   },
   {
     name: "Stakeholder Communication",
     highlight: "card",
+    tooltip: "Keeping teams and executives informed and aligned.",
   },
 ];
 
@@ -287,27 +295,46 @@ export const TechnicalSkills = [
 
 export const MarketingSkills = [
   {
-    name: "CRM",
+    name: "Product Marketing",
     highlight: "card",
+    tooltip:
+      "Crafting messaging and campaigns that resonate and drive adoption.",
+  },
+  {
+    name: "Customer Acquisition",
+    highlight: "card",
+    tooltip: "Designing campaigns to attract and convert users.",
   },
   {
     name: "Retention Strategies",
     highlight: "card",
+    tooltip:
+      "Developing programs to keep customers engaged and increase value.",
   },
   {
-    name: "Personalization Algorithms",
+    name: "Digital Marketing",
     highlight: "card",
+    tooltip: "Proficiency in Google Ads, Meta Ads, and email tools.",
   },
   {
-    name: "PLG",
+    name: "Conversion Optimization",
     highlight: "card",
+    tooltip:
+      "Boosting performance through A/B testing and user flow improvements.",
   },
   {
-    name: "User Behavior Analysis",
+    name: "Content and SEO",
     highlight: "card",
+    tooltip: "Creating impactful, discoverable content for organic growth.",
   },
   {
-    name: "A/B Testing",
+    name: "Campaign Analysis",
     highlight: "card",
+    tooltip: "Using data to measure and optimize marketing efforts.",
+  },
+  {
+    name: "Competitive Research",
+    highlight: "card",
+    tooltip: "Identifying trends and staying ahead of competitors.",
   },
 ];
