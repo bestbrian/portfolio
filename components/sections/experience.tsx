@@ -5,12 +5,6 @@ import betterLogo from "/public/images/better_logo.jpg";
 import brandloyalLogo from "/public/images/brandloyal_logo.jpeg";
 import vroomLogo from "/public/images/vroom_logo.jpeg";
 import musthLogo from "/public/images/musth_logo.jpg";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 import { EventItem } from "@/components/event-item";
 import {
   Drawer,
@@ -22,7 +16,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "../ui/drawer";
-import { Button } from "../ui/button";
+import { ExpandableCardDemo } from "../card-expand";
 
 export const Experience = () => {
   return (
@@ -62,6 +56,7 @@ export const Experience = () => {
             </div>
           </DrawerContent>
         </Drawer>
+        <ExpandableCardDemo />
 
         <Drawer>
           <DrawerTrigger className="w-full">
