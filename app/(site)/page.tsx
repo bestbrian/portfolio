@@ -13,6 +13,7 @@ import { HomeHero } from "@/components/sections/home-hero";
 import { HomeSummary } from "@/components/sections/home-summary";
 import { Experience } from "@/components/sections/experience";
 import { Skills } from "@/components/sections/skills";
+import { About } from "@/components/sections/about";
 
 export default function Home() {
   return (
@@ -31,6 +32,9 @@ export default function Home() {
           <SplitLayout section="TOOLS">
             <ToolGrid tools={SoftwareTools} />
           </SplitLayout>
+        </section>
+        <section className="flex">
+          <About />
         </section>
         <section className="flex flex-col gap-12">
           <SplitLayout section="EDUCATION">

@@ -1,5 +1,6 @@
 "use client";
 
+import { EASE } from "@/lib/types";
 import { motion } from "motion/react";
 
 interface SlidePhaseProps {
@@ -17,7 +18,7 @@ export const SlidePhase = ({ children, delay = 0 }: SlidePhaseProps) => {
       }}
       viewport={{ once: true }}
       transition={{
-        ease: [0.08, 0.65, 0.53, 0.96],
+        ease: EASE.slideIn,
         duration: 0.6,
         delay: delay * 0.2,
       }}

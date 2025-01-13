@@ -23,6 +23,10 @@ const config = {
       },
     },
     extend: {
+      spacing: {
+        13: "3.25rem",
+        "perfect-fourth": "1.33rem",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
