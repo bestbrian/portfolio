@@ -7,21 +7,21 @@ import { animations, EASE } from "@/lib/types";
 export const HomeHero = () => {
   return (
     <motion.section
-      className="flex flex-col gap-2 my-20"
+      className="flex flex-col gap-md my-section-padding"
       variants={animations.fadeIn()}
       initial="hidden"
       animate="show"
     >
       <div>
         <motion.h1
-          className="text-4xl mb-4 font-subway"
+          className="text-h1 mb-heading-body font-subway leading-heading"
           variants={animations.slideUp(true)}
           animate={{ ...animations.slideUp().show }}
         >
           Work
         </motion.h1>
         <motion.p
-          className="text-primary"
+          className="text-primary leading-paragraph"
           variants={animations.slideUp(true)}
           animate={{ ...animations.slideUp().show, transition: { delay: 0.2 } }}
         >
@@ -44,7 +44,7 @@ export const HomeHero = () => {
         </motion.div>
 
         <motion.h2
-          className="text-center font-subway mt-8 mb-4 text-3xl dark:text-white"
+          className="text-center font-subway mt-xl mb-md text-h2 dark:text-white leading-8"
           variants={animations.slideUp()}
           animate={{ ...animations.slideUp().show, transition: { delay: 0.3 } }}
         >

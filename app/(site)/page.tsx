@@ -21,6 +21,9 @@ export default function Home() {
       <div>
         <HomeHero />
         <HomeSummary />
+        <section className="flex w-full">
+          <About />
+        </section>
         <Experience />
         <Skills />
         <section className="flex flex-col gap-12">
@@ -32,9 +35,6 @@ export default function Home() {
           <SplitLayout section="TOOLS">
             <ToolGrid tools={SoftwareTools} />
           </SplitLayout>
-        </section>
-        <section className="flex">
-          <About />
         </section>
         <section className="flex flex-col gap-12">
           <SplitLayout section="EDUCATION">

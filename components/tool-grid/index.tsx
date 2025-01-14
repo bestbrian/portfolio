@@ -11,7 +11,7 @@ interface ToolGridProps {
 
 export const ToolGrid = ({ tools }: { tools: ToolGridProps[] }) => {
   return (
-    <div className="flex md:px-4 pb-4 gap-3 items-center mt-4 flex-wrap">
+    <div className="flex md:px-4 pb-4 gap-2 items-center mt-4 flex-wrap">
       {tools.map((tool, i) => (
         <div
           key={i}

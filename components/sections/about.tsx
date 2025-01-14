@@ -1,34 +1,39 @@
 "use client";
-import { useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useEffect } from "react";
 import { BraidEffect } from "../braid";
+import TextRevealByWord from "../text-reveal";
 
 export function About() {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start center", "end center"],
+    offset: ["start 75%", "end 25%"],
   });
-  useEffect(() => {
-    console.log("HELLO HERE:", scrollYProgress);
-  }, [scrollYProgress]);
-  const pathLengthFirst = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
-  const pathLengthSecond = useTransform(scrollYProgress, [0, 0.8], [0.05, 1.2]);
-  const pathLengthThird = useTransform(scrollYProgress, [0, 0.8], [0.1, 1.2]);
-  const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0.15, 1.2]);
-  const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0.2, 1.2]);
+
+  const opacity = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
+  const pathLengthFirst = useTransform(scrollYProgress, [0, 0.8], [0, 1]);
+  const pathLengthSecond = useTransform(scrollYProgress, [0, 0.8], [0, 1]);
+  const pathLengthThird = useTransform(scrollYProgress, [0, 0.8], [0, 1]);
+  const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0, 1]);
+  const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1]);
 
   return (
-    <div className="w-full relative" ref={ref}>
-      <BraidEffect
-        pathLengths={[
-          pathLengthFirst,
-          pathLengthSecond,
-          pathLengthThird,
-          pathLengthFourth,
-          pathLengthFifth,
-        ]}
-      />
+    <div
+      className="w-screen relative -mx-[50vw] left-[50%] right-[50%]"
+      ref={ref}
+    >
+      <motion.div style={{ opacity }}>
+        <BraidEffect
+          pathLengths={[
+            pathLengthFirst,
+            pathLengthSecond,
+            pathLengthThird,
+            pathLengthFourth,
+            pathLengthFifth,
+          ]}
+        />
+      </motion.div>
     </div>
   );
 }
