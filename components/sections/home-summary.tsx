@@ -29,39 +29,6 @@ export const HomeSummary = () => {
             scalable, user-centric solutions that deliver results.
             <br />
             <br />
-            Some of my highlights include:
-            <br />
-          </p>
-          <ul className="list-disc pt-2 pl-4 space-y-2">
-            <li>
-              <b>BrandLoyal</b>: Transformed the way retail businesses collect
-              and automate customer feedback by developing a tablet-based system
-              that integrated tracking pixels and automated follow-ups. Scaled
-              the platform to serve 500+ locations across five countries,
-              enabling businesses to improve customer satisfaction, increase
-              retention, and modernize in-store experiences.
-            </li>
-            <li>
-              <b>Better</b>: Designed and implemented modular email systems
-              during a decade-defining mortgage boom, boosting refinance signups
-              by 200%+ and pre-approval rates by 300%+. Built drip automations
-              for strategic partners like Amex, NerdWallet, and Credit Karma,
-              increasing stickiness and ROI.
-            </li>
-            <li>
-              <b>Vroom</b>: Built a reusable email snippet library and audience
-              segmentation systems, allowing marketing teams to deliver targeted
-              campaigns with no-code flexibility and increased conversion rates.
-            </li>
-            <li>
-              <b>Musth</b>: Developed internal tools that eliminated human error
-              and increased team efficiency. Led data collection initiatives to
-              round out user profiles and automated campaigns to deliver timely,
-              personalized content.
-            </li>
-          </ul>
-          <p>
-            <br />
             I’m passionate about turning insights into action—using data,
             design, and strategy to craft products that delight users and drive
             business growth.

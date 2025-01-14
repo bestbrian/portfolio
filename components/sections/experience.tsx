@@ -16,13 +16,14 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "../ui/drawer";
-import { ExpandableCardDemo } from "../card-expand";
+import { ExperienceCards } from "../card-expand";
 
 export const Experience = () => {
   return (
     <section className="flex flex-col gap-12">
       <SplitLayout section="EXPERIENCE">
-        <Drawer>
+        <ExperienceCards />
+        {/* <Drawer>
           <DrawerTrigger className="w-full">
             <EventItem
               title="Senior Product Manager"
@@ -56,8 +57,6 @@ export const Experience = () => {
             </div>
           </DrawerContent>
         </Drawer>
-        <ExpandableCardDemo />
-
         <Drawer>
           <DrawerTrigger className="w-full">
             <EventItem
@@ -186,7 +185,7 @@ export const Experience = () => {
               </ul>
             </div>
           </DrawerContent>
-        </Drawer>
+        </Drawer> */}
       </SplitLayout>
     </section>
   );
