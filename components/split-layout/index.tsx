@@ -1,7 +1,13 @@
 import { ReactNode } from "react";
 import { SlidePhase } from "../slide-phase";
 
-export const SplitLayout = ({ section, children }) => {
+export const SplitLayout = ({
+  section,
+  children,
+}: {
+  section?: string;
+  children: ReactNode;
+}) => {
   return (
     <section
       className="

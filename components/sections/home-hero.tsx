@@ -3,8 +3,16 @@ import { motion } from "motion/react";
 import { SplitLayout } from "../split-layout";
 import Image from "next/image";
 import { animations, EASE } from "@/lib/types";
+import * as amplitude from "@amplitude/analytics-browser";
+import { Identify } from "@amplitude/analytics-browser";
+import { UAParser } from "ua-parser-js";
 
 export const HomeHero = () => {
+  const user = new Identify();
+  const userProperties = amplitude.identify(user);
+
+  const { browser, cpu, device, os } = UAParser();
+  console.log(browser, cpu, device, os);
   return (
     <motion.section
       className="flex flex-col gap-md my-section-padding"
