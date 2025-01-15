@@ -1,5 +1,4 @@
 "use client";
-import { cn } from "@/lib/utils";
 import { motion, MotionValue } from "framer-motion";
 import React from "react";
 import TextRevealByWord from "./text-reveal";
@@ -11,9 +10,6 @@ const transition = {
 
 export const BraidEffect = ({
   pathLengths,
-  title,
-  description,
-  className,
 }: {
   pathLengths: MotionValue[];
   title?: string;

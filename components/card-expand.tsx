@@ -265,12 +265,12 @@ export function ExperienceCards() {
             <motion.li
               key={`card-${index}-${id}`}
               layoutId={`card-${index}-${id}`}
-              className="flex items-center justify-between p-4
+              className="flex items-start justify-between p-4
                   hover:bg-neutral-50 dark:hover:bg-neutral-800
                   rounded-xl cursor-pointer w-full z-1"
             >
               {/* Left side: image + text */}
-              <div className="flex items-center gap-4">
+              <div className="flex items-start gap-4">
                 {/* If you want the image to animate between states, give it a matching layoutId */}
                 <motion.div
                   layoutId={`image-${index}-${id}`}
@@ -308,7 +308,7 @@ export function ExperienceCards() {
               {/* Right side: CTA button */}
               <motion.button
                 layoutId={`cta-${index}-${id}`}
-                className="px-4 py-2 text-sm rounded-full font-bold   bg-gray-100 hover:bg-green-500 hover:text-white text-black   flex-shrink-0"
+                className="pt-1.5 text-sm flex-shrink-0 text-primary"
               >
                 {card.ctaText}
               </motion.button>

@@ -1,14 +1,13 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
-import React, { useEffect } from "react";
+import React from "react";
 import { BraidEffect } from "../braid";
-import TextRevealByWord from "../text-reveal";
 
 export function About() {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start 75%", "end 25%"],
+    offset: ["start 30%", "end 25%"],
   });
 
   const opacity = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
