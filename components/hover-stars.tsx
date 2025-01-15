@@ -58,6 +58,8 @@ const SmallStar = ({ className }: { className?: string }) => (
     />
   </motion.svg>
 );
+const starColors = ["text-yellow-400", "text-green-400", "text-red-400"];
+
 export function UpgradeBanner({
   children,
   onClose,
@@ -65,6 +67,12 @@ export function UpgradeBanner({
   className,
 }: UpgradeBannerProps) {
   const [isHovered, setIsHovered] = React.useState(false);
+  const [colorIndex, setColorIndex] = React.useState(0);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    setColorIndex((prev) => (prev + 1) % 3);
+  };
 
   const iconVariants = {
     hidden: {
@@ -103,7 +111,7 @@ export function UpgradeBanner({
         initial={{ opacity: 0, x: 30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.4 }}
-        onMouseEnter={() => setIsHovered(true)}
+        onMouseEnter={handleMouseEnter}
         onMouseLeave={() => setIsHovered(false)}
         onClick={onClick}
       >
@@ -114,7 +122,7 @@ export function UpgradeBanner({
           custom={{ x: -10, y: -10 }}
           className="pointer-events-none absolute left-[4px] top-[2px]"
         >
-          <SmallStar className="text-yellow-400" />
+          <SmallStar className={starColors[(colorIndex + 0) % 3]} />
         </motion.div>
         <motion.div
           initial="hidden"
@@ -123,7 +131,7 @@ export function UpgradeBanner({
           custom={{ x: -10, y: -10 }}
           className="pointer-events-none absolute right-[4px] top-[2px]"
         >
-          <LargeStar className="text-green-400" />
+          <LargeStar className={starColors[(colorIndex + 1) % 3]} />
         </motion.div>
         <motion.div
           initial="hidden"
@@ -132,7 +140,7 @@ export function UpgradeBanner({
           custom={{ x: 10, y: 10 }}
           className="pointer-events-none absolute bottom-[2px] right-[4px] -z-10"
         >
-          <MediumStar className="text-red-400" />
+          <MediumStar className={starColors[(colorIndex + 2) % 3]} />
         </motion.div>
         {children}
       </motion.div>
