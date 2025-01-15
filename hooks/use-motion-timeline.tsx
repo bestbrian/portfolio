@@ -1,6 +1,6 @@
 import {
   DOMKeyframesDefinition,
-  DynamicAnimationOptions,
+  AnimationOptions,
   useAnimate,
 } from "motion/react";
 import { useRef, useEffect } from "react";
@@ -9,7 +9,7 @@ type ElementOrSelector = Element | Element[] | NodeListOf<Element> | string;
 type AnimateParams = [
   ElementOrSelector,
   DOMKeyframesDefinition,
-  (DynamicAnimationOptions | undefined)?,
+  (AnimationOptions | undefined)?,
 ];
 
 type Animation = AnimateParams | Animation[];
