@@ -22,7 +22,7 @@ export const BraidEffect = ({
 }) => {
   return (
     <TextRevealByWord
-      paragraph="I take your jumbled, inefficient piece of crap product, code and processes and turning them into fucking treasure."
+      paragraph="I tame messy code, refine sloppy processes, and deliver clean, powerful results."
       className="mb-4 font-subway"
     >
       <svg
