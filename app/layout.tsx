@@ -1,6 +1,5 @@
 import * as amplitude from "@amplitude/analytics-browser";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
@@ -8,8 +7,11 @@ import { ThemeProvider } from "next-themes";
 import { Nav } from "@/components/nav";
 import { siteConfig } from "./config/site";
 import localFont from "@next/font/local";
+import { Inter } from "next/font/google";
 import { IBM_Plex_Mono } from "@next/font/google";
+import { useQueryTracking } from "@/hooks/use-query-tracking";
 import AmplitudeContextProvider from "@/components/ui/telemetry-provider";
+import { AnalyticsTracker } from "@/components/analytics-tracker";
 
 const inter = Inter({ subsets: ["latin"] });
 const mono = IBM_Plex_Mono({
@@ -135,18 +137,21 @@ export default function RootLayout({
       <body
         className={`${inter.className} ${subway.variable} ${satoshi.variable} ${mono.variable} px-0`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-          enableColorScheme
-        >
-          <Nav />
-          {children}
-          <div id="drawer-root" />
-          <Toaster />
-        </ThemeProvider>
+        <AmplitudeContextProvider>
+          <AnalyticsTracker />
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+            enableColorScheme
+          >
+            <Nav />
+            {children}
+            <div id="drawer-root" />
+            <Toaster />
+          </ThemeProvider>
+        </AmplitudeContextProvider>
       </body>
     </html>
   );

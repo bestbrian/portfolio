@@ -99,7 +99,7 @@ export const SoftwareTools = [
     image: "images/git_logo.svg", //change to atlassian maybe
     name: "GitHub",
     badge: {
-      name: "Tools",
+      name: "GIT",
     },
   },
   {
