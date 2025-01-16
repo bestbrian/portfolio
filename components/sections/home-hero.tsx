@@ -22,7 +22,7 @@ export const HomeHero = () => {
     >
       <div>
         <motion.h1
-          className="text-h1 mb-heading-body font-subway leading-heading"
+          className="font-subway text-4xl"
           variants={animations.slideUp(true)}
           animate={{ ...animations.slideUp().show }}
         >

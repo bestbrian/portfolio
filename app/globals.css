@@ -2,49 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 
+  Already present, but showcasing short comments for color usage 
+*/
 @layer base {
   :root {
-    --background: 142 100% 95%;
-    --foreground: 142 5% 0%;
-    --card: 142 50% 90%;
-    --card-foreground: 142 5% 10%;
-    --popover: 142 100% 95%;
-    --popover-foreground: 142 100% 0%;
-    --primary: 145 45% 40%; /* Muted forest green */
-    --primary-foreground: 0 0% 100%; /* White text on green */
-    --secondary: 142 30% 70%;
+    --background: 0 0% 95%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 90%;
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 95%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 0 0% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 70%;
     --secondary-foreground: 0 0% 0%;
-    --muted: 104 30% 85%;
-    --muted-foreground: 142 5% 35%;
-    --accent: 104 30% 80%;
-    --accent-foreground: 142 5% 10%;
-    --destructive: 0 100% 30%;
-    --destructive-foreground: 142 5% 90%;
-    --border: 142 30% 50%;
-    --input: 142 30% 18%;
-    --ring: 142 100% 34%;
+    --muted: 0 0% 85%;
+    --muted-foreground: 0 0% 35%;
+    --accent: 0 0% 80%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 0% 30%;
+    --destructive-foreground: 0 0% 90%;
+    --border: 0 0% 50%;
+    --input: 0 0% 18%;
+    --ring: 0 0% 34%;
     --radius: 0.5rem;
   }
+
   .dark {
-    --background: 142 50% 5%;
-    --foreground: 142 5% 90%;
-    --card: 142 50% 0%;
-    --card-foreground: 142 5% 90%;
-    --popover: 142 50% 5%;
-    --popover-foreground: 142 5% 90%;
-    --primary: 145 45% 45%; /* Slightly brighter green for dark mode */
-    --primary-foreground: 0 0% 100%;
-    --secondary: 142 30% 10%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 104 30% 15%;
-    --muted-foreground: 142 5% 60%;
-    --accent: 104 30% 15%;
-    --accent-foreground: 142 5% 90%;
-    --destructive: 0 100% 30%;
-    --destructive-foreground: 142 5% 90%;
-    --border: 142 30% 18%;
-    --input: 142 30% 18%;
-    --ring: 142 100% 34%;
+    --background: 142 50% 5%; /* #0D1A0D - dark green background */
+    --foreground: 142 5% 90%; /* #E6FFE6 - text on dark bg */
+    --card: 142 50% 0%; /* #000000 - black card bg */
+    --card-foreground: 142 5% 90%; /* #E6FFE6 - light text on black card */
+    --popover: 142 50% 5%; /* #0D1A0D - same as background in dark mode */
+    --popover-foreground: 142 5% 90%; /* #E6FFE6 - text on popover */
+    --primary: 145 45% 45%; /* #339966 - slightly brighter green in dark mode */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF */
+    --secondary: 142 30% 10%; /* #1A331A - deeper green accent */
+    --secondary-foreground: 0 0% 100%; /* #FFFFFF */
+    --muted: 104 30% 15%; /* #263326 - dark muted surfaces */
+    --muted-foreground: 142 5% 60%; /* #999999 - grey text on dark muted */
+    --accent: 104 30% 15%; /* #263326 - subtle dark accent */
+    --accent-foreground: 142 5% 90%; /* #E6FFE6 - light text on accent */
+    --destructive: 0 100% 30%; /* #FF4D4D */
+    --destructive-foreground: 142 5% 90%; /* #E6FFE6 */
+    --border: 142 30% 18%; /* #2E4D2E - subdued green border */
+    --input: 142 30% 18%; /* #2E4D2E - input backgrounds in dark mode */
+    --ring: 142 100% 34%; /* #00FF00 - bright green focus ring */
     --radius: 0.5rem;
   }
 }
@@ -58,5 +62,27 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply text-h1 font-subway font-bold mb-6;
+  }
+  h2 {
+    @apply text-h2 font-subway font-semibold mb-4;
+  }
+  h3 {
+    @apply text-h3 font-satoshi font-bold;
+  }
+  h4 {
+    @apply text-h4 font-subway font-medium mb-2;
+  }
+  p {
+    @apply text-p font-satoshi font-normal mb-4;
+  }
+  small,
+  .legal {
+    @apply text-legal font-satoshi text-muted-foreground;
   }
 }

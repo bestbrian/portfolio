@@ -10,9 +10,6 @@ import betterLogo from "/public/images/better_logo.jpg";
 import brandloyalLogo from "/public/images/brandloyal_logo.jpeg";
 import { UpgradeBanner } from "./hover-stars";
 
-// -------------------------------
-// 1) Expanded Card Content
-// -------------------------------
 const cards = [
   {
     description: "Musth",
@@ -22,27 +19,28 @@ const cards = [
     content: () => (
       <div>
         <p>
-          Developed internal tools that eliminated human error...
+          Developed innovative tools and led transformative projects to improve
+          user engagement and operational efficiency. Introduced machine
+          learning to optimize audience targeting, resulting in a 40% increase
+          in daily active users and 40% more relevant content delivery.
+          Automated internal processes, reducing manual effort by 95% and
+          eliminating recurring errors.
           <br />
           <br />
         </p>
         <h3>Key Achievements</h3>
         <ul className="list-disc pt-2 pl-4 space-y-2">
           <li>
-            Developed and launched multiple key features, achieving significant
-            improvements in the efficiency and accessibility of financial
-            trading platforms, by guiding the team through iterative,
-            customer-focused delivery.
+            Launched ML-driven A/B testing and audience ranking, significantly
+            boosting user engagement.
           </li>
           <li>
-            Played a pivotal role in adopting and implementing new technologies
-            within an Agile framework, resulting in enhanced product performance
-            and increased customer satisfaction.
+            Established robust tracking systems, enabling detailed user journeys
+            and behavior-driven insights.
           </li>
           <li>
-            Fostered an Agile culture within the team, accelerating product
-            development cycles and improving responsiveness to market changes
-            through iterative feedback and continuous improvement.
+            Ensured timely roadmap delivery by aligning stakeholders and
+            tracking OKRs.
           </li>
         </ul>
       </div>
@@ -56,21 +54,27 @@ const cards = [
     content: () => (
       <div>
         <p>
-          Designed and implemented modular email systems...
-          <br />
+          Designed and implemented modular email systems during a critical
+          mortgage boom. Spearheaded email optimizations featured on{" "}
+          <i>Really Good Emails</i> and collaborated with major partners like{" "}
+          <i>Amex</i> and
+          <i>NerdWallet</i> to build high-performing campaigns. Improved
+          flexibility, reduced costs, and boosted operational efficiency.
           <br />
         </p>
         <h3>Key Achievements</h3>
         <ul className="list-disc pt-2 pl-4 space-y-2">
           <li>
-            Enhanced email engagement through advanced tracking and data
-            analytics, enabling the team to make informed decisions for ongoing
-            improvements.
+            Created a reusable email library, cutting campaign production time
+            by 47%.
           </li>
           <li>
-            Streamlined production processes to ensure high-quality, on-time
-            campaign delivery, consistently meeting or exceeding key performance
-            benchmarks.
+            Enhanced email performance, achieving a 22% increase in
+            click-through rates and an 18% ROI improvement.
+          </li>
+          <li>
+            Streamlined workflows, consistently exceeding performance benchmarks
+            by 12–16%.
           </li>
         </ul>
       </div>
@@ -84,53 +88,56 @@ const cards = [
     content: () => (
       <div>
         <p>
-          Transformed the way retail businesses collect and automate customer
-          feedback...
+          Built a SaaS platform that modernized in-store customer experiences
+          and feedback collection. Scaled the platform to serve over 500
+          businesses across five countries while driving $1.2M ARR. Developed
+          innovative marketing automation features and secured acceptance into{" "}
+          <i>Y Combinator</i>'s S18 Batch.
           <br />
           <br />
         </p>
         <h3>Key Achievements</h3>
         <ul className="list-disc pt-2 pl-4 space-y-2">
           <li>
-            Product Innovation: Designed the core product features and systems,
-            focusing on creating sustainable competitive advantages and
+            <b>Product Innovation</b>: Designed the core product features and
+            systems, focusing on creating sustainable competitive advantages and
             establishing a significant competitive moat.
           </li>
           <li>
-            UI/UX Design: Developed a comprehensive design system for core
-            products, emphasizing intuitive user interfaces and seamless user
-            experiences to boost customer satisfaction.
+            <b>UI/UX Design</b>: Developed a comprehensive design system for
+            core products, emphasizing intuitive user interfaces and seamless
+            user experiences to boost customer satisfaction.
           </li>
           <li>
-            Data-Driven Dashboard: Engineered a sophisticated product dashboard
-            that aggregates application data and business metrics, facilitating
-            data-driven decisions.
+            <b>Data-Driven Dashboard</b>: Engineered a sophisticated product
+            dashboard that aggregates application data and business metrics,
+            facilitating data-driven decisions.
           </li>
           <li>
-            Marketing Strategy: Pioneered various experimental marketing
+            <b>Marketing Strategy</b>: Pioneered various experimental marketing
             strategies that significantly increased customer acquisition and
             propelled company growth.
           </li>
           <li>
-            API Development: Architected and refined the API and dashboard
-            integration, facilitating seamless functionality across numerous
-            business locations.
+            <b>API Development</b>: Architected and refined the API and
+            dashboard integration, facilitating seamless functionality across
+            numerous business locations.
           </li>
           <li>
-            Customer Success: Implemented effective onboarding and customer
-            success strategies, utilizing drip campaigns to enhance retention
-            and attract new business.
+            <b>Customer Success</b>: Implemented effective onboarding and
+            customer success strategies, utilizing drip campaigns to enhance
+            retention and attract new business.
           </li>
           <li>
-            Digital Transformation: Created a &quot;Smart Display&quot; Web App
-            and developed automation tools, converting physical interactions
-            into digital touchpoints for advanced pixel retargeting and
-            analytics.
+            <b>Digital Transformation</b>: Created a &quot;Smart Display&quot;
+            Web App and developed automation tools, converting physical
+            interactions into digital touchpoints for advanced pixel retargeting
+            and analytics.
           </li>
           <li>
-            Project Leadership: Managed diverse teams, including contractors and
-            consultants, adhering to agile methodologies to meet strategic
-            goals.
+            <b>Project Leadership</b>: Managed diverse teams, including
+            contractors and consultants, adhering to agile methodologies to meet
+            strategic goals.
           </li>
         </ul>
       </div>
@@ -144,36 +151,23 @@ const cards = [
     content: () => (
       <div>
         <p>
-          Built a reusable email snippet library and audience segmentation
-          systems...
+          Built reusable email systems and audience segmentation tools, enabling
+          marketing teams to create personalized campaigns effortlessly.
+          Supported IPO readiness through scalable internal tools and
+          standardized communications.
           <br />
           <br />
         </p>
         <h3>Key Achievements</h3>
         <ul className="list-disc pt-2 pl-4 space-y-2">
           <li>
-            Built a Component-Based Email System: Streamlined the creation of
-            transactional and promotional emails with modular templates,
-            reducing production time and increasing campaign efficiency.
+            Increased funnel conversions by 20% through enhanced email clarity
+            and design.
           </li>
+          <li>Developed dynamic templates that cut production time by 42%.</li>
           <li>
-            Developed an Internal Email Signature Generator: Standardized email
-            branding across teams, improving professionalism and consistency in
-            communications leading up to the IPO.
-          </li>
-          <li>
-            Optimized Customer Communication: Improved email workflows and
-            segmentation strategies, boosting engagement and conversion rates.
-          </li>
-          <li>
-            Enhanced Email Development Processes: Ensured cross-platform
-            compatibility and improved deliverability through best practices in
-            coding and testing.
-          </li>
-          <li>
-            Supported IPO Readiness: Contributed to scalable internal tools and
-            customer outreach systems that aligned with Vroom&apos;s growth
-            goals.
+            Created a standardized email signature generator, improving brand
+            consistency and reducing manual updates by 79%.
           </li>
         </ul>
       </div>
@@ -182,7 +176,7 @@ const cards = [
 ];
 
 // -------------------------------
-// 2) Close Icon for your button
+// 1) Close Icon
 // -------------------------------
 export const CloseIcon = () => {
   return (
@@ -199,7 +193,8 @@ export const CloseIcon = () => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="h-4 w-4 text-black z-50"
+      // Use currentColor so it adapts to text color
+      className="h-4 w-4 text-foreground z-50"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M18 6l-12 12" />
@@ -209,29 +204,13 @@ export const CloseIcon = () => {
 };
 
 // -------------------------------
-// 3) The main component
+// 2) Main ExperienceCards Component
 // -------------------------------
 export function ExperienceCards() {
-  /**
-   * `active`: holds the currently expanded card info
-   * Could be null or a card object from the `cards` array
-   */
   const [active, setActive] = useState<(typeof cards)[number] | null>(null);
-
-  /**
-   * `ref` for detecting outside clicks
-   */
   const ref = useRef<HTMLDivElement>(null);
-
-  /**
-   * `id` is a unique instance ID for our layout transitions
-   * so we don't clash with other possible expanders in the app
-   */
   const id = useId();
 
-  /**
-   * Listen for the Escape key to close the expanded card
-   */
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape") {
@@ -242,21 +221,12 @@ export function ExperienceCards() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
 
-  /**
-   * Custom hook to close card if user clicks outside
-   */
   useOutsideClick(ref, () => setActive(null));
 
-  /**
-   * We keep everything in a single AnimatePresence block:
-   * - The background overlay
-   * - The expanded card
-   * so they fade in/out together
-   */
   return (
     <>
-      {/* 1. List of collapsed cards */}
-      <ul className="max-w-2xl mx-auto w-full gap-4">
+      {/* Collapsed Cards List */}
+      <ul className="mx-auto w-full max-w-2xl gap-4">
         {cards.map((card, index) => (
           <UpgradeBanner
             key={`banner-${index}`}
@@ -265,13 +235,13 @@ export function ExperienceCards() {
             <motion.li
               key={`card-${index}-${id}`}
               layoutId={`card-${index}-${id}`}
-              className="flex items-start justify-between p-4
-                  hover:bg-neutral-50 dark:hover:bg-neutral-800
-                  rounded-xl cursor-pointer w-full z-1"
+              // Replace neutral hovers with your tokens:
+              className="
+                flex items-start justify-between p-4 rounded-xl cursor-pointer w-full z-1 text-card-foreground hover:bg-card
+              "
             >
               {/* Left side: image + text */}
               <div className="flex items-start gap-4">
-                {/* If you want the image to animate between states, give it a matching layoutId */}
                 <motion.div
                   layoutId={`image-${index}-${id}`}
                   className="flex-shrink-0"
@@ -285,94 +255,90 @@ export function ExperienceCards() {
                   />
                 </motion.div>
 
-                {/* Title + description in a vertical stack */}
+                {/* Title + description */}
                 <div className="flex flex-col">
-                  {/* Title animates from collapsed to expanded */}
                   <motion.h3
                     layoutId={`title-${index}-${id}`}
-                    className="font-medium text-neutral-800 dark:text-neutral-200"
+                    className="font-medium text-foreground"
                   >
                     {card.title}
                   </motion.h3>
-
-                  {/* Description animates from collapsed to expanded */}
                   <motion.p
                     layoutId={`description-${index}-${id}`}
-                    className="text-neutral-600 dark:text-neutral-400 text-sm"
+                    className="text-sm"
                   >
                     {card.description}
                   </motion.p>
                 </div>
               </div>
 
-              {/* Right side: CTA button */}
-              <motion.button
+              {/* Right side: Dates (CTA text) */}
+              <motion.p
                 layoutId={`cta-${index}-${id}`}
+                // We'll color the CTA with brand color
                 className="pt-1.5 text-sm flex-shrink-0 text-primary"
               >
                 {card.ctaText}
-              </motion.button>
+              </motion.p>
             </motion.li>
           </UpgradeBanner>
         ))}
       </ul>
-      {/* 2. AnimatePresence for overlay + expanded view */}
+
+      {/* AnimatePresence for overlay + expanded card */}
       <AnimatePresence>
         {active && (
           <>
-            {/*
-              2a. Background overlay
-                  Fades in behind the expanded card
-            */}
+            {/* Overlay */}
             <motion.div
-              className="fixed inset-0 bg-black/20 h-full w-full z-10"
+              // Instead of black/20, use a token-based approach:
+              className="fixed inset-0 bg-foreground/20 h-full w-full z-10"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             />
 
-            {/*
-              2b. Expanded card container
-                  We position this fixed, so it floats above everything
-            */}
+            {/* Expanded card wrapper */}
             <motion.div
-              /**
-               * Make sure the layoutId matches the item we clicked
-               * so it animates from the same bounding box
-               */
               layoutId={`card-${cards.findIndex((c) => c === active)}-${id}`}
               className="fixed inset-0 grid place-items-center z-50 p-4"
-              /**
-               * We'll animate the container in/out
-               */
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              {/*
-                2b-i. The actual card content wrapper
-                We'll limit its max height for scrolling
-              */}
+              {/* Actual expanded card */}
               <motion.div
                 ref={ref}
-                className="w-full max-w-xl bg-white dark:bg-neutral-900 sm:rounded-3xl     overflow-auto max-h-[80vh] relative"
+                // Use card tokens for background & text
+                className="
+                  w-full max-w-xl 
+                  max-h-[80vh] 
+                  overflow-auto 
+                  relative 
+                  bg-card 
+                  text-card-foreground 
+                  rounded-xl
+                "
               >
-                {/*
-                  Close button in top-right corner (visible on all screens).
-                */}
+                {/* Close button */}
                 <motion.button
                   onClick={() => setActive(null)}
-                  className="flex absolute top-2 right-2 items-center       justify-center bg-white rounded-full h-6 w-6 z-50"
+                  className="
+                    flex absolute top-2 right-2 
+                    items-center justify-center 
+                    bg-card h-6 w-6 
+                    rounded-full 
+                    z-50
+                  "
                 >
                   <CloseIcon />
                 </motion.button>
 
-                {/*
-                  2b-ii. Expanded image
-                  Matches the layoutId from the collapsed item
-                */}
+                {/* Expanded image */}
                 <motion.div
-                  layoutId={`image-${cards.findIndex((c) => c === active)}-${id}`}
+                  layoutId={`image-${cards.findIndex(
+                    (c) => c === active
+                  )}-${id}`}
                 >
                   <Image
                     priority
@@ -380,44 +346,47 @@ export function ExperienceCards() {
                     height={200}
                     src={active.src}
                     alt={active.title}
-                    className="w-full h-64 md:h-80 object-cover  object-center bg-center"
+                    className="w-full h-64 md:h-80 object-cover object-center bg-center"
                   />
                 </motion.div>
 
-                {/*
-                  2b-iii. Main content area: title + description + CTA + big content
-                */}
+                {/* Main content area */}
                 <div className="p-4">
-                  {/* Title with a matching layoutId */}
-                  <motion.h3
-                    layoutId={`title-${cards.findIndex((c) => c === active)}-${id}`}
-                    className="font-bold text-neutral-700 dark:text-neutral-200 text-xl md:text-2xl"
-                  >
-                    {active.title}
-                  </motion.h3>
+                  <div className="flex justify-between items-start">
+                    <div>
+                      {/* Title */}
+                      <motion.h3
+                        layoutId={`title-${cards.findIndex(
+                          (c) => c === active
+                        )}-${id}`}
+                        className="font-bold text-foreground text-xl md:text-2xl"
+                      >
+                        {active.title}
+                      </motion.h3>
+                      {/* Description */}
+                      <motion.p
+                        layoutId={`description-${cards.findIndex(
+                          (c) => c === active
+                        )}-${id}`}
+                        className="mt-1 mb-4"
+                      >
+                        {active.description}
+                      </motion.p>
+                    </div>
 
-                  {/* Description with a matching layoutId */}
-                  <motion.p
-                    layoutId={`description-${cards.findIndex((c) => c === active)}-${id}`}
-                    className="text-neutral-600 dark:text-neutral-400 mt-1 mb-4"
-                  >
-                    {active.description}
-                  </motion.p>
+                    {/* CTA */}
+                    <motion.p
+                      layoutId={`cta-${cards.findIndex(
+                        (c) => c === active
+                      )}-${id}`}
+                      className="font-subway text-primary"
+                    >
+                      {active.ctaText}
+                    </motion.p>
+                  </div>
 
-                  {/* CTA with a matching layoutId */}
-                  <motion.a
-                    layoutId={`cta-${cards.findIndex((c) => c === active)}-${id}`}
-                    href="#"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
-                  >
-                    {active.ctaText}
-                  </motion.a>
-
-                  {/*
-                    Expanded content that is typically too big to show in collapsed form
-                    We don't need 'layout' on this, so it doesn't cause reflows
-                  */}
-                  <div className="text-neutral-600 dark:text-neutral-400 text-sm lg:text-base mt-4">
+                  {/* The card's expanded content */}
+                  <div className="text-sm lg:text-base mt-4">
                     {typeof active.content === "function"
                       ? active.content()
                       : active.content}
