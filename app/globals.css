@@ -7,25 +7,25 @@
 */
 @layer base {
   :root {
-    --background: 0 0% 95%;
-    --foreground: 0 0% 0%;
-    --card: 0 0% 90%;
-    --card-foreground: 0 0% 10%;
-    --popover: 0 0% 95%;
-    --popover-foreground: 0 0% 0%;
-    --primary: 0 0% 40%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 70%;
-    --secondary-foreground: 0 0% 0%;
-    --muted: 0 0% 85%;
-    --muted-foreground: 0 0% 35%;
-    --accent: 0 0% 80%;
-    --accent-foreground: 0 0% 10%;
-    --destructive: 0 0% 30%;
-    --destructive-foreground: 0 0% 90%;
-    --border: 0 0% 50%;
-    --input: 0 0% 18%;
-    --ring: 0 0% 34%;
+    --background: 142 100% 95%; /* #F0FFF4 - main page background */
+    --foreground: 142 5% 0%; /* #000000 - default text color */
+    --card: 142 50% 90%; /* #E6FFE6 - card backgrounds */
+    --card-foreground: 142 5% 10%; /* #1A1A1A - text on card */
+    --popover: 142 100% 95%; /* #F0FFF4 - same as background for popovers */
+    --popover-foreground: 142 100% 0%; /* #00FF00 - extremely bright; consider #1A1A1A for readability */
+    --primary: 145 45% 40%; /* #2E8B57 - forest green for buttons/links */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF - white text on primary */
+    --secondary: 142 30% 70%; /* #B3FFB3 - lighter green accent */
+    --secondary-foreground: 0 0% 0%; /* #000000 - dark text on secondary */
+    --muted: 104 30% 85%; /* #D9EAD3 - for footers, less emphasis */
+    --muted-foreground: 142 5% 35%; /* #595959 - text on muted */
+    --accent: 104 30% 80%; /* #CCE5CC - subtle accent color */
+    --accent-foreground: 142 5% 10%; /* #1A1A1A - dark text on accent */
+    --destructive: 0 100% 30%; /* #FF4D4D - red for deletes/danger */
+    --destructive-foreground: 142 5% 90%; /* #E6FFE6 - text on destructive red */
+    --border: 142 30% 50%; /* #80B380 - greenish border color */
+    --input: 142 30% 18%; /* #2E4D2E - input backgrounds */
+    --ring: 142 100% 34%; /* #00FF00 - neon green focus ring */
     --radius: 0.5rem;
   }
 
