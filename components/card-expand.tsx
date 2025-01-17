@@ -55,8 +55,8 @@ const cards = [
       <div>
         <p>
           Designed and implemented modular email systems during a critical
-          mortgage boom. Spearheaded email optimizations featured on{" "}
-          <i>Really Good Emails</i> and collaborated with major partners like{" "}
+          mortgage boom. Spearheaded email optimizations featured on
+          <i>Really Good Emails</i> and collaborated with major partners like
           <i>Amex</i> and
           <i>NerdWallet</i> to build high-performing campaigns. Improved
           flexibility, reduced costs, and boosted operational efficiency.
@@ -91,7 +91,7 @@ const cards = [
           Built a SaaS platform that modernized in-store customer experiences
           and feedback collection. Scaled the platform to serve over 500
           businesses across five countries while driving $1.2M ARR. Developed
-          innovative marketing automation features and secured acceptance into{" "}
+          innovative marketing automation features and secured acceptance into
           <i>Y Combinator</i>'s S18 Batch.
           <br />
           <br />
