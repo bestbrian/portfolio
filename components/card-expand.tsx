@@ -39,8 +39,8 @@ const cards = [
             and behavior-driven insights.
           </li>
           <li>
-            Ensured timely roadmap delivery by aligning stakeholders and
-            tracking OKRs.
+            Ensured timely roadmap delivery by aligning stakeholders andtracking
+            OKRs.
           </li>
         </ul>
       </div>
@@ -57,9 +57,9 @@ const cards = [
           Designed and implemented modular email systems during a critical
           mortgage boom. Spearheaded email optimizations featured on
           <i>Really Good Emails</i> and collaborated with major partners like
-          <i>Amex</i> and
-          <i>NerdWallet</i> to build high-performing campaigns. Improved
-          flexibility, reduced costs, and boosted operational efficiency.
+          <i>Amex</i> and <i>NerdWallet</i> to build high-performing
+          campaigns.Improved flexibility, reduced costs, and boosted operational
+          efficiency.
           <br />
         </p>
         <h3>Key Achievements</h3>
@@ -92,7 +92,7 @@ const cards = [
           and feedback collection. Scaled the platform to serve over 500
           businesses across five countries while driving $1.2M ARR. Developed
           innovative marketing automation features and secured acceptance into
-          <i>Y Combinator</i>'s S18 Batch.
+          <i>Y Combinator</i>&apos;s S18 Batch.
           <br />
           <br />
         </p>
