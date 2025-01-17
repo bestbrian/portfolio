@@ -74,7 +74,7 @@ const cards = [
           </li>
           <li>
             Streamlined workflows, consistently exceeding performance benchmarks
-            by 12–16%.
+            by 12&dash;16%.
           </li>
         </ul>
       </div>
