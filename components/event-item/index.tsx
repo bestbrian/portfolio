@@ -41,7 +41,7 @@ export const EventItem = ({
           }}
         />
         <div className="flex flex-col">
-          <h4 className="font-semibold text-left">{title}</h4>
+          <h3 className="">{title}</h3>
           <p className="font-normal text-left">{body}</p>
         </div>
       </div>
