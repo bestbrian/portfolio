@@ -11,16 +11,16 @@ interface ToolGridProps {
 
 export const ToolGrid = ({ tools }: { tools: ToolGridProps[] }) => {
   return (
-    <div className="flex md:px-4 pb-4 gap-2 items-center mt-4 flex-wrap">
+    <div className="flex flex-wrap gap-4 py-6 justify-center md:justify-start md:px-4">
       {tools.map((tool, i) => (
         <div
           key={i}
-          className="rounded-md bg-card items-center flex flex-col justify-between py-4 w-[6.75rem] h-40"
+          className="rounded-md bg-card flex flex-col items-center justify-between py-4 w-[6.75rem] h-40"
         >
-          <div className="h-[60px] flex items-center">
+          <div className="h-16 flex items-center">
             <Image
               src={tool.image}
-              alt="alt"
+              alt={tool.name}
               placeholder="blur"
               blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNUf8BzDAAEJAHbKoDoHQAAAABJRU5ErkJggg=="
               width={60}
@@ -34,7 +34,7 @@ export const ToolGrid = ({ tools }: { tools: ToolGridProps[] }) => {
             {tool.imageDark && (
               <Image
                 src={tool.imageDark}
-                alt="alt"
+                alt={`${tool.name} (dark mode)`}
                 placeholder="blur"
                 blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNUf8BzDAAEJAHbKoDoHQAAAABJRU5ErkJggg=="
                 width={60}
@@ -48,8 +48,8 @@ export const ToolGrid = ({ tools }: { tools: ToolGridProps[] }) => {
             )}
           </div>
           <div className="flex flex-col items-center justify-center gap-2">
-            <p className="text-sm">{tool.name}</p>
-            <Badge className="uppercase rounded-sm bg-card text-primary border-primary font-mono text-xs light:text-black">
+            <p className="text-sm font-medium text-foreground">{tool.name}</p>
+            <Badge className="uppercase rounded-sm bg-muted text-muted-foreground border-muted font-mono text-xs">
               {tool.badge.name}
             </Badge>
           </div>

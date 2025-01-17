@@ -18,7 +18,7 @@ export const BraidEffect = ({
 }) => {
   return (
     <TextRevealByWord
-      paragraph="I tame messy code, refine sloppy processes, and deliver clean, powerful results."
+      paragraph="I tame messy code, refine&nbsp;sloppy processes, and deliver clean, powerful&nbsp;results."
       className="mb-4 font-subway"
     >
       <svg
