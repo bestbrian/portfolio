@@ -4,10 +4,14 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 
-import musthLogo from "/public/images/musth_logo.jpg";
-import vroomLogo from "/public/images/vroom_logo.jpeg";
-import betterLogo from "/public/images/better_logo.jpg";
+import musthLogo from "/public/images/musth_logo.svg";
+import vroomLogo from "/public/images/vroom_logo.svg";
+import betterLogo from "/public/images/better_logo.svg";
 import brandloyalLogo from "/public/images/brandloyal_logo.jpeg";
+import musthLogoLg from "/public/images/musth_logo_lg.svg";
+import vroomLogoLg from "/public/images/vroom_logo_lg.svg";
+import betterLogoLg from "/public/images/better_logo_lg.svg";
+import brandloyalLogoLg from "/public/images/brandloyal_logo.jpeg";
 import { UpgradeBanner } from "./hover-stars";
 
 const cards = [
@@ -15,6 +19,7 @@ const cards = [
     description: "Musth",
     title: "Senior Product Manager",
     src: musthLogo,
+    srcLg: musthLogoLg,
     ctaText: "2022 — 2024",
     content: () => (
       <div>
@@ -50,6 +55,7 @@ const cards = [
     description: "Better",
     title: "Software Engineer",
     src: betterLogo,
+    srcLg: betterLogoLg,
     ctaText: "2020 — 2022",
     content: () => (
       <div>
@@ -84,6 +90,7 @@ const cards = [
     description: "BrandLoyal",
     title: "Co-Founder & Chief Operating Officer",
     src: brandloyalLogo,
+    srcLg: brandloyalLogoLg,
     ctaText: "2014 — 2022",
     content: () => (
       <div>
@@ -147,6 +154,7 @@ const cards = [
     description: "Vroom",
     title: "Software Engineer",
     src: vroomLogo,
+    srcLg: vroomLogoLg,
     ctaText: "2018 — 2020",
     content: () => (
       <div>
@@ -344,7 +352,7 @@ export function ExperienceCards() {
                     priority
                     width={200}
                     height={200}
-                    src={active.src}
+                    src={active.srcLg}
                     alt={active.title}
                     className="w-full h-64 md:h-80 object-cover object-center bg-center"
                   />

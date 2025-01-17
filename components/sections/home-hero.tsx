@@ -46,7 +46,7 @@ export const HomeHero = () => {
             alt="Brian Best"
             height={280}
             width={280}
-            className="object-center object-cover rounded-md"
+            className="object-center object-cover rounded-md mt-8"
             priority
           />
         </motion.div>

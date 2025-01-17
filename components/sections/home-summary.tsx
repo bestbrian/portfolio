@@ -23,15 +23,21 @@ export const HomeSummary = () => {
           <p>
             Data-driven product leader and Y Combinator alum who builds tools
             and platforms that solve real problems, simplify workflows, and
-            drive measurable impact. From co-founding BrandLoyal, where I
-            pioneered retail feedback automation, to leading product and systems
-            development at Better, Vroom, and Musth, I specialize in creating
-            scalable, user-centric solutions that deliver results.
+            drive measurable impact.
             <br />
             <br />
-            I’m passionate about turning insights into action—using data,
+            From co-founding BrandLoyal, where I pioneered retail feedback
+            automation, to leading product and systems development at Better,
+            Vroom, and Musth, I specialize in creating scalable, user-centric
+            solutions that deliver results.
+            <br />
+            <br />
+            I&apos;m passionate about turning insights into action — using data,
             design, and strategy to craft products that delight users and drive
             business growth.
+            <br />
+            <br />
+            Keep scrolling to learn more.
           </p>
         </motion.div>
       </SplitLayout>
