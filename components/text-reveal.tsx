@@ -16,6 +16,7 @@ const TextRevealByWord: FC<Props> = ({ paragraph, className, children }) => {
 
   const { scrollYProgress } = useScroll({
     target: targetRef,
+    offset: ["start 30%", "end end"],
   });
   const words = paragraph.split(" ");
 
