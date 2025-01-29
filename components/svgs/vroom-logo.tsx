@@ -11,14 +11,20 @@ export function VroomLogo() {
         width="200"
         height="200"
         fill="#D83730"
-        style="fill:#D83730;fill:color(display-p3 0.8471 0.2157 0.1882);fill-opacity:1;"
+        style={{
+          fill: "#D83730",
+          fillOpacity: 1,
+        }}
       />
       <path
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M37.0943 79.0407L42.2242 48.831H91.8138L90.1038 120.65L123.163 48.261H161.923L109.484 152H57.0441V79.0407H37.0943Z"
         fill="white"
-        style="fill:white;fill-opacity:1;"
+        style={{
+          fill: "#D83730",
+          fillOpacity: 1,
+        }}
       />
     </svg>
   );
