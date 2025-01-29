@@ -8,7 +8,7 @@ import { ToolGrid } from "@/components/tool-grid";
 import { TechTools, SoftwareTools } from "@/lib/content";
 
 import psmiiLogo from "/public/images/psmii_logo.png";
-import yorkuLogo from "/public/images/yorku_logo.jpg";
+import yorkuLogo from "/public/images/yorku_logo.svg";
 import { HomeHero } from "@/components/sections/home-hero";
 import { HomeSummary } from "@/components/sections/home-summary";
 import { Experience } from "@/components/sections/experience";
@@ -17,13 +17,15 @@ import { About } from "@/components/sections/about";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center">
-      <div>
+    <main>
+      <div className="flex flex-col items-center justify-center 2xl:pt-20">
         <HomeHero />
         <HomeSummary />
-        <section className="flex w-full">
-          <About />
-        </section>
+      </div>
+      <section>
+        <About />
+      </section>
+      <div className="flex flex-col items-center justify-center 2xl:pt-20">
         <Experience />
         <Skills />
         <section className="flex flex-col gap-12">

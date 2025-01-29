@@ -1,5 +1,7 @@
+"use client";
 import { ReactNode } from "react";
-import { SlidePhase } from "../slide-phase";
+import { motion } from "motion/react";
+import { EASE } from "@/lib/types";
 
 export const SplitLayout = ({
   section,
@@ -9,7 +11,17 @@ export const SplitLayout = ({
   children: ReactNode;
 }) => {
   return (
-    <section
+    <motion.section
+      // className="p-4"
+      initial={{ opacity: 0 }}
+      whileInView={{
+        opacity: 1,
+      }}
+      viewport={{ once: true }}
+      transition={{
+        ease: EASE.slideIn,
+        duration: 0.6,
+      }}
       className="
         grid 
         grid-cols-12 
@@ -40,6 +52,6 @@ export const SplitLayout = ({
       >
         {children}
       </div>
-    </section>
+    </motion.section>
   );
 };

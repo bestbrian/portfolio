@@ -32,7 +32,7 @@
   .dark {
     --background: 142 50% 5%; /* #0D1A0D - dark green background */
     --foreground: 142 5% 90%; /* #E6FFE6 - text on dark bg */
-    --card: 142 50% 0%; /* #000000 - black card bg */
+    --card: 142 50% 0%; /* #1B5E20 - black card bg */
     --card-foreground: 142 5% 90%; /* #E6FFE6 - light text on black card */
     --popover: 142 50% 5%; /* #0D1A0D - same as background in dark mode */
     --popover-foreground: 142 5% 90%; /* #E6FFE6 - text on popover */

@@ -7,11 +7,11 @@ import { useOutsideClick } from "@/hooks/use-outside-click";
 import musthLogo from "/public/images/musth_logo.svg";
 import vroomLogo from "/public/images/vroom_logo.svg";
 import betterLogo from "/public/images/better_logo.svg";
-import brandloyalLogo from "/public/images/brandloyal_logo.jpeg";
+import brandloyalLogo from "/public/images/brandloyal_logo.svg";
 import musthLogoLg from "/public/images/musth_logo_lg.svg";
 import vroomLogoLg from "/public/images/vroom_logo_lg.svg";
 import betterLogoLg from "/public/images/better_logo_lg.svg";
-import brandloyalLogoLg from "/public/images/brandloyal_logo.jpeg";
+import brandloyalLogoLg from "/public/images/brandloyal_logo_lg.svg";
 import { UpgradeBanner } from "./hover-stars";
 
 const cards = [
