@@ -21,6 +21,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const html = await renderer.render(...blocks);
 
   return (
-    <div className="prose" dangerouslySetInnerHTML={{ __html: html }}></div>
+    <article className="" dangerouslySetInnerHTML={{ __html: html }}></article>
   );
 }
