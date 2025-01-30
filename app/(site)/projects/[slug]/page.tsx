@@ -1,22 +1,26 @@
-import { SanityDocument } from "@sanity/client";
-import { projectPathsQuery, projectQuery } from "@/sanity/lib/queries";
-import { sanityFetch } from "@/sanity/lib/fetch";
-import { client } from "@/sanity/lib/client";
-import Project from "../components/project";
+import { fetchBySlug, fetchPageBlocks, notion } from "@/lib/notion";
+import { NotionRenderer } from "@notion-render/client";
+import hljsPlugin from "@notion-render/hljs-plugin";
+import bookmarkPlugin from "@notion-render/bookmark-plugin";
 
-export const revalidate = 60;
+export default async function Page({ params }: { params: { slug: string } }) {
+  const post = await fetchBySlug(params.slug);
+  if (!post) {
+    return <div>Not Found</div>;
+  }
 
-export async function generateStaticParams() {
-  const posts = await client.fetch(projectPathsQuery);
-  return posts;
-}
+  const blocks = await fetchPageBlocks(post.id);
 
-const ProjectPage = async ({ params }: { params: any }) => {
-  const post = await sanityFetch<SanityDocument>({
-    query: projectQuery,
-    params,
+  const renderer = new NotionRenderer({
+    client: notion,
   });
-  return <Project post={post} />;
-};
 
-export default ProjectPage;
+  renderer.use(hljsPlugin({}));
+  renderer.use(bookmarkPlugin(undefined));
+
+  const html = await renderer.render(...blocks);
+
+  return (
+    <div className="prose" dangerouslySetInnerHTML={{ __html: html }}></div>
+  );
+}
