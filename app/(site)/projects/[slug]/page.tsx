@@ -19,6 +19,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
   renderer.use(bookmarkPlugin(undefined));
 
   const html = await renderer.render(...blocks);
+  // console.log(html);
+  console.log(blocks);
 
   return (
     <article className="" dangerouslySetInnerHTML={{ __html: html }}></article>
