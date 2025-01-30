@@ -23,6 +23,7 @@ export const SplitLayout = ({
         duration: 0.6,
       }}
       className="
+      mx-auto
         grid 
         grid-cols-12 
         gap-6
