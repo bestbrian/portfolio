@@ -26,8 +26,6 @@ export const Breadcrumb = () => {
     return pathname.split("/").filter(Boolean);
   }, [pathname]);
 
-  console.log("HELLO THERE", segments);
-
   const pathArray = segments.map((segment, index) => {
     const href = "/" + segments.slice(0, index + 1).join("/");
     return {
@@ -37,7 +35,7 @@ export const Breadcrumb = () => {
   });
 
   return (
-    <BreadcrumbList>
+    <BreadcrumbList className="flex justify-center items-center">
       <BreadcrumbItem>
         <BreadcrumbLink href="/">Home</BreadcrumbLink>
       </BreadcrumbItem>

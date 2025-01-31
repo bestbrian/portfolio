@@ -1,9 +1,6 @@
 import { ContactForm } from "@/components/contact-form";
-import { Badge } from "@/components/ui/badge";
-import { motion } from "motion/react";
 import { SplitLayout } from "@/components/split-layout";
 import { EventItem } from "@/components/event-item";
-import { BadgeGrid } from "@/components/badge-grid";
 import { ToolGrid } from "@/components/tool-grid";
 import { TechTools, SoftwareTools } from "@/lib/content";
 
@@ -14,8 +11,16 @@ import { HomeSummary } from "@/components/sections/home-summary";
 import { Experience } from "@/components/sections/experience";
 import { Skills } from "@/components/sections/skills";
 import { About } from "@/components/sections/about";
+import { fetchBySlug, fetchFeaturedPosts } from "@/lib/notion";
+import { Card, CardHeader } from "@/components/ui/card";
+import { NeonGradientCard } from "@/components/neon-gradient-card";
 
-export default function Home() {
+export default async function Home() {
+  const { results } = await fetchFeaturedPosts();
+  console.log(
+    "Featured post(s):",
+    results[0].properties.Title.title[0].plain_text
+  );
   return (
     <main>
       <div className="flex flex-col items-center justify-center 2xl:pt-20">
@@ -25,6 +30,23 @@ export default function Home() {
       <section>
         <About />
       </section>
+
+      <SplitLayout section="WORK">
+        <div className="flex">
+          {results.map((result, i) => {
+            if ("properties" in result && "Title" in result.properties) {
+              return (
+                <Card key={i}>
+                  <CardHeader>
+                    {result.properties.Title.title[0].plain_text}
+                  </CardHeader>
+                </Card>
+              );
+            }
+            return null;
+          })}
+        </div>
+      </SplitLayout>
       <div className="flex flex-col items-center justify-center 2xl:pt-20">
         <Experience />
         <Skills />
