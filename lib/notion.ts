@@ -40,6 +40,18 @@ export const fetchBySlug = React.cache((slug: string) => {
     .then((res) => res.results[0] as PageObjectResponse | undefined);
 });
 
+export const fetchFeaturedPosts = React.cache(() => {
+  return notion.databases.query({
+    database_id: process.env.NOTION_DB_ID!,
+    filter: {
+      property: "Featured",
+      checkbox: {
+        equals: true,
+      },
+    },
+  });
+});
+
 export const fetchPageBlocks = React.cache((pageId: string) => {
   return notion.blocks.children
     .list({ block_id: pageId })
