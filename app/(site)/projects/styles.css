@@ -4,6 +4,7 @@ body {
 
 img {
   max-height: 500px;
+  padding: 1rem 0;
 }
 
 h2 {
@@ -14,5 +15,9 @@ h2 {
 
 .notion-content p {
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.notion-content form {
+  padding: 0;
 }
