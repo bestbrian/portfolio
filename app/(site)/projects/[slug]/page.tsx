@@ -78,26 +78,30 @@ export default async function Page({ params }: { params: { slug: string } }) {
           content.type === "carousel" ? (
             <Carousel key={index}>
               <CarouselContent>
-                {content.content.map((block: any) => (
-                  <CarouselItem
-                    key={block.id}
-                    className="flex items-center justify-center"
-                  >
-                    <Image
-                      src={block.image.file?.url || block.image.external?.url}
-                      alt={block.image.caption?.[0]?.plain_text || `Image`}
-                      width={800}
-                      height={600}
-                      className="w-auto h-auto max-h-[600px] object-contain"
-                      priority
-                    />
-                    {/* <img
-                      src={block.image.file?.url || block.image.external?.url}
-                      alt={block.image.caption?.[0]?.plain_text || `Image`}
-                      className="w-auto h-auto max-h-[600px] object-contain"
-                    /> */}
-                  </CarouselItem>
-                ))}
+                {Array.isArray(content.content)
+                  ? content.content.map((block: any) => (
+                      <CarouselItem
+                        key={block.id}
+                        className="flex items-center justify-center"
+                      >
+                        <Image
+                          src={
+                            block.image.file?.url || block.image.external?.url
+                          }
+                          alt={block.image.caption?.[0]?.plain_text || `Image`}
+                          width={800}
+                          height={600}
+                          className="w-auto h-auto max-h-[600px] object-contain"
+                          priority
+                        />
+                        {/* <img
+                        src={block.image.file?.url || block.image.external?.url}
+                        alt={block.image.caption?.[0]?.plain_text || `Image`}
+                        className="w-auto h-auto max-h-[600px] object-contain"
+                      /> */}
+                      </CarouselItem>
+                    ))
+                  : null}
               </CarouselContent>
               <CarouselPrevious />
               <CarouselNext />
