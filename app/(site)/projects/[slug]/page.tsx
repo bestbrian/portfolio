@@ -65,11 +65,14 @@ export default async function Page({ params }: { params: { slug: string } }) {
     })
   );
 
+  const title =
+    post.properties.Title && "title" in post.properties.Title
+      ? post.properties.Title.title[0]?.plain_text
+      : "Untitled";
+
   return (
     <div className="notion-content">
-      <h1 className="mt-14 mb-8 font-bold leading-tight">
-        {post.properties.Title.title[0]?.plain_text || "Untitled"}
-      </h1>
+      <h1 className="mt-14 mb-8 font-bold leading-tight">{title}</h1>
       <article>
         {renderedContent.map((content, index) =>
           content.type === "carousel" ? (

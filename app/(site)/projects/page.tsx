@@ -2,7 +2,7 @@ import { fetchPages } from "@/lib/notion";
 import { SplitLayout } from "@/components/split-layout";
 import { ArticleCards } from "@/components/article-expand";
 import { ContactForm } from "@/components/contact-form";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Card, CardTitle, CardContent } from "@/components/ui/card";
 
 export default async function Project() {
   try {
