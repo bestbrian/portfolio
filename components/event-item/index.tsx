@@ -59,7 +59,7 @@ export const EventItem = ({
         </div>
       </div>
 
-      <div className="flex justify-start text-primary whitespace-nowrap">
+      <div className="flex justify-start pt-1 text-sm flex-shrink-0 text-primary whitespace-nowrap">
         {timeline}
       </div>
     </motion.div>

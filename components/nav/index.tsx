@@ -23,7 +23,7 @@ export function Nav() {
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="bg-background/60 hover:bg-background/75 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+            <NavigationMenuTrigger className="hover:bg-background/75">
               TLDR
             </NavigationMenuTrigger>
 
@@ -98,18 +98,21 @@ export function Nav() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
+            <Link href="/projects" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Projects
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
             <button
               onClick={() => {
                 const element = document.getElementById("contact");
                 element?.scrollIntoView({ behavior: "smooth" });
               }}
             >
-              <NavigationMenuLink
-                className={cn(
-                  navigationMenuTriggerStyle(),
-                  "bg-background/60 hover:bg-background/75 backdrop-blur supports-[backdrop-filter]:bg-background/60"
-                )}
-              >
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 Contact
               </NavigationMenuLink>
             </button>

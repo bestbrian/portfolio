@@ -255,11 +255,11 @@ export function ExperienceCards() {
                   className="flex-shrink-0"
                 >
                   <Image
-                    width={100}
-                    height={100}
+                    width={48}
+                    height={48}
                     src={card.src}
                     alt={card.title}
-                    className="h-16 w-16 md:h-14 md:w-14 rounded-lg object-cover object-center bg-center"
+                    className="h-12 w-12 md:h-12 md:w-12 rounded-lg object-cover object-center bg-center"
                   />
                 </motion.div>
 
@@ -267,13 +267,13 @@ export function ExperienceCards() {
                 <div className="flex flex-col">
                   <motion.h3
                     layoutId={`title-${index}-${id}`}
-                    className="font-medium text-foreground"
+                    className="text-foreground"
                   >
                     {card.title}
                   </motion.h3>
                   <motion.p
                     layoutId={`description-${index}-${id}`}
-                    className="text-sm"
+                    className="font-normal"
                   >
                     {card.description}
                   </motion.p>
@@ -284,7 +284,7 @@ export function ExperienceCards() {
               <motion.p
                 layoutId={`cta-${index}-${id}`}
                 // We'll color the CTA with brand color
-                className="pt-1.5 text-sm flex-shrink-0 text-primary"
+                className="pt-1 text-sm flex-shrink-0 text-primary"
               >
                 {card.ctaText}
               </motion.p>
