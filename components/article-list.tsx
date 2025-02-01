@@ -2,6 +2,10 @@
 
 import { ArticleCards } from "./article-expand";
 
-export function ArticleList({ posts }) {
+interface ArticleListProps {
+  posts: any;
+}
+
+export function ArticleList({ posts }: ArticleListProps) {
   return <ArticleCards posts={posts} />;
 }
