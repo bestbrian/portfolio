@@ -4,9 +4,34 @@ import { ArticleCards } from "@/components/article-expand";
 import { ContactForm } from "@/components/contact-form";
 import { Card, CardTitle, CardContent } from "@/components/ui/card";
 
+interface Post {
+  id: string;
+  properties: any;
+  cover: {
+    type: string;
+    external: {
+      url: string;
+    };
+  };
+  [key: string]: any;
+}
+
+interface Posts {
+  results: Post[];
+}
+
 export default async function Project() {
   try {
-    const posts = await fetchPages();
+    const rawPosts = await fetchPages();
+    const posts: Posts = {
+      results: rawPosts.results.map((post: any) => ({
+        ...post,
+        cover:
+          post.cover?.type === "external"
+            ? post.cover
+            : { external: { url: "" } },
+      })),
+    };
 
     return (
       <div>
