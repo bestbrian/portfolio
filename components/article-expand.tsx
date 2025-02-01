@@ -5,7 +5,35 @@ import React, { useId } from "react";
 import { motion } from "framer-motion";
 
 // Add styles in a separate className prop to control sizing per usage
-export function ArticleCards({ posts }) {
+interface Post {
+  id: string;
+  cover: {
+    external: {
+      url: string;
+    };
+  };
+  properties: {
+    Slug: {
+      rich_text: {
+        plain_text: string;
+      }[];
+    };
+    Title: {
+      title: {
+        plain_text: string;
+      }[];
+    };
+    Created: {
+      created_time: string;
+    };
+  };
+}
+
+interface Posts {
+  results: Post[];
+}
+
+export function ArticleCards({ posts }: { posts: Posts }) {
   const router = useRouter();
   const id = useId();
 
