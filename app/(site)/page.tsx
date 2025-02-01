@@ -17,72 +17,65 @@ import { NeonGradientCard } from "@/components/neon-gradient-card";
 
 export default async function Home() {
   const { results } = await fetchFeaturedPosts();
-  console.log(
-    "Featured post(s):",
-    results[0].properties.Title.title[0].plain_text
-  );
+
   return (
     <main>
       <div className="flex flex-col items-center justify-center 2xl:pt-20">
         <HomeHero />
         <HomeSummary />
       </div>
-      <section>
-        <About />
-      </section>
 
-      <SplitLayout section="WORK">
-        <div className="flex">
-          {results.map((result, i) => {
-            if ("properties" in result && "Title" in result.properties) {
-              return (
-                <Card key={i}>
-                  <CardHeader>
-                    {result.properties.Title.title[0].plain_text}
-                  </CardHeader>
-                </Card>
-              );
-            }
-            return null;
-          })}
-        </div>
-      </SplitLayout>
+      <About />
+
       <div className="flex flex-col items-center justify-center 2xl:pt-20">
         <Experience />
         <Skills />
-        <section className="flex flex-col gap-12">
-          <SplitLayout section="TECH">
-            <ToolGrid tools={TechTools} />
-          </SplitLayout>
-        </section>
-        <section className="flex flex-col gap-12">
-          <SplitLayout section="TOOLS">
-            <ToolGrid tools={SoftwareTools} />
-          </SplitLayout>
-        </section>
-        <section className="flex flex-col gap-12">
-          <SplitLayout section="EDUCATION">
-            <EventItem
-              title="Bachelor of Human Resources&nbsp;Management"
-              body="York University, Toronto"
-              timeline="2010-2014"
-              image={yorkuLogo}
-              disableHover={true}
-            />
-            <EventItem
-              title="Professional Scrum Master II"
-              body="Scrum.org"
-              timeline="2024"
-              image={psmiiLogo}
-              disableHover={true}
-            />
-          </SplitLayout>
-        </section>
-        <section id="contact">
-          <SplitLayout section="CONTACT">
-            <ContactForm />
-          </SplitLayout>
-        </section>
+
+        <SplitLayout section="TECH">
+          <ToolGrid tools={TechTools} />
+        </SplitLayout>
+
+        <SplitLayout section="TOOLS">
+          <ToolGrid tools={SoftwareTools} />
+        </SplitLayout>
+
+        {/* <SplitLayout section="WORK">
+          <div className="flex p-3 gap-3">
+            {results.map((result, i) => {
+              if ("properties" in result && "Title" in result.properties) {
+                return (
+                  <Card key={i} className="w-1/2">
+                    <CardHeader>
+                      {result.properties.Title.title[0].plain_text}
+                    </CardHeader>
+                  </Card>
+                );
+              }
+              return null;
+            })}
+          </div>
+        </SplitLayout> */}
+
+        <SplitLayout section="EDUCATION">
+          <EventItem
+            title="Bachelor of Human Resources&nbsp;Management"
+            body="York University, Toronto"
+            timeline="2010-2014"
+            image={yorkuLogo}
+            disableHover={true}
+          />
+          <EventItem
+            title="Professional Scrum Master II"
+            body="Scrum.org"
+            timeline="2024"
+            image={psmiiLogo}
+            disableHover={true}
+          />
+        </SplitLayout>
+
+        <SplitLayout section="CONTACT">
+          <ContactForm />
+        </SplitLayout>
       </div>
     </main>
   );

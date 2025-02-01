@@ -11,11 +11,11 @@ interface ToolGridProps {
 
 export const ToolGrid = ({ tools }: { tools: ToolGridProps[] }) => {
   return (
-    <div className="flex flex-wrap gap-4 py-6 justify-center md:justify-start md:px-4">
+    <div className="flex flex-wrap gap-3 py-6 justify-center md:justify-start md:px-4">
       {tools.map((tool, i) => (
         <div
           key={i}
-          className="rounded-md bg-card flex flex-col items-center justify-between py-4 w-[6.75rem] h-40"
+          className="rounded-md bg-card flex flex-col items-center justify-between py-4 w-[6.5rem] h-40"
         >
           <div className="h-16 flex items-center">
             <Image
@@ -23,8 +23,8 @@ export const ToolGrid = ({ tools }: { tools: ToolGridProps[] }) => {
               alt={tool.name}
               placeholder="blur"
               blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNUf8BzDAAEJAHbKoDoHQAAAABJRU5ErkJggg=="
-              width={60}
-              height={60}
+              width={48}
+              height={48}
               className={tool.imageDark ? "dark:hidden" : ""}
               style={{
                 maxWidth: "100%",
@@ -37,8 +37,8 @@ export const ToolGrid = ({ tools }: { tools: ToolGridProps[] }) => {
                 alt={`${tool.name} (dark mode)`}
                 placeholder="blur"
                 blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNUf8BzDAAEJAHbKoDoHQAAAABJRU5ErkJggg=="
-                width={60}
-                height={60}
+                width={48}
+                height={48}
                 className="hidden dark:block"
                 style={{
                   maxWidth: "100%",

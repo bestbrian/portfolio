@@ -4,7 +4,6 @@ import { fetchBySlug, fetchPageBlocks, notion } from "@/lib/notion";
 import { NotionRenderer } from "@notion-render/client";
 import hljsPlugin from "@notion-render/hljs-plugin";
 import bookmarkPlugin from "@notion-render/bookmark-plugin";
-import "./styles.css";
 import { ContactForm } from "@/components/contact-form";
 import { BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
@@ -67,8 +66,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
   );
 
   return (
-    <div>
-      <h1 className="font-bold mb-8">
+    <div className="notion-content">
+      <h1 className="mt-14 mb-8 font-bold leading-tight">
         {post.properties.Title.title[0]?.plain_text || "Untitled"}
       </h1>
       <article>

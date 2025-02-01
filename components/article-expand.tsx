@@ -5,7 +5,7 @@ import React, { useId } from "react";
 import { motion } from "framer-motion";
 
 // Add styles in a separate className prop to control sizing per usage
-export function ArticleCards({ posts, className }) {
+export function ArticleCards({ posts }) {
   const router = useRouter();
   const id = useId();
 

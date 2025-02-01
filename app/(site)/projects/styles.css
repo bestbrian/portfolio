@@ -11,3 +11,8 @@ h2 {
   margin-bottom: 1rem;
   line-height: 1.2;
 }
+
+.notion-content p {
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
