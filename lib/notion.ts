@@ -11,6 +11,10 @@ import {
   BrianbestResponseDTO,
 } from "@/notion-sdk/dbs/brianbest";
 
+const notionClient = new Client({
+  auth: process.env.NOTION_TOKEN,
+});
+
 export const notion = new BrianbestDatabase({
   notionSecret: process.env.NOTION_TOKEN!,
 });
@@ -34,15 +38,19 @@ export const fetchPages = React.cache(async () => {
 });
 
 export const fetchBySlug = React.cache(async (slug: string) => {
-  const queryResponse = await notion.query({
+  const response = await notion.query({
     filter: {
-      and: [{ slug: { equals: slug } }],
+      and: [{ status: { equals: "Live" } }],
     },
     sorts: [{ property: "created", direction: "descending" }],
   });
-  return queryResponse.results.map(
-    (result) => new BrianbestResponseDTO(result)
+
+  const cleanResponse = JSON.parse(JSON.stringify(response));
+  const post = cleanResponse.results.find(
+    (post) => post.properties.Slug.rich_text[0]?.plain_text === slug
   );
+
+  return post;
 });
 
 // export const fetchFeaturedPosts = React.cache(() => {
@@ -57,8 +65,12 @@ export const fetchBySlug = React.cache(async (slug: string) => {
 //   });
 // });
 
-export const fetchPageBlocks = React.cache((pageId: string) => {
-  return notion.blocks.children
-    .list({ block_id: pageId })
-    .then((res) => res.results as BlockObjectResponse[]);
+export const fetchPageBlocks = React.cache(async (pageId: string) => {
+  const response = await notionClient.blocks.children.list({
+    block_id: pageId,
+    page_size: 100,
+  });
+
+  const cleanResponse = JSON.parse(JSON.stringify(response));
+  return cleanResponse.results;
 });
