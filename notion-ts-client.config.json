@@ -1,0 +1,53 @@
+{
+  "ignore": [
+    {
+      "name": "myblogz",
+      "id": "1909f42c-39cb-80f7-86cd-f57ee4a9d868"
+    }
+  ],
+  "databases": {
+    "18b9f42c-39cb-8068-a51f-da91db3536eb": {
+      "_name": "brian.best",
+      "varName": "brianbest",
+      "pathName": "brianbest",
+      "properties": {
+        "BeNn": {
+          "_name": "Slug",
+          "_type": "rich_text",
+          "varName": "slug",
+          "readOnly": false
+        },
+        "sP%3CL": {
+          "_name": "Tags",
+          "_type": "multi_select",
+          "varName": "tags",
+          "readOnly": false
+        },
+        "%7CnQL": {
+          "_name": "Status",
+          "_type": "status",
+          "varName": "status",
+          "readOnly": false
+        },
+        "title": {
+          "_name": "Title",
+          "_type": "title",
+          "varName": "title",
+          "readOnly": false
+        },
+        "Nura": {
+          "_name": "Edited",
+          "_type": "last_edited_time",
+          "varName": "edited",
+          "readOnly": true
+        },
+        "is~D": {
+          "_name": "Created",
+          "_type": "created_time",
+          "varName": "created",
+          "readOnly": true
+        }
+      }
+    }
+  }
+}

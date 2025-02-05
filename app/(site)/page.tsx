@@ -11,12 +11,12 @@ import { HomeSummary } from "@/components/sections/home-summary";
 import { Experience } from "@/components/sections/experience";
 import { Skills } from "@/components/sections/skills";
 import { About } from "@/components/sections/about";
-import { fetchBySlug, fetchFeaturedPosts } from "@/lib/notion";
+// import { fetchBySlug, fetchFeaturedPosts } from "@/lib/notion";
 import { Card, CardHeader } from "@/components/ui/card";
 import { NeonGradientCard } from "@/components/neon-gradient-card";
 
 export default async function Home() {
-  const { results } = await fetchFeaturedPosts();
+  // const { results } = await fetchFeaturedPosts();
 
   return (
     <main>
