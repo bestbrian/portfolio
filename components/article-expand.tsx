@@ -3,48 +3,19 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useId } from "react";
 import { motion } from "framer-motion";
+import { BrianbestQueryResponse } from "@/notion-sdk/dbs/brianbest";
 
-// Add styles in a separate className prop to control sizing per usage
-interface Post {
-  id: string;
-  cover: {
-    external: {
-      url: string;
-    };
-  };
-  properties: {
-    Slug: {
-      rich_text: {
-        plain_text: string;
-      }[];
-    };
-    Title: {
-      title: {
-        plain_text: string;
-      }[];
-    };
-    Created: {
-      created_time: string;
-    };
-  };
-}
-
-interface Posts {
-  results: Post[];
-}
-
-export function ArticleCards({ posts }: { posts: Posts }) {
+export function ArticleCards({ posts }: { posts: BrianbestResponse[] }) {
   const router = useRouter();
   const id = useId();
 
   const handleCardClick = (slug: string) => {
-    // Navigate to the post page after animation completes
     router.push(`/projects/${slug}`);
   };
 
   return (
     <ul className="mx-auto w-full gap-4">
-      {posts.results.map((post: any, index: number) => (
+      {posts.map((post, index) => (
         <motion.li
           key={`card-${index}-${id}`}
           layoutId={`card-${post.id}`}
@@ -58,7 +29,7 @@ export function ArticleCards({ posts }: { posts: Posts }) {
               {post.cover && (
                 <Image
                   src={post.cover.external.url}
-                  alt={post.properties.Title.title[0]?.plain_text || ""}
+                  alt="Post cover"
                   width={150}
                   height={150}
                   className="rounded-lg object-cover"
@@ -71,7 +42,7 @@ export function ArticleCards({ posts }: { posts: Posts }) {
                 layoutId={`title-${post.id}`}
                 className="text-2xl font-medium text-foreground"
               >
-                {post.properties.Title.title[0]?.plain_text || "Untitled"}
+                {post.properties.Title.title[0].text.content}
               </motion.h1>
               <motion.p
                 layoutId={`date-${post.id}`}

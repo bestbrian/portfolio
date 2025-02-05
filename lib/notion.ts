@@ -5,52 +5,57 @@ import {
   BlockObjectResponse,
   PageObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints";
+import {
+  BrianbestDatabase,
+  BrianbestResponse,
+  BrianbestResponseDTO,
+} from "@/notion-sdk/dbs/brianbest";
 
-export const notion = new Client({ auth: process.env.NOTION_TOKEN });
+export const notion = new BrianbestDatabase({
+  notionSecret: process.env.NOTION_TOKEN!,
+});
 
-export const fetchPages = React.cache(() => {
-  return notion.databases.query({
-    database_id: process.env.NOTION_DB_ID!,
+export const fetchPages = React.cache(async () => {
+  const response = await notion.query({
     filter: {
-      property: "Status",
-      status: {
-        equals: "Live",
-      },
+      and: [{ status: { equals: "Live" } }],
     },
     sorts: [
       {
-        property: "Created",
+        property: "created",
         direction: "descending",
       },
     ],
   });
+
+  // Clean and transform the response
+  const cleanResponse = JSON.parse(JSON.stringify(response));
+  return cleanResponse.results;
 });
 
-export const fetchBySlug = React.cache((slug: string) => {
-  return notion.databases
-    .query({
-      database_id: process.env.NOTION_DB_ID!,
-      filter: {
-        property: "Slug",
-        rich_text: {
-          equals: slug,
-        },
-      },
-    })
-    .then((res) => res.results[0] as PageObjectResponse | undefined);
-});
-
-export const fetchFeaturedPosts = React.cache(() => {
-  return notion.databases.query({
-    database_id: process.env.NOTION_DB_ID!,
+export const fetchBySlug = React.cache(async (slug: string) => {
+  const queryResponse = await notion.query({
     filter: {
-      property: "Featured",
-      checkbox: {
-        equals: true,
-      },
+      and: [{ slug: { equals: slug } }],
     },
+    sorts: [{ property: "created", direction: "descending" }],
   });
+  return queryResponse.results.map(
+    (result) => new BrianbestResponseDTO(result)
+  );
 });
+
+// export const fetchFeaturedPosts = React.cache(() => {
+//   return notion.databases.query({
+//     database_id: process.env.NOTION_DB_ID!,
+//     filter: {
+//       property: "Featured",
+//       checkbox: {
+//         equals: true,
+//       },
+//     },
+//   });
+// });
 
 export const fetchPageBlocks = React.cache((pageId: string) => {
   return notion.blocks.children
