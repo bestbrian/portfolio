@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 import { fetchBySlug, fetchPageBlocks, notion } from "@/lib/notion";
-import { NotionRenderer } from "@notion-render/client";
 import hljsPlugin from "@notion-render/hljs-plugin";
 import bookmarkPlugin from "@notion-render/bookmark-plugin";
 import { ContactForm } from "@/components/contact-form";
+import { NotionRenderer } from "@notion-render/client";
 import { BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
 import {
@@ -53,7 +53,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           content: group,
         };
       } else {
-        const renderer = new NotionRenderer({ client: notion });
+        const renderer = new NotionRenderer();
         renderer.use(hljsPlugin({}));
         renderer.use(bookmarkPlugin(undefined));
         const html = await renderer.render(...group);
