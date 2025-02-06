@@ -86,3 +86,12 @@
     @apply text-legal font-satoshi text-muted-foreground;
   }
 }
+
+@keyframes shift {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
