@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useId } from "react";
 import { motion } from "framer-motion";
-import { BrianbestQueryResponse } from "@/notion-sdk/dbs/brianbest";
+import { BrianbestResponse } from "@/notion-sdk/dbs/brianbest";
 
 export function ArticleCards({ posts }: { posts: BrianbestResponse[] }) {
   const router = useRouter();
@@ -12,6 +12,12 @@ export function ArticleCards({ posts }: { posts: BrianbestResponse[] }) {
   const handleCardClick = (slug: string) => {
     router.push(`/projects/${slug}`);
   };
+  console.log(
+    "POSTS ARE ",
+    posts[0].cover?.type === "external"
+      ? posts[0].cover.external?.url
+      : undefined
+  );
 
   return (
     <ul className="mx-auto w-full gap-4">
@@ -25,13 +31,26 @@ export function ArticleCards({ posts }: { posts: BrianbestResponse[] }) {
           className="flex items-start justify-between p-4 rounded-xl cursor-pointer w-full z-1 text-card-foreground hover:bg-card"
         >
           <div className="flex items-start gap-4">
-            <motion.div layoutId={`image-${post.id}`} className="flex-shrink-0">
+            <motion.div
+              layoutId={`image-${post.id}`}
+              className="flex-shrink-0 relative size-40"
+            >
               {post.cover && (
                 <Image
-                  src={post.cover.external.url}
+                  src={
+                    post.cover?.type === "external"
+                      ? post.cover.external?.url
+                      : "/images/placeholder.svg"
+                  }
+                  width={0}
+                  height={0}
+                  fill
                   alt="Post cover"
-                  width={150}
-                  height={150}
+                  sizes="size-40"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                  }}
                   className="rounded-lg object-cover"
                 />
               )}
@@ -42,7 +61,7 @@ export function ArticleCards({ posts }: { posts: BrianbestResponse[] }) {
                 layoutId={`title-${post.id}`}
                 className="text-2xl font-medium text-foreground"
               >
-                {post.properties.Title.title[0].text.content}
+                [Test] {post.properties.Title.title[0].plain_text}
               </motion.h1>
               <motion.p
                 layoutId={`date-${post.id}`}

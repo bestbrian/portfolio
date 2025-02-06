@@ -114,8 +114,10 @@ export default async function Page({ params }: { params: { slug: string } }) {
           )
         )}
       </article>
-      <h2>Want more? Let&apos;s connect</h2>
-      <ContactForm />
+      <section id="contact">
+        <h2>Want more? Let&apos;s connect</h2>
+        <ContactForm />
+      </section>
     </div>
   );
 }
