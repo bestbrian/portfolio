@@ -104,15 +104,29 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   return (
     <div className="notion-content">
-      <section className="h-[100svh] md:h-[40vh] bg-white flex flex-col items-center justify-items-center text-black pt-4">
-        <p>TOPIC</p>
-        <Squiggle />
-        <h1 className="mt-8 mb-8 font-bold leading-tight w-7/12 text-center">
-          {title}
-        </h1>
-        <Squiggle />
+      <section
+        className="h-[100svh] md:h-[40vh] flex flex-col items-center justify-between text-white pt-4 relative"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/40" />
 
-        <ChevronDown strokeWidth={1} size={32} className="mt-4" />
+        <p className="relative z-10">TOPIC</p>
+
+        <div className="relative z-10 flex flex-col items-center flex-1">
+          <div className="h-full flex flex-col justify-center">
+            <Squiggle />
+            <h1 className="mt-8 mb-8 mx-auto font-bold leading-tight w-7/12 text-center">
+              {title}
+            </h1>
+            <Squiggle />
+          </div>
+        </div>
+
+        <ChevronDown strokeWidth={1} size={32} className="relative z-10 mb-4" />
       </section>
 
       <article className="container max-w-2xl mx-auto px-4 py-16 ">
@@ -151,7 +165,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           )
         )}
       </article>
-      <section id="contact">
+      <section id="contact" className="max-w-2xl mx-auto px-4 py-16 ">
         <h2>Want more? Let&apos;s connect</h2>
         <ContactForm />
       </section>
