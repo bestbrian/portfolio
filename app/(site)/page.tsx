@@ -14,9 +14,11 @@ import { About } from "@/components/sections/about";
 // import { fetchBySlug, fetchFeaturedPosts } from "@/lib/notion";
 import { Card, CardHeader } from "@/components/ui/card";
 import { NeonGradientCard } from "@/components/neon-gradient-card";
+import { fetchPages } from "@/lib/notion";
+import { ArticleCards } from "@/components/article-expand";
 
 export default async function Home() {
-  // const { results } = await fetchFeaturedPosts();
+  const posts = await fetchPages();
 
   return (
     <main>
@@ -39,21 +41,8 @@ export default async function Home() {
           <ToolGrid tools={SoftwareTools} />
         </SplitLayout>
 
-        {/* <SplitLayout section="WORK">
-          <div className="flex p-3 gap-3">
-            {results.map((result, i) => {
-              if ("properties" in result && "Title" in result.properties) {
-                return (
-                  <Card key={i} className="w-1/2">
-                    <CardHeader>
-                      {result.properties.Title.title[0].plain_text}
-                    </CardHeader>
-                  </Card>
-                );
-              }
-              return null;
-            })}
-          </div>
+        {/* <SplitLayout section="POSTS">
+          <ArticleCards posts={posts} />
         </SplitLayout> */}
 
         <SplitLayout section="EDUCATION">
