@@ -105,12 +105,21 @@ const config = {
           "0%": { backgroundPosition: "top center" },
           "100%": { backgroundPosition: "bottom center" },
         },
+        squiggle: {
+          from: {
+            transform: "translateY(-20px)",
+          },
+          to: {
+            transform: "translateY(0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "background-position-spin":
           "background-position-spin 3000ms infinite alternate",
+        "squiggle-line": "squiggle 0.3s linear infinite",
       },
     },
   },

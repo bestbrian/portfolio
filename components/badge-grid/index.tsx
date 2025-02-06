@@ -21,7 +21,7 @@ export const BadgeGrid = ({
   title,
 }: {
   badges: BadgeProps[];
-  title: string;
+  title?: string;
 }) => {
   return (
     <div className="p-4">

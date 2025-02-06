@@ -14,6 +14,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { BadgeGrid } from "@/components/badge-grid";
+import { ChevronDown } from "lucide-react";
 
 function groupConsecutiveImages(blocks: BlockObjectResponse[]) {
   const groups: BlockObjectResponse[][] = [];
@@ -36,6 +38,24 @@ function groupConsecutiveImages(blocks: BlockObjectResponse[]) {
   }
 
   return groups;
+}
+
+export function Squiggle() {
+  return (
+    <div
+      className="
+        mx-auto
+        w-[4px]
+        h-[400px]
+        bg-center 
+      "
+      style={{
+        backgroundImage: 'url("/images/squiggle.svg")',
+        backgroundSize: "100% auto",
+        flex: 100,
+      }}
+    />
+  );
 }
 
 export default async function Page({ params }: { params: { slug: string } }) {
@@ -70,10 +90,33 @@ export default async function Page({ params }: { params: { slug: string } }) {
       ? post.properties.Title.title[0]?.plain_text
       : "Untitled";
 
+  const heroImage =
+    post.cover?.type === "external"
+      ? post.cover.external?.url
+      : "/images/placeholder.svg";
+
+  const tags =
+    post.properties.Tags && "multi_select" in post.properties.Tags
+      ? post.properties.Tags.multi_select
+          .map((item: any) => item.name)
+          .filter((name: string) => name.toLowerCase() !== "featured")
+      : [];
+
   return (
     <div className="notion-content">
-      <h1 className="mt-14 mb-8 font-bold leading-tight">{title}</h1>
-      <article>
+      <section className="h-[100svh] md:h-[40vh] bg-white flex flex-col items-center justify-items-center text-black pt-4">
+        <p>TOPIC</p>
+        <Squiggle />
+        <h1 className="mt-8 mb-8 font-bold leading-tight w-7/12 text-center">
+          {title}
+        </h1>
+        <Squiggle />
+
+        <ChevronDown strokeWidth={1} size={32} className="mt-4" />
+      </section>
+
+      <article className="container max-w-2xl mx-auto px-4 py-16 ">
+        {/* <BadgeGrid badges={tags.map((tag: any) => ({ name: tag }))} /> */}
         {renderedContent.map((content, index) =>
           content.type === "carousel" ? (
             <Carousel key={index}>
@@ -92,13 +135,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                           width={800}
                           height={600}
                           className="w-auto h-auto max-h-[600px] object-contain"
-                          priority
                         />
-                        {/* <img
-                        src={block.image.file?.url || block.image.external?.url}
-                        alt={block.image.caption?.[0]?.plain_text || `Image`}
-                        className="w-auto h-auto max-h-[600px] object-contain"
-                      /> */}
                       </CarouselItem>
                     ))
                   : null}

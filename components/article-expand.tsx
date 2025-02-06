@@ -51,6 +51,7 @@ export function ArticleCards({ posts }: { posts: BrianbestResponse[] }) {
                     width: "100%",
                     height: "100%",
                   }}
+                  priority={true}
                   className="rounded-lg object-cover"
                 />
               )}
@@ -61,7 +62,7 @@ export function ArticleCards({ posts }: { posts: BrianbestResponse[] }) {
                 layoutId={`title-${post.id}`}
                 className="text-2xl font-medium text-foreground"
               >
-                [Test] {post.properties.Title.title[0].plain_text}
+                {post.properties.Title.title[0].plain_text}
               </motion.h1>
               <motion.p
                 layoutId={`date-${post.id}`}
