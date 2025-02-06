@@ -47,7 +47,8 @@ export const fetchBySlug = React.cache(async (slug: string) => {
 
   const cleanResponse = JSON.parse(JSON.stringify(response));
   const post = cleanResponse.results.find(
-    (post) => post.properties.Slug.rich_text[0]?.plain_text === slug
+    (post: BrianbestResponse) =>
+      post.properties.Slug.rich_text[0]?.plain_text === slug
   );
 
   return post;
