@@ -3,18 +3,9 @@ import { SplitLayout } from "@/components/split-layout";
 import { ArticleCards } from "@/components/article-expand";
 import { ContactForm } from "@/components/contact-form";
 import { Card, CardTitle, CardContent } from "@/components/ui/card";
-import { BrianbestQueryResponse } from "@/notion-sdk/dbs/brianbest";
 
 export default async function Project() {
   const posts = await fetchPages();
-  // const posts: Posts = {
-  //   results: rawPosts.results.map((post: any) => ({
-  //     ...post,
-  //     cover:
-  //       post.cover?.type === "external"
-  //         ? post.cover
-  //         : { external: { url: "" } },
-  //   })),
 
   return (
     <div className="container max-w-2xl mx-auto px-4 py-16">

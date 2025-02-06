@@ -106,7 +106,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   return (
     <div className="notion-content">
       <section
-        className="h-full flex flex-col justify-between text-white pt-4 relative "
+        className="h-full flex flex-col justify-between text-white py-4 relative "
         style={{
           backgroundImage: `url(${heroImage})`,
           backgroundSize: "cover",
@@ -117,17 +117,13 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
         <div className="min-h-[calc(100svh-124px)] md:min-h-[40svh] flex flex-col justify-center items-center">
           <Squiggle />
-          <h1 className="mt-8 mb-8 mx-auto font-bold leading-tight w-7/12 text-center">
+          <h1 className="my-2 mx-auto font-bold leading-tight w-7/12 text-center">
             {title}
           </h1>
           <Squiggle />
         </div>
 
-        <ChevronDown
-          strokeWidth={1}
-          size={32}
-          className="relative mb-4 mx-auto"
-        />
+        <ChevronDown strokeWidth={1} size={32} className="relative mx-auto" />
       </section>
 
       <article className="container max-w-2xl mx-auto px-4 py-16 ">
