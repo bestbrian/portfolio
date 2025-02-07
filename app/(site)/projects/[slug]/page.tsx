@@ -5,8 +5,8 @@ import { fetchBySlug, fetchPageBlocks } from "@/lib/notion";
 import { ContactForm } from "@/components/contact-form";
 import { NotionRenderer } from "@notion-render/client";
 import { BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
-import { Badge } from "@/components/ui/badge";
 import { ArticleHeader } from "@/components/blog/article-header";
+import { ArticleMetaData } from "@/components/blog/article-metadata";
 import { ArticleContent } from "@/components/blog/article-content";
 
 function groupConsecutiveImages(blocks: BlockObjectResponse[]) {
@@ -97,35 +97,21 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   return (
     <div className="notion-content">
-      {/* HEADER */}
       <ArticleHeader heroImage={heroImage} title={title} />
 
-      {/* ARTICLE */}
       <section className="max-w-screen-2xl mx-4 md:mx-16 pb-8 lg:mx-auto">
-        {/* Desktop layout: three columns */}
         <div className="md:grid grid-cols-[1fr,2fr,1fr] items-start">
-          {/* LEFT COLUMN – Metadata (sticky) */}
-          <div className="pt-4 md:pt-0 md:sticky md:top-24 md:pl-16">
-            <p className="md:pb-1">
-              <span className="text-baserimary">Published:</span> {publishDate}
-            </p>
-            <p className="md:pb-2">{readingStats.text}</p>
-            <div className="flex flex-wrap gap-2 mb-8">
-              {tags.map((tag: any, index: any) => (
-                <Badge key={index} variant="outline">
-                  {tag}
-                </Badge>
-              ))}
-            </div>
-          </div>
-          {/* CENTER COLUMN – Article content */}
+          <ArticleMetaData
+            publishDate={publishDate}
+            readingStats={readingStats}
+            tags={tags}
+          />
           <ArticleContent renderedContent={renderedContent} />
-          {/* RIGHT COLUMN */}
+          {/* RIGHT COLUMN - Empty for balance */}
           <div></div>
         </div>
       </section>
 
-      {/* CONTACT */}
       <section className="mx-4 md:max-w-2xl md:mx-auto">
         <h2>Want more? Let&apos;s connect</h2>
         <ContactForm />
