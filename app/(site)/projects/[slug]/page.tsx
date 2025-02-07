@@ -1,12 +1,12 @@
 import Image from "next/image";
 
-import { fetchBySlug, fetchPageBlocks, notion } from "@/lib/notion";
+import { fetchBySlug, fetchPageBlocks } from "@/lib/notion";
 import hljsPlugin from "@notion-render/hljs-plugin";
 import bookmarkPlugin from "@notion-render/bookmark-plugin";
 import { ContactForm } from "@/components/contact-form";
 import { NotionRenderer } from "@notion-render/client";
 import { BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
-
+import { motion } from "framer-motion";
 import {
   Carousel,
   CarouselContent,
@@ -14,7 +14,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { BadgeGrid } from "@/components/badge-grid";
 import { ChevronDown } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
@@ -96,6 +95,14 @@ export default async function Page({ params }: { params: { slug: string } }) {
       ? post.cover.external?.url
       : "/images/placeholder.svg";
 
+  const publishDate = new Date(
+    post.properties.Created.created_time
+  ).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
   const tags =
     post.properties.Tags && "multi_select" in post.properties.Tags
       ? post.properties.Tags.multi_select
@@ -105,8 +112,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   return (
     <div className="notion-content">
+      {/* HEADER */}
       <section
-        className="h-full flex flex-col justify-between text-white py-4 relative "
+        className="h-full flex flex-col justify-between text-white py-4 relative rounded-2xl mx-4 md:m-16"
         style={{
           backgroundImage: `url(${heroImage})`,
           backgroundSize: "cover",
@@ -126,41 +134,66 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <ChevronDown strokeWidth={1} size={32} className="relative mx-auto" />
       </section>
 
-      <article className="container max-w-2xl mx-auto px-4 py-16 ">
-        {renderedContent.map((content, index) =>
-          content.type === "carousel" ? (
-            <Carousel key={index}>
-              <CarouselContent>
-                {Array.isArray(content.content)
-                  ? content.content.map((block: any) => (
-                      <CarouselItem
-                        key={block.id}
-                        className="flex items-center justify-center"
-                      >
-                        <Image
-                          src={
-                            block.image.file?.url || block.image.external?.url
-                          }
-                          alt={block.image.caption?.[0]?.plain_text || `Image`}
-                          width={800}
-                          height={600}
-                          className="w-auto h-auto max-h-[600px] object-contain"
-                        />
-                      </CarouselItem>
-                    ))
-                  : null}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-          ) : (
-            <div
-              key={index}
-              dangerouslySetInnerHTML={{ __html: content.content }}
-            />
-          )
-        )}
-      </article>
+      {/* ARTICLE */}
+      <section className="mx-4 md:mx-16 pb-8">
+        {/* Desktop layout: three columns */}
+        <div className="md:grid grid-cols-[1fr,2fr,1fr] items-start">
+          {/* LEFT COLUMN – Metadata (sticky) */}
+          <div className="pt-4 md:pt-0 md:sticky md:top-16">
+            <p className="md:pb-4">{publishDate}</p>
+            <div className="flex flex-wrap gap-2 mb-8">
+              {tags.map((tag: any, index: any) => (
+                <Badge key={index} variant="outline">
+                  {tag}
+                </Badge>
+              ))}
+            </div>
+          </div>
+          {/* CENTER COLUMN – Article content */}
+          <article className="md:max-w-2xl mx-auto pb-8">
+            {renderedContent.map((content, index) =>
+              content.type === "carousel" ? (
+                <Carousel key={index}>
+                  <CarouselContent>
+                    {Array.isArray(content.content)
+                      ? content.content.map((block: any) => (
+                          <CarouselItem
+                            key={block.id}
+                            className="flex items-center justify-center"
+                          >
+                            <Image
+                              src={
+                                block.image.file?.url ||
+                                block.image.external?.url
+                              }
+                              alt={
+                                block.image.caption?.[0]?.plain_text || "Image"
+                              }
+                              width={800}
+                              height={600}
+                              className="w-auto h-auto max-h-[600px] object-contain"
+                            />
+                          </CarouselItem>
+                        ))
+                      : null}
+                  </CarouselContent>
+                  <CarouselPrevious />
+                  <CarouselNext />
+                </Carousel>
+              ) : (
+                <div
+                  key={index}
+                  dangerouslySetInnerHTML={{ __html: content.content }}
+                />
+              )
+            )}
+          </article>
+          {/* RIGHT COLUMN */}
+          <div></div>
+        </div>
+      </section>
+
+      {/* CONTACT */}
       <section id="contact" className="max-w-2xl mx-auto px-4">
         <h2>Want more? Let&apos;s connect</h2>
         <ContactForm />
