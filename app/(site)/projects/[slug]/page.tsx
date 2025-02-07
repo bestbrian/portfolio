@@ -1,12 +1,13 @@
 import Image from "next/image";
 import readingTime from "reading-time";
-import { fetchBySlug, fetchPageBlocks } from "@/lib/notion";
 import hljsPlugin from "@notion-render/hljs-plugin";
 import bookmarkPlugin from "@notion-render/bookmark-plugin";
+import { fetchBySlug, fetchPageBlocks } from "@/lib/notion";
 import { ContactForm } from "@/components/contact-form";
 import { NotionRenderer } from "@notion-render/client";
 import { BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
-import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import {
   Carousel,
   CarouselContent,
@@ -14,8 +15,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { ChevronDown } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { Squiggle } from "@/components/squiggle";
 
 function groupConsecutiveImages(blocks: BlockObjectResponse[]) {
   const groups: BlockObjectResponse[][] = [];
@@ -38,24 +38,6 @@ function groupConsecutiveImages(blocks: BlockObjectResponse[]) {
   }
 
   return groups;
-}
-
-export function Squiggle() {
-  return (
-    <div
-      className="
-        mx-auto
-        w-[4px]
-        h-[200px]
-        bg-center 
-      "
-      style={{
-        backgroundImage: 'url("/images/squiggle.svg")',
-        backgroundSize: "100% auto",
-        flex: 100,
-      }}
-    />
-  );
 }
 
 export default async function Page({ params }: { params: { slug: string } }) {
@@ -112,7 +94,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   const articleText = renderedContent
     .filter((content) => content.type === "html")
-    .map((content) => content.content.replace(/<[^>]+>/g, ""))
+    .map((content) =>
+      typeof content.content === "string"
+        ? content.content.replace(/<[^>]+>/g, "")
+        : ""
+    )
     .join(" ");
 
   const readingStats = readingTime(articleText);
