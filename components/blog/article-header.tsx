@@ -17,7 +17,7 @@ export function ArticleHeader({ heroImage, title }: ArticleHeaderProps) {
       }}
     >
       <p className="relative font-subway mx-auto">ARTICLE</p>
-      <div className="min-h-[calc(100svh-124px)] md:min-h-[40svh] flex flex-col justify-center items-center">
+      <div className="min-h-[calc(100svh-256px)] md:min-h-[40svh] flex flex-col justify-center items-center">
         <Squiggle />
         <h1 className="my-2 mx-auto font-bold leading-tight w-7/12 text-center text-heading-lg md:text-heading-xl">
           {title}

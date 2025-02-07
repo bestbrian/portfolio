@@ -2,20 +2,23 @@ import { ContactForm } from "@/components/contact-form";
 import { SplitLayout } from "@/components/split-layout";
 import { EventItem } from "@/components/event-item";
 import { ToolGrid } from "@/components/tool-grid";
-import { TechTools, SoftwareTools } from "@/lib/content";
+import {
+  TechTools,
+  SoftwareTools,
+  ProductSkills,
+  MarketingSkills,
+} from "@/lib/content";
 
 import psmiiLogo from "/public/images/psmii_logo.png";
 import yorkuLogo from "/public/images/yorku_logo.svg";
 import { HomeHero } from "@/components/sections/home-hero";
-import { HomeSummary } from "@/components/sections/home-summary";
 import { Experience } from "@/components/sections/experience";
-import { Skills } from "@/components/sections/skills";
 import { About } from "@/components/sections/about";
-// import { fetchBySlug, fetchFeaturedPosts } from "@/lib/notion";
-import { Card, CardHeader } from "@/components/ui/card";
+
 import { NeonGradientCard } from "@/components/neon-gradient-card";
 import { fetchPages } from "@/lib/notion";
 import { ArticleCards } from "@/components/article-expand";
+import { BadgeGrid } from "@/components/badge-grid";
 
 export default async function Home() {
   const posts = await fetchPages();
@@ -24,14 +27,17 @@ export default async function Home() {
     <main>
       <div className="flex flex-col items-center justify-center 2xl:pt-20">
         <HomeHero />
-        <HomeSummary />
       </div>
 
       <About />
 
       <div className="flex flex-col items-center justify-center 2xl:pt-20">
         <Experience />
-        <Skills />
+
+        <SplitLayout section="SKILLS">
+          <BadgeGrid title="Product Management" badges={ProductSkills} />
+          <BadgeGrid title="Marketing" badges={MarketingSkills} />
+        </SplitLayout>
 
         <SplitLayout section="TECH">
           <ToolGrid tools={TechTools} />

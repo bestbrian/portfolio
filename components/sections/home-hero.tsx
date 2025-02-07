@@ -43,6 +43,40 @@ export const HomeHero = () => {
           Hi, my name is Brian
         </motion.h2>
       </SplitLayout>
+      <SplitLayout section="SUMMARY">
+        <motion.div
+          className="p-4"
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+          }}
+          viewport={{ once: true }}
+          transition={{
+            ease: EASE.slideIn,
+            duration: 0.6,
+          }}
+        >
+          <p>
+            Data-driven product leader and Y Combinator alum who builds tools
+            and platforms that solve real problems, simplify workflows, and
+            drive measurable impact.
+            <br />
+            <br />
+            From co-founding BrandLoyal, where I pioneered retail feedback
+            automation, to leading product and systems development at Better,
+            Vroom, and Musth, I specialize in creating scalable, user-centric
+            solutions that deliver results.
+            <br />
+            <br />
+            I&apos;m passionate about turning insights into action — using data,
+            design, and strategy to craft products that delight users and drive
+            business growth.
+            <br />
+            <br />
+            Keep scrolling to learn more.
+          </p>
+        </motion.div>
+      </SplitLayout>
     </motion.section>
   );
 };

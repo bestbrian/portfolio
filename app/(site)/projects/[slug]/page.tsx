@@ -99,7 +99,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
     <div className="notion-content">
       <ArticleHeader heroImage={heroImage} title={title} />
 
-      <section className="max-w-screen-2xl mx-4 md:mx-16 pb-8 lg:mx-auto">
+      <section className="max-w-screen-2xl mx-4 sm:mx-0 pb-8 lg:mx-auto">
         <div className="md:grid grid-cols-[1fr,2fr,1fr] items-start">
           <ArticleMetaData
             publishDate={publishDate}
