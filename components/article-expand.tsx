@@ -1,13 +1,9 @@
 "use client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import React, { useEffect, useId, useState } from "react";
+import React, { useId } from "react";
 import { motion } from "framer-motion";
 import { BrianbestResponse } from "@/notion-sdk/dbs/brianbest";
-import { fetchPageBlocks } from "@/lib/notion";
-import readingTime from "reading-time";
-import { calculateReadingTime } from "@/lib/reading-time-client";
-import { Badge } from "./ui/badge";
 import { CalendarDays, Clock } from "lucide-react";
 
 type EnhancedBrianbestResponse = BrianbestResponse & {
@@ -81,21 +77,19 @@ export function ArticleCards({
                 layoutId={`metadata-${post.id}`}
                 className="pt-1.5 text-sm flex-shrink-0 text-baserimary flex flex-col gap-2"
               >
-                <p className="flex justify-start items-center mt-1">
-                  <CalendarDays className="pr-2 stroke-primary" />
-                  {new Date(
-                    post.properties.Created.created_time
-                  ).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
-                </p>
-                <div className="flex justify-start items-center">
-                  <Clock className="pr-2 stroke-primary" />
-                  {/* <Badge variant="outline" className="w-fit"> */}
-                  {post.readingTime}
-                  {/* </Badge> */}
+                <div className="flex justify-start items-center mt-1">
+                  <p className="flex justify-start items-center">
+                    <CalendarDays className="pr-2 stroke-primary" />
+                    {new Date(
+                      post.properties.Created.created_time
+                    ).toLocaleDateString("en-US", {
+                      day: "numeric",
+                      month: "numeric",
+                      year: "numeric",
+                    })}
+                  </p>
+                  <Clock className="ml-4 pr-2 stroke-primary" />
+                  <p>{post.readingTime}</p>
                 </div>
               </motion.div>
             </div>
