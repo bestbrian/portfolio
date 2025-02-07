@@ -1,5 +1,5 @@
 import Image from "next/image";
-import readingTime from "reading-time"; // <-- import readingTime
+import readingTime from "reading-time";
 import { fetchBySlug, fetchPageBlocks } from "@/lib/notion";
 import hljsPlugin from "@notion-render/hljs-plugin";
 import bookmarkPlugin from "@notion-render/bookmark-plugin";
@@ -147,11 +147,10 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <div className="md:grid grid-cols-[1fr,2fr,1fr] items-start">
           {/* LEFT COLUMN – Metadata (sticky) */}
           <div className="pt-4 md:pt-0 md:sticky md:top-16">
-            <p className="md:pb-2">
-              {publishDate}
-              <br />
-              {readingStats.text}
+            <p className="md:pb-1">
+              <span className="text-primary">Published:</span> {publishDate}
             </p>
+            <p className="md:pb-2">{readingStats.text}</p>
             <div className="flex flex-wrap gap-2 mb-8">
               {tags.map((tag: any, index: any) => (
                 <Badge key={index} variant="outline">

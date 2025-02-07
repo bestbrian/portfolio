@@ -1,11 +1,31 @@
-import { fetchPages } from "@/lib/notion";
+import { fetchPageBlocks, fetchPages } from "@/lib/notion";
 import { SplitLayout } from "@/components/split-layout";
 import { ArticleCards } from "@/components/article-expand";
 import { ContactForm } from "@/components/contact-form";
 import { Card, CardTitle, CardContent } from "@/components/ui/card";
+import { calculateReadingTime } from "@/lib/reading-time-client";
 
 export default async function Project() {
   const posts = await fetchPages();
+
+  const enhancedPosts = await Promise.all(
+    posts.map(async (post: { id: string }) => {
+      const blocks = await fetchPageBlocks(post.id);
+      const text = blocks
+        .map((block: { paragraph: { rich_text: { plain_text: any }[] } }) => {
+          if ("paragraph" in block && block.paragraph?.rich_text?.[0]) {
+            return block.paragraph.rich_text[0].plain_text;
+          }
+          return "";
+        })
+        .join(" ");
+
+      return {
+        ...post,
+        readingTime: calculateReadingTime(text),
+      };
+    })
+  );
 
   return (
     <div className="container max-w-2xl mx-auto px-4">
@@ -27,8 +47,9 @@ export default async function Project() {
       </SplitLayout>
 
       <SplitLayout section="POSTS">
-        <ArticleCards posts={posts} />
+        <ArticleCards posts={enhancedPosts} />
       </SplitLayout>
+
       <SplitLayout section="CONTACT">
         <ContactForm />
       </SplitLayout>

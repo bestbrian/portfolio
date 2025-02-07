@@ -1,11 +1,23 @@
 "use client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import React, { useId } from "react";
+import React, { useEffect, useId, useState } from "react";
 import { motion } from "framer-motion";
 import { BrianbestResponse } from "@/notion-sdk/dbs/brianbest";
+import { fetchPageBlocks } from "@/lib/notion";
+import readingTime from "reading-time";
+import { calculateReadingTime } from "@/lib/reading-time-client";
+import { Badge } from "./ui/badge";
 
-export function ArticleCards({ posts }: { posts: BrianbestResponse[] }) {
+type EnhancedBrianbestResponse = BrianbestResponse & {
+  readingTime: string;
+};
+
+export function ArticleCards({
+  posts,
+}: {
+  posts: EnhancedBrianbestResponse[];
+}) {
   const router = useRouter();
   const id = useId();
 
@@ -64,18 +76,24 @@ export function ArticleCards({ posts }: { posts: BrianbestResponse[] }) {
               >
                 {post.properties.Title.title[0].plain_text}
               </motion.h1>
-              <motion.p
-                layoutId={`date-${post.id}`}
-                className="pt-1.5 text-sm flex-shrink-0 text-primary"
+              <motion.div
+                layoutId={`metadata-${post.id}`}
+                className="pt-1.5 text-sm flex-shrink-0 text-primary flex flex-col gap-2"
               >
-                {new Date(
-                  post.properties.Created.created_time
-                ).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-              </motion.p>
+                <span>
+                  {new Date(
+                    post.properties.Created.created_time
+                  ).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </span>
+
+                <Badge variant="outline" className="w-fit">
+                  {post.readingTime}
+                </Badge>
+              </motion.div>
             </div>
           </div>
         </motion.li>
