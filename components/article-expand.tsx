@@ -8,6 +8,7 @@ import { fetchPageBlocks } from "@/lib/notion";
 import readingTime from "reading-time";
 import { calculateReadingTime } from "@/lib/reading-time-client";
 import { Badge } from "./ui/badge";
+import { CalendarDays, Clock } from "lucide-react";
 
 type EnhancedBrianbestResponse = BrianbestResponse & {
   readingTime: string;
@@ -80,7 +81,8 @@ export function ArticleCards({
                 layoutId={`metadata-${post.id}`}
                 className="pt-1.5 text-sm flex-shrink-0 text-baserimary flex flex-col gap-2"
               >
-                <span>
+                <p className="flex justify-start items-center mt-1">
+                  <CalendarDays className="pr-2 stroke-primary" />
                   {new Date(
                     post.properties.Created.created_time
                   ).toLocaleDateString("en-US", {
@@ -88,11 +90,13 @@ export function ArticleCards({
                     month: "long",
                     day: "numeric",
                   })}
-                </span>
-
-                <Badge variant="outline" className="w-fit">
+                </p>
+                <div className="flex justify-start items-center">
+                  <Clock className="pr-2 stroke-primary" />
+                  {/* <Badge variant="outline" className="w-fit"> */}
                   {post.readingTime}
-                </Badge>
+                  {/* </Badge> */}
+                </div>
               </motion.div>
             </div>
           </div>
