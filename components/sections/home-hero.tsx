@@ -36,7 +36,7 @@ export const HomeHero = () => {
         </motion.div>
 
         <motion.h2
-          className="text-center font-subway my-6 text-h2 dark:text-white leading-8"
+          className="text-center font-subway my-6 text-heading-lg dark:text-white leading-8"
           variants={animations.slideUp()}
           animate={{ ...animations.slideUp().show, transition: { delay: 0.3 } }}
         >

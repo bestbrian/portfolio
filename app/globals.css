@@ -67,23 +67,23 @@
 
 @layer base {
   h1 {
-    @apply text-h1 font-subway font-bold;
+    @apply text-heading-xl font-subway font-bold;
   }
   h2 {
-    @apply text-h2 font-subway font-semibold;
+    @apply text-heading-lg font-subway font-semibold;
   }
   h3 {
-    @apply text-h3 font-satoshi font-bold;
+    @apply text-base font-satoshi font-bold;
   }
   h4 {
-    @apply text-h4 font-subway font-medium;
+    @apply text-heading-md font-subway font-medium;
   }
   p {
-    @apply text-p font-satoshi font-normal;
+    @apply text-base font-satoshi font-normal;
   }
   small,
   .legal {
-    @apply text-legal font-satoshi text-muted-foreground;
+    @apply text-caption font-satoshi text-muted-foreground;
   }
 }
 

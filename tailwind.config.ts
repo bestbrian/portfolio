@@ -25,12 +25,11 @@ const config = {
     },
     extend: {
       fontSize: {
-        h1: "3.16rem",
-        h2: "2.37rem",
-        h3: "1rem",
-        h4: "1.33rem",
-        p: "1rem",
-        legal: "0.75rem",
+        "heading-xl": "3.16rem", // For desktop or larger breakpoints (h1)
+        "heading-lg": "2.37rem", // For mobile or as a default heading size (h2)
+        "heading-md": "1.33rem", // Additional size if needed (h4)
+        base: "1rem", // Body text (p/h3)
+        caption: "0.75rem", // Captions or legal text
       },
       // lineHeight: {
       //   paragraph: "1.5rem",

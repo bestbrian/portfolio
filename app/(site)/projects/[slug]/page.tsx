@@ -1,4 +1,3 @@
-import Image from "next/image";
 import readingTime from "reading-time";
 import hljsPlugin from "@notion-render/hljs-plugin";
 import bookmarkPlugin from "@notion-render/bookmark-plugin";
@@ -6,16 +5,9 @@ import { fetchBySlug, fetchPageBlocks } from "@/lib/notion";
 import { ContactForm } from "@/components/contact-form";
 import { NotionRenderer } from "@notion-render/client";
 import { BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
-import { ChevronDown } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Squiggle } from "@/components/squiggle";
+import { ArticleHeader } from "@/components/blog/article-header";
+import { ArticleContent } from "@/components/blog/article-content";
 
 function groupConsecutiveImages(blocks: BlockObjectResponse[]) {
   const groups: BlockObjectResponse[][] = [];
@@ -106,26 +98,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   return (
     <div className="notion-content">
       {/* HEADER */}
-      <section
-        className="h-full flex flex-col justify-between text-white mt-6 py-4 relative rounded-2xl mx-4 md:m-16"
-        style={{
-          backgroundImage: `url(${heroImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <p className="relative font-subway mx-auto">ARTICLE</p>
-
-        <div className="min-h-[calc(100svh-124px)] md:min-h-[40svh] flex flex-col justify-center items-center">
-          <Squiggle />
-          <h1 className="my-2 mx-auto font-bold leading-tight w-7/12 text-center text-h1 md:text-h2 lg:text-h1">
-            {title}
-          </h1>
-          <Squiggle />
-        </div>
-
-        <ChevronDown strokeWidth={1} size={32} className="relative mx-auto" />
-      </section>
+      <ArticleHeader heroImage={heroImage} title={title} />
 
       {/* ARTICLE */}
       <section className="max-w-screen-2xl mx-4 md:mx-16 pb-8 lg:mx-auto">
@@ -134,7 +107,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           {/* LEFT COLUMN – Metadata (sticky) */}
           <div className="pt-4 md:pt-0 md:sticky md:top-24 md:pl-16">
             <p className="md:pb-1">
-              <span className="text-primary">Published:</span> {publishDate}
+              <span className="text-baserimary">Published:</span> {publishDate}
             </p>
             <p className="md:pb-2">{readingStats.text}</p>
             <div className="flex flex-wrap gap-2 mb-8">
@@ -146,44 +119,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
             </div>
           </div>
           {/* CENTER COLUMN – Article content */}
-          <article className="md:max-w-2xl mx-auto pb-8">
-            {renderedContent.map((content, index) =>
-              content.type === "carousel" ? (
-                <Carousel key={index}>
-                  <CarouselContent>
-                    {Array.isArray(content.content)
-                      ? content.content.map((block: any) => (
-                          <CarouselItem
-                            key={block.id}
-                            className="flex items-center justify-center"
-                          >
-                            <Image
-                              src={
-                                block.image.file?.url ||
-                                block.image.external?.url
-                              }
-                              alt={
-                                block.image.caption?.[0]?.plain_text || "Image"
-                              }
-                              width={800}
-                              height={600}
-                              className="w-auto h-auto max-h-[600px] object-contain"
-                            />
-                          </CarouselItem>
-                        ))
-                      : null}
-                  </CarouselContent>
-                  <CarouselPrevious />
-                  <CarouselNext />
-                </Carousel>
-              ) : (
-                <div
-                  key={index}
-                  dangerouslySetInnerHTML={{ __html: content.content }}
-                />
-              )
-            )}
-          </article>
+          <ArticleContent renderedContent={renderedContent} />
           {/* RIGHT COLUMN */}
           <div></div>
         </div>

@@ -284,7 +284,7 @@ export function ExperienceCards() {
               <motion.p
                 layoutId={`cta-${index}-${id}`}
                 // We'll color the CTA with brand color
-                className="pt-1 text-sm flex-shrink-0 text-primary"
+                className="pt-1 text-sm flex-shrink-0 text-baserimary"
               >
                 {card.ctaText}
               </motion.p>
@@ -387,7 +387,7 @@ export function ExperienceCards() {
                       layoutId={`cta-${cards.findIndex(
                         (c) => c === active
                       )}-${id}`}
-                      className="font-subway text-primary"
+                      className="font-subway text-baserimary"
                     >
                       {active.ctaText}
                     </motion.p>

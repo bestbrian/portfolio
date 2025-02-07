@@ -49,7 +49,9 @@ export const EventItem = ({
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: 0.2 }}
-      className={`inline-flex justify-between items-start w-full p-4 ${!disableHover && "hover:bg-accent"} rounded-md`}
+      className={`inline-flex justify-between items-start w-full p-4 ${
+        !disableHover && "hover:bg-accent"
+      } rounded-md`}
     >
       <div className="flex gap-4 items-center">
         {imageContent}
@@ -59,7 +61,7 @@ export const EventItem = ({
         </div>
       </div>
 
-      <div className="flex justify-start pt-1 text-sm flex-shrink-0 text-primary whitespace-nowrap">
+      <div className="flex justify-start pt-1 text-sm flex-shrink-0 text-baserimary whitespace-nowrap">
         {timeline}
       </div>
     </motion.div>
