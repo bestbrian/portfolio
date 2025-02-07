@@ -194,7 +194,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="max-w-2xl mx-auto px-4 md:px-0">
+      <section id="contact" className="mx-4 md:max-w-2xl md:mx-auto">
         <h2>Want more? Let&apos;s connect</h2>
         <ContactForm />
       </section>

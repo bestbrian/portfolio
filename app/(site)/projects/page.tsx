@@ -8,7 +8,7 @@ export default async function Project() {
   const posts = await fetchPages();
 
   return (
-    <div className="container max-w-2xl mx-auto px-4 py-16">
+    <div className="container max-w-2xl mx-auto px-4">
       <SplitLayout section="PROJECTS">
         <div className="flex p-3 gap-3">
           <Card className="w-1/2">

@@ -33,7 +33,7 @@ export function ArticleCards({ posts }: { posts: BrianbestResponse[] }) {
           <div className="flex items-start gap-4">
             <motion.div
               layoutId={`image-${post.id}`}
-              className="flex-shrink-0 relative size-40"
+              className="flex-shrink-0 relative size-32"
             >
               {post.cover && (
                 <Image
@@ -46,7 +46,7 @@ export function ArticleCards({ posts }: { posts: BrianbestResponse[] }) {
                   height={0}
                   fill
                   alt="Post cover"
-                  sizes="size-40"
+                  sizes="size-32"
                   style={{
                     width: "100%",
                     height: "100%",
