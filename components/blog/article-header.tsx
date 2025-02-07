@@ -9,7 +9,7 @@ interface ArticleHeaderProps {
 export function ArticleHeader({ heroImage, title }: ArticleHeaderProps) {
   return (
     <section
-      className="h-full flex flex-col justify-between text-white mt-6 py-4 relative rounded-2xl mx-4 md:m-16"
+      className="h-full flex flex-col justify-between text-white mt-6 py-4 relative rounded-2xl mx-4 md:m-16 2xl:mx-auto max-w-screen-2xl"
       style={{
         backgroundImage: `url(${heroImage})`,
         backgroundSize: "cover",
@@ -19,7 +19,7 @@ export function ArticleHeader({ heroImage, title }: ArticleHeaderProps) {
       <p className="relative font-subway mx-auto">ARTICLE</p>
       <div className="min-h-[calc(100svh-256px)] md:min-h-[40svh] flex flex-col justify-center items-center">
         <Squiggle />
-        <h1 className="my-2 mx-auto font-bold leading-tight w-7/12 text-center text-heading-lg md:text-heading-xl">
+        <h1 className="w-10/12 my-2 mx-auto font-bold leading-tight text-center text-heading-lg md:text-heading-xl md:w-1/2">
           {title}
         </h1>
         <Squiggle />
