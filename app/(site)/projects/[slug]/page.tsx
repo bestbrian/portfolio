@@ -107,7 +107,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
     <div className="notion-content">
       {/* HEADER */}
       <section
-        className="h-full flex flex-col justify-between text-white py-4 relative rounded-2xl mx-4 md:m-16"
+        className="h-full flex flex-col justify-between text-white mt-6 py-4 relative rounded-2xl mx-4 md:m-16"
         style={{
           backgroundImage: `url(${heroImage})`,
           backgroundSize: "cover",
@@ -118,7 +118,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
         <div className="min-h-[calc(100svh-124px)] md:min-h-[40svh] flex flex-col justify-center items-center">
           <Squiggle />
-          <h1 className="my-2 mx-auto font-bold leading-tight w-7/12 text-center">
+          <h1 className="my-2 mx-auto font-bold leading-tight w-7/12 text-center text-h1 md:text-h2 lg:text-h1">
             {title}
           </h1>
           <Squiggle />
@@ -128,11 +128,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
       </section>
 
       {/* ARTICLE */}
-      <section className="max-w-screen-2xl mx-4 md:mx-16 pb-8">
+      <section className="max-w-screen-2xl mx-4 md:mx-16 pb-8 lg:mx-auto">
         {/* Desktop layout: three columns */}
         <div className="md:grid grid-cols-[1fr,2fr,1fr] items-start">
           {/* LEFT COLUMN – Metadata (sticky) */}
-          <div className="pt-4 md:pt-0 md:sticky md:top-16">
+          <div className="pt-4 md:pt-0 md:sticky md:top-24 md:pl-16">
             <p className="md:pb-1">
               <span className="text-primary">Published:</span> {publishDate}
             </p>
@@ -190,7 +190,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="mx-4 md:max-w-2xl md:mx-auto">
+      <section className="mx-4 md:max-w-2xl md:mx-auto">
         <h2>Want more? Let&apos;s connect</h2>
         <ContactForm />
       </section>

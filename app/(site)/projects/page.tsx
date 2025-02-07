@@ -28,7 +28,7 @@ export default async function Project() {
   );
 
   return (
-    <div className="container max-w-2xl mx-auto px-4">
+    <div className="w-full max-w-2xl mx-auto">
       <SplitLayout section="PROJECTS">
         <div className="flex p-3 gap-3">
           <Card className="w-1/2">

@@ -20,22 +20,6 @@ export const HomeHero = () => {
       initial="hidden"
       animate="show"
     >
-      {/* <div>
-        <motion.h1
-          className="font-subway text-4xl"
-          variants={animations.slideUp(true)}
-          animate={{ ...animations.slideUp().show }}
-        >
-          Work
-        </motion.h1>
-        <motion.p
-          className="text-primary leading-paragraph"
-          variants={animations.slideUp(true)}
-          animate={{ ...animations.slideUp().show, transition: { delay: 0.2 } }}
-        >
-          An overview of my career
-        </motion.p>
-      </div> */}
       <SplitLayout>
         <motion.div
           className="flex justify-center"
@@ -46,13 +30,13 @@ export const HomeHero = () => {
             alt="Brian Best"
             height={280}
             width={280}
-            className="object-center object-cover rounded-md mt-8"
+            className="object-center object-cover rounded-md"
             priority
           />
         </motion.div>
 
         <motion.h2
-          className="text-center font-subway mt-3 mb-md text-h2 dark:text-white leading-8"
+          className="text-center font-subway my-6 text-h2 dark:text-white leading-8"
           variants={animations.slideUp()}
           animate={{ ...animations.slideUp().show, transition: { delay: 0.3 } }}
         >
