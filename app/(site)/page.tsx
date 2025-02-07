@@ -1,28 +1,24 @@
-import { ContactForm } from "@/components/contact-form";
 import { SplitLayout } from "@/components/split-layout";
-import { EventItem } from "@/components/event-item";
+import { HomeHero } from "@/components/sections/home-hero";
+import { About } from "@/components/sections/about";
+import { Experience } from "@/components/sections/experience";
+import { ContactForm } from "@/components/contact-form";
+import { BadgeGrid } from "@/components/badge-grid";
 import { ToolGrid } from "@/components/tool-grid";
+import { EventItem } from "@/components/event-item";
 import {
   TechTools,
   SoftwareTools,
   ProductSkills,
   MarketingSkills,
 } from "@/lib/content";
-
 import psmiiLogo from "/public/images/psmii_logo.png";
 import yorkuLogo from "/public/images/yorku_logo.svg";
-import { HomeHero } from "@/components/sections/home-hero";
-import { Experience } from "@/components/sections/experience";
-import { About } from "@/components/sections/about";
 
 import { NeonGradientCard } from "@/components/neon-gradient-card";
-import { fetchPages } from "@/lib/notion";
 import { ArticleCards } from "@/components/article-expand";
-import { BadgeGrid } from "@/components/badge-grid";
 
 export default async function Home() {
-  const posts = await fetchPages();
-
   return (
     <main>
       <div className="flex flex-col items-center justify-center 2xl:pt-20">

@@ -61,7 +61,7 @@ Style Guide:
      - H3: 1.77rem
      - H4: 1.33rem
      - Paragraph: 1rem
-     - Legal: 0.75rem
+     - Caption: 0.75rem
    - Line-height
      - Paragraph: 1.5rem
      - Headings: 1.2rem

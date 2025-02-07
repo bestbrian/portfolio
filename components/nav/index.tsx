@@ -19,7 +19,7 @@ import { Button } from "../ui/button";
 export function Nav() {
   return (
     <div className="fixed bottom-0 md:sticky md:top-0 md:bottom-auto w-full max-w-screen-2xl mx-auto z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="mx-auto w-full flex items-center justify-between px-4 py-2">
+      <div className="flex items-center justify-between w-full mx-auto px-4 py-2 ">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
