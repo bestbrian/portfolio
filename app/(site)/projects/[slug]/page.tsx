@@ -135,7 +135,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
       </section>
 
       {/* ARTICLE */}
-      <section className="mx-4 md:mx-16 pb-8">
+      <section className="max-w-screen-2xl mx-4 md:mx-16 pb-8">
         {/* Desktop layout: three columns */}
         <div className="md:grid grid-cols-[1fr,2fr,1fr] items-start">
           {/* LEFT COLUMN – Metadata (sticky) */}
@@ -194,7 +194,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="max-w-2xl mx-auto px-4">
+      <section id="contact" className="max-w-2xl mx-auto px-4 md:px-0">
         <h2>Want more? Let&apos;s connect</h2>
         <ContactForm />
       </section>
