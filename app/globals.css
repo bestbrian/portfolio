@@ -95,3 +95,7 @@
     transform: translateY(0);
   }
 }
+
+.logo-svg {
+  color: hsl(var(--foreground));
+}
