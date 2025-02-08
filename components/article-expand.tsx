@@ -75,7 +75,7 @@ export function ArticleCards({
               </motion.h1>
               <motion.div
                 layoutId={`metadata-${post.id}`}
-                className="pt-1.5 text-sm flex-shrink-0 text-baserimary flex flex-col gap-2"
+                className="pt-1.5 text-sm flex-shrink-0 text-primary flex flex-col gap-2"
               >
                 <div className="flex justify-start items-center mt-1">
                   <p className="flex justify-start items-center">
@@ -89,7 +89,7 @@ export function ArticleCards({
                     })}
                   </p>
                   <Clock className="ml-4 pr-2 stroke-primary" />
-                  <p>{post.readingTime}</p>
+                  <p className="text-base">{post.readingTime}</p>
                 </div>
               </motion.div>
             </div>

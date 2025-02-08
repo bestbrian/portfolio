@@ -35,7 +35,7 @@ export function Nav() {
           </svg>
         </Link>
 
-        <NavigationMenu>
+        <NavigationMenu className="mr-2">
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger className="hover:bg-background/75">

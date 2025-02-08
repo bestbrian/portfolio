@@ -234,7 +234,7 @@ export function ExperienceCards() {
   return (
     <>
       {/* Collapsed Cards List */}
-      <ul className="mx-auto w-full max-w-2xl gap-4">
+      <ul className="mx-auto w-full max-w-2xl gap-4 select-none">
         {cards.map((card, index) => (
           <UpgradeBanner
             key={`banner-${index}`}
@@ -283,8 +283,7 @@ export function ExperienceCards() {
               {/* Right side: Dates (CTA text) */}
               <motion.p
                 layoutId={`cta-${index}-${id}`}
-                // We'll color the CTA with brand color
-                className="pt-1 text-sm flex-shrink-0 text-baserimary"
+                className="pt-1 text-sm flex-shrink-0 text-primary"
               >
                 {card.ctaText}
               </motion.p>
@@ -387,7 +386,7 @@ export function ExperienceCards() {
                       layoutId={`cta-${cards.findIndex(
                         (c) => c === active
                       )}-${id}`}
-                      className="font-subway text-baserimary"
+                      className="font-subway text-primary"
                     >
                       {active.ctaText}
                     </motion.p>

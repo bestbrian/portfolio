@@ -34,7 +34,7 @@ export const BadgeGrid = ({
                 <TooltipTrigger>
                   <Badge
                     className={cn(
-                      "select-none px-3 py-2 rounded-md bg-secondary text-baserimary border-primary font-normal text-sm hover:bg-secondary hover:text-baserimary",
+                      "select-none px-3 py-2 rounded-md bg-secondary text-primary border-primary font-normal text-sm hover:bg-secondary hover:text-primary",
                       badge.highlight
                         ? `bg-${badge.highlight} border-${badge.highlight} hover:bg-${badge.highlight} hover:border-${badge.highlight}`
                         : null
@@ -50,7 +50,7 @@ export const BadgeGrid = ({
                 key={i}
                 // BRIAN: MAY need to play with tailwind.config colors or add prop for text IF needed
                 className={cn(
-                  "select-none px-4 py-2 rounded-md bg-secondary text-baserimary border-primary font-normal text-sm hover:bg-secondary hover:text-baserimary",
+                  "select-none px-4 py-2 rounded-md bg-secondary text-primary border-primary font-normal text-sm hover:bg-secondary hover:text-primary",
                   badge.highlight
                     ? `bg-${badge.highlight} border-${badge.highlight} hover:bg-${badge.highlight} hover:border-${badge.highlight}`
                     : null
