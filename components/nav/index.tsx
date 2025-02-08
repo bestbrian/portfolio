@@ -18,8 +18,8 @@ import { Button } from "../ui/button";
 
 export function Nav() {
   return (
-    <div className="fixed bottom-0 md:sticky md:top-8 md:bottom-auto w-full max-w-screen-2xl mx-auto z-50">
-      <div className="flex items-center justify-between m-6 px-4 py-2 rounded-full supports-[backdrop-filter]:bg-background/60 backdrop-blur">
+    <div className="fixed bottom-0 md:sticky md:top-4 md:bottom-auto w-full max-w-screen-2xl mx-auto z-50">
+      <div className="flex items-center justify-between m-4 px-4 py-2 rounded-full supports-[backdrop-filter]:bg-white backdrop-blur">
         <Link href="/" className="flex items-center">
           <svg
             className="ml-2 logo-svg"
