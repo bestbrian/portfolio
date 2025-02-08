@@ -18,6 +18,11 @@ import yorkuLogo from "/public/images/yorku_logo.svg";
 import { NeonGradientCard } from "@/components/neon-gradient-card";
 import { ArticleCards } from "@/components/article-expand";
 
+export const metadata = {
+  title: `About Me`,
+  description: "Learn more about me and my work.",
+};
+
 export default async function Home() {
   return (
     <main>

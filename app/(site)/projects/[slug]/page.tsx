@@ -32,6 +32,22 @@ function groupConsecutiveImages(blocks: BlockObjectResponse[]) {
   return groups;
 }
 
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const post = await fetchBySlug(params.slug);
+
+  return {
+    title:
+      post?.properties.Title && "title" in post.properties.Title
+        ? post.properties.Title.title[0]?.plain_text
+        : "Untitled",
+    description: "Find my recent projects and blog posts on this page.",
+  };
+}
+
 export default async function Page({ params }: { params: { slug: string } }) {
   const post = await fetchBySlug(params.slug);
   if (!post) return <div>Article Not Found</div>;

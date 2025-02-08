@@ -75,7 +75,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Brian Best",
-      url: "https://brianbest.dev",
+      url: "https://brian.best",
     },
   ],
   creator: "Brian Best",

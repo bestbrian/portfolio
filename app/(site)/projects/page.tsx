@@ -5,9 +5,13 @@ import { ContactForm } from "@/components/contact-form";
 import { Card, CardTitle, CardContent } from "@/components/ui/card";
 import { calculateReadingTime } from "@/lib/reading-time-client";
 
+export const metadata = {
+  title: `My Projects`,
+  description: "Find my recent projects and blog posts on this page.",
+};
+
 export default async function Project() {
   const posts = await fetchPages();
-
   const enhancedPosts = await Promise.all(
     posts.map(async (post: { id: string }) => {
       const blocks = await fetchPageBlocks(post.id);

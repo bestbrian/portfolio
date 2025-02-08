@@ -36,11 +36,11 @@ export const HomeHero = () => {
         </motion.div>
 
         <motion.h2
-          className="text-center font-subway my-6 text-heading-lg dark:text-white leading-8"
+          className="text-center font-subway my-6 px-2 text-heading-lg dark:text-white leading-8"
           variants={animations.slideUp()}
           animate={{ ...animations.slideUp().show, transition: { delay: 0.3 } }}
         >
-          Hi, my name is Brian
+          Hi, my name is&nbsp;Brian
         </motion.h2>
       </SplitLayout>
       <SplitLayout section="SUMMARY">
