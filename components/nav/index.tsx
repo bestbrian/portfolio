@@ -17,8 +17,36 @@ import { ModeSwitcher } from "../mode-switcher";
 import { Button } from "../ui/button";
 
 export function Nav() {
+  // State to control navbar visibility
+  const [show, setShow] = React.useState(true);
+  // Using a ref to store the last scroll position
+  const lastScrollY = React.useRef(0);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      // If scrolling down (and past a small threshold), hide the navbar;
+      // otherwise, show it
+      if (currentScrollY > lastScrollY.current && currentScrollY > 50) {
+        setShow(false);
+      } else {
+        setShow(true);
+      }
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="fixed bottom-0 md:sticky md:top-4 md:bottom-auto w-full max-w-screen-2xl mx-auto z-50">
+    // Tailwind's transition utilities let us slide the navbar out of view.
+    // The "md:translate-y-0" ensures that on medium+ screens (desktop) the navbar always shows.
+    <div
+      className={`fixed bottom-0 md:sticky md:top-4 md:bottom-auto w-full max-w-screen-2xl mx-auto z-50 transition-transform duration-300 ${
+        show ? "translate-y-0" : "translate-y-full md:translate-y-0"
+      }`}
+    >
       <div className="flex items-center justify-between m-4 px-4 py-2 rounded-full supports-[backdrop-filter]:bg-secondary/60 backdrop-blur">
         <Link href="/" className="flex items-center">
           <svg
