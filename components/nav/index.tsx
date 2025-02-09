@@ -50,9 +50,7 @@ export function Nav() {
         <div className="flex items-center justify-start">
           <Link href="/" className="flex items-center">
             <svg
-              className="ml-2 logo-svg"
-              width="32"
-              height="32"
+              className="ml-2 logo-svg w-6 h-6 md:w-8 md:h-8"
               viewBox="0 0 13 9"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +65,7 @@ export function Nav() {
         <div className="flex items-center justify-center">
           <NavigationMenu className="mr-2">
             <NavigationMenuList>
-              <NavigationMenuItem>
+              <NavigationMenuItem className="hidden md:flex">
                 <NavigationMenuTrigger className="hover:bg-background/75">
                   <p className="font-bold">TLDR</p>
                 </NavigationMenuTrigger>
