@@ -93,6 +93,14 @@ export default async function Page({ params }: { params: { slug: string } }) {
     day: "numeric",
   });
 
+  const editDate = new Date(
+    post.properties.Edited.last_edited_time
+  ).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
   const tags =
     post.properties.Tags && "multi_select" in post.properties.Tags
       ? post.properties.Tags.multi_select
@@ -119,6 +127,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <div className="md:grid grid-cols-[1fr,2fr,1fr] items-start">
           <ArticleMetaData
             publishDate={publishDate}
+            editDate={editDate}
             readingStats={readingStats}
             tags={tags}
           />
