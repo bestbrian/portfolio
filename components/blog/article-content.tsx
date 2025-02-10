@@ -34,7 +34,7 @@ export function ArticleContent({ renderedContent }: ArticleContentProps) {
                       alt={block.image.caption?.[0]?.plain_text || "Image"}
                       width={800}
                       height={600}
-                      className="w-auto h-auto max-h-[600px] object-contain"
+                      className="w-auto h-auto max-h-[600px] object-contain rounded-lg"
                     />
                   </CarouselItem>
                 ))}
