@@ -78,7 +78,7 @@ export function ArticleCards({
                 className="pt-1.5 text-sm flex-shrink-0 text-primary flex flex-col gap-2"
               >
                 <div className="flex flex-col sm:flex-row justify-start items-start sm:items-center mt-1 gap-2">
-                  <p className="flex justify-start items-center text-primary-foreground">
+                  <p className="flex justify-start items-center text-foreground dark:text-primary-foreground">
                     <CalendarDays className="pr-2 stroke-primary" />
                     {new Date(
                       post.properties.Created.created_time
@@ -90,7 +90,7 @@ export function ArticleCards({
                   </p>
                   <div className="flex items-center">
                     <Clock className="pr-2 stroke-primary" />
-                    <p className="text-primary-foreground">
+                    <p className="text-foreground dark:text-primary-foreground">
                       {post.readingTime}
                     </p>
                   </div>

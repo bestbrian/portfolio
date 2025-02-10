@@ -46,7 +46,7 @@ export function Nav() {
         show ? "translate-y-0" : "translate-y-full md:translate-y-0"
       }`}
     >
-      <div className="grid grid-cols-[1fr_auto_1fr] items-center m-4 px-4 py-2 rounded-full supports-[backdrop-filter]:bg-secondary/60 backdrop-blur">
+      <div className="grid grid-cols-[1fr_auto_1fr] items-center m-4 px-4 py-2 rounded-lg supports-[backdrop-filter]:bg-secondary/60 backdrop-blur">
         <div className="flex items-center justify-start">
           <Link href="/" className="flex items-center">
             <svg
