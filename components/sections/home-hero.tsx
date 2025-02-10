@@ -30,13 +30,13 @@ export const HomeHero = () => {
             alt="Brian Best"
             height={280}
             width={280}
-            className="object-center object-cover rounded-md"
+            className="object-center object-cover rounded-lg"
             priority
           />
         </motion.div>
 
         <motion.h2
-          className="text-center font-subway my-6 px-2 text-heading-lg dark:text-white leading-8"
+          className="text-center font-subway my-6 px-2 text-heading-lg dark:text-white leading-8 font-medium"
           variants={animations.slideUp()}
           animate={{ ...animations.slideUp().show, transition: { delay: 0.3 } }}
         >

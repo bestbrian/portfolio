@@ -51,7 +51,7 @@ export const EventItem = ({
       transition={{ duration: 0.5, delay: 0.2 }}
       className={`inline-flex justify-between items-start w-full p-4 ${
         !disableHover && "hover:bg-accent"
-      } rounded-md`}
+      } rounded-lg`}
     >
       <div className="flex gap-4 items-center">
         {imageContent}

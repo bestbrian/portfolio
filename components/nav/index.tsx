@@ -67,19 +67,19 @@ export function Nav() {
             <NavigationMenuList>
               <NavigationMenuItem className="hidden md:flex">
                 <NavigationMenuTrigger className="hover:bg-background/75">
-                  <p className="font-bold">TLDR</p>
+                  <p className="font-medium">TLDR</p>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-4 md:w-[600px] lg:w-[700px] lg:grid-cols-[.75fr_1fr]">
                     <li className="row-span-3">
                       <NavigationMenuLink asChild>
-                        <div className="flex h-full w-full select-none flex-col justify-end rounded-md outline-none focus:shadow-md relative">
-                          <div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-2 outline-none focus:shadow-md relative px-4">
+                        <div className="flex h-full w-full select-none flex-col justify-end rounded-lg outline-none focus:shadow-md relative">
+                          <div className="flex h-full w-full select-none flex-col justify-end rounded-lg bg-gradient-to-b from-muted/50 to-muted p-2 outline-none focus:shadow-md relative px-4">
                             <Image
                               src="/images/brian_image.jpeg"
                               alt="Brian Best"
                               fill
-                              className="object-cover rounded-md"
+                              className="object-cover rounded-lg"
                               priority
                             />
                             <div
@@ -142,7 +142,7 @@ export function Nav() {
               <NavigationMenuItem>
                 <Link href="/projects" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    <p className="font-bold">Projects</p>
+                    <p className="font-medium">Projects</p>
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -155,7 +155,7 @@ export function Nav() {
                   }}
                 >
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    <p className="font-bold">Contact</p>
+                    <p className="font-medium">Contact</p>
                   </NavigationMenuLink>
                 </button>
               </NavigationMenuItem>

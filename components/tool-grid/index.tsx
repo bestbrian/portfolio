@@ -15,7 +15,7 @@ export const ToolGrid = ({ tools }: { tools: ToolGridProps[] }) => {
       {tools.map((tool, i) => (
         <div
           key={i}
-          className="rounded-md bg-card flex flex-col items-center justify-between py-4 w-[6.5rem] h-40"
+          className="rounded-lg bg-card flex flex-col items-center justify-between py-4 w-[6.5rem] h-40"
         >
           <div className="h-16 flex items-center">
             <Image

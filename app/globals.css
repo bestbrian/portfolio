@@ -70,7 +70,7 @@
     @apply text-heading-xl font-subway font-medium;
   }
   h2 {
-    @apply text-heading-lg font-subway font-semibold;
+    @apply text-heading-lg font-subway font-semibold leading-10;
   }
   h3 {
     @apply text-base font-satoshi font-bold;

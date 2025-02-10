@@ -118,7 +118,7 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="flex items-end w-1/3 ml-auto">
+        <Button type="submit" className="flex w-1/3 ml-auto">
           Submit
         </Button>
       </form>
