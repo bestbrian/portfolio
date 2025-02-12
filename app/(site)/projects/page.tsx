@@ -12,7 +12,7 @@ export const metadata = {
 
 export default async function Project() {
   const posts = await fetchPages();
-  const enhancedPosts = posts.map((post) => ({
+  const enhancedPosts = posts.map((post: any) => ({
     ...post,
     readingTime: calculateReadingTime(
       post.properties.Preview?.rich_text?.[0]?.plain_text || ""
