@@ -26,7 +26,7 @@ export const ArticleMetaData = ({
 }: ArticleMetaDataProps): JSX.Element => {
   return (
     <div className="pt-4 md:pt-0 md:sticky md:top-24 md:pl-16 pr-4">
-      <TooltipProvider>
+      <TooltipProvider delayDuration={100}>
         <Tooltip>
           <TooltipTrigger>
             <p className="flex justify-start md:pb-1">
@@ -39,7 +39,7 @@ export const ArticleMetaData = ({
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>
-      <TooltipProvider>
+      <TooltipProvider delayDuration={100}>
         <Tooltip>
           <TooltipTrigger>
             <p className="flex justify-start md:pb-1">

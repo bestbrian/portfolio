@@ -12,24 +12,12 @@ export const metadata = {
 
 export default async function Project() {
   const posts = await fetchPages();
-  const enhancedPosts = await Promise.all(
-    posts.map(async (post: { id: string }) => {
-      const blocks = await fetchPageBlocks(post.id);
-      const text = blocks
-        .map((block: { paragraph: { rich_text: { plain_text: any }[] } }) => {
-          if ("paragraph" in block && block.paragraph?.rich_text?.[0]) {
-            return block.paragraph.rich_text[0].plain_text;
-          }
-          return "";
-        })
-        .join(" ");
-
-      return {
-        ...post,
-        readingTime: calculateReadingTime(text),
-      };
-    })
-  );
+  const enhancedPosts = posts.map((post) => ({
+    ...post,
+    readingTime: calculateReadingTime(
+      post.properties.Preview?.rich_text?.[0]?.plain_text || ""
+    ),
+  }));
 
   return (
     <div className="w-full max-w-2xl mx-auto">

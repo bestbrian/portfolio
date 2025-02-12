@@ -88,12 +88,12 @@ export function ArticleCards({
                       year: "numeric",
                     })}
                   </p>
-                  <div className="flex items-center">
+                  {/* <div className="flex items-center">
                     <Clock className="pr-2 stroke-primary" />
                     <p className="text-foreground dark:text-primary-foreground">
                       {post.readingTime}
                     </p>
-                  </div>
+                  </div> */}
                 </div>
               </motion.div>
             </div>
